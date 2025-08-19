@@ -1,6 +1,4 @@
-﻿# 📚 Lista szkoleń Sekurak.Academy — 2023 oraz 2024 (Semestr I & II)
-
-> Poniższe pozycje są zredagowane na podstawie Twojego pliku „SPIS NAGRAŃ” Sekurak.Academy — tytuły, trenerzy, poziomy i kategorie pochodzą z materiału źródłowego. Opisy są krótkimi streszczeniami inspirowanymi tytułami (do 3 zdań).&#x20;
+﻿# 📚 Lista szkoleń Sekurak.Academy — 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II
 
 ---
 
@@ -15,7 +13,7 @@
 
 ---
 
-# 🗓️ 2023 &#x20;
+# 🗓️ 2023
 
 ### 🎓 Praktyczny OSSEC
 
@@ -99,7 +97,7 @@
 
 ---
 
-# 🗓️ 2024 — Semestr I &#x20;
+# 🗓️ 2024 — Semestr I
 
 ### 🎓 Bezpieczeństwo Active Directory II
 
@@ -173,7 +171,7 @@
 
 ---
 
-# 🗓️ 2024 — Semestr II &#x20;
+# 🗓️ 2024 — Semestr II
 
 ### 🎓 Model bezpieczeństwa przeglądarek
 
@@ -262,13 +260,11 @@
 
 ---
 
-# 📚 Lista szkoleń Sekurak.Academy — 2025 (Semestr I & II)
-
-> Poniżej kontynuacja listy w tym samym układzie co poprzednio. Dla **Semestru I 2025** bazuję na Twoim PDF-ie Sekurak.Academy (tytuły, trenerzy, poziomy i kategorie). Dla **Semestru II 2025** – na przesłanej przez Ciebie agendzie (poziomy nie były podane).&#x20;
+# 📚 Sekurak.Academy — 2025 (Semestr I & II)
 
 ---
 
-# 🗓️ 2025 — Semestr I &#x20;
+# 🗓️ 2025 — Semestr I
 
 ### 🎓 Analiza złośliwego oprogramowania na żywo
 
@@ -353,8 +349,6 @@
 ---
 
 # 🗓️ 2025 — Semestr II (Agenda)
-
-> Wg przesłanej przez Ciebie agendy Semestru II 2025: ścieżki, tytuły i prowadzący. **Poziom:** *(nie podano)* — zostawiam jako informację przy każdym wpisie.
 
 ### 🎓 Bezpieczna architektura sieci w małej firmie i mikroprzedsiębiorstwie
 
