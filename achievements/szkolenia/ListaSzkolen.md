@@ -1,5 +1,7 @@
 ﻿# 📚 Lista szkoleń Sekurak.Academy — 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II
 
+Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze
+
 ---
 
 ## 🔎 Legenda kategorii (ikony)
