@@ -1,12 +1,12 @@
 ﻿# 🇵🇱 Szkolenia
-Lista i krótkie opisy odbytych szkoleń (plik: `lista-szkolen.md`) <br>
+Lista i krótkie opisy odbytych szkoleń (plik: `ListaSzkolen.md`) <br>
 Struktura: · tytuł · organizator · zakres ·
 
 **Tech/Tools:** ✍️ Markdown · 🧾 PDF (opcjonalnie)
 
 ---
 # 🇬🇧 Trainings
-Training list and short descriptions (`lista-szkolen.md`)  <br>
+Training list and short descriptions (`ListaSzkolen.md`)  <br>
 Structure: · title · provider · scope · 
 
 **Tech/Tools:** ✍️ Markdown · 🧾 PDF (optional)
