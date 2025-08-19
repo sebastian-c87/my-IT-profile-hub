@@ -1,15 +1,23 @@
 ﻿# 🇵🇱 Oceny z uczelni
-Arkusz ocen uzyskanych w poszczególnych etapach studiowania. <br>
-**Akademia Finansów i Biznesu VISTULA** <br> 
-Plik opisowy: `readme-oceny.md` z kontekstem semestrów.
+Arkusz ocen uzyskanych w poszczególnych etapach studiowania wraz ze szczegółowym opisem tematyki zajęć. <br>
+## **Akademia Finansów i Biznesu VISTULA** <br> 
+Plik opisowy: `OpisZajęć.md` z kontekstem semestrów.
+
+Karta przebiegu studiów pobrana z systemu uczelnianego USOS: `Arkusz_ocen.pdf` zawiera oceny i przyznane punkty ECTS.
 
 **Tech/Tools:** 🧾 PDF · 🔒 Prywatność
 
 ---
+---
+---
+<br> 
+
 # 🇬🇧 University grades
 Sheet with grades obtained at individual stages of study <br>
-**Akademia Finansów i Biznesu VISTULA**    
+## **Akademia Finansów i Biznesu VISTULA**    
 Summary: `readme-oceny.md` with semester context.
+
+The study progress card downloaded from the USOS university system: `Arkusz_ocen.pdf` contains grades and ECTS points awarded.
 
 **Tech/Tools:** 🧾 PDF · 🔒 Privacy
 ##
