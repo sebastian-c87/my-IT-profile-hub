@@ -1,6 +1,6 @@
 ﻿# 🧾 Karta przebiegu studiów — **lista i opis przedmiotów**
 
-> Zestawienie zajęć odbytych podczas studiów. **[Karta przebiegu studiów](achievements/uczelnia/Arkusz_Ocen.pdf)** wraz z ocenami i punktami ECTS.
+> Zestawienie zajęć odbytych podczas studiów. [![Karta przebiegu studiów](https://img.shields.io/badge/Karta_Przebiegu_Studiów-PDF-orange?style=flat&logo=readme&logoColor=white)](/achievements/uczelnia/Arkusz_Ocen.pdf) wraz z ocenami i punktami ECTS.
 > 
 >> # **Akademia Finansów i Biznesu VISTULA** <br> 
 >>> # Informatyka.   

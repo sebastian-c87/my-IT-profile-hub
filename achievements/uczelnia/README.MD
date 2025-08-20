@@ -1,9 +1,9 @@
 ﻿# 🇵🇱 Oceny z uczelni
 Arkusz ocen uzyskanych w poszczególnych etapach studiowania wraz ze szczegółowym opisem tematyki zajęć. <br>
 ## **Akademia Finansów i Biznesu VISTULA** <br> 
-Plik opisowy: `OpisZajęć.md` z kontekstem semestrów.
+Plik opisowy: `OpisZajęć.md` [![Opis Zajęć](https://img.shields.io/badge/OPIS_ZAJĘĆ-Markdown-blue?style=flat&logo=markdown&logoColor=white)](/achievements/uczelnia/OpisZajęć.md) z kontekstem semestrów.
 
-Karta przebiegu studiów pobrana z systemu uczelnianego USOS: `Arkusz_ocen.pdf` zawiera oceny i przyznane punkty ECTS.
+Karta przebiegu studiów pobrana z systemu uczelnianego USOS: `Arkusz_ocen.pdf` [![Karta przebiegu studiów](https://img.shields.io/badge/Karta_Przebiegu_Studiów-PDF-orange?style=flat&logo=readme&logoColor=white)](/achievements/uczelnia/Arkusz_Ocen.pdf) zawiera oceny i przyznane punkty ECTS.
 
 **Tech/Tools:** 🧾 PDF · 🔒 Prywatność
 
