@@ -34,16 +34,8 @@ jobs:
         id: copy
         shell: bash
         run: |
-<<<<<<< HEAD
-          set -e
-          cp -f CV/PL/Sebastian_Ciborowski_CV.pdf       docs/Sebastian_Ciborowski_CV_PL.pdf
-          [ -f CV/PL/Sebastian_Ciborowski_CV.docx ]      && cp -f CV/PL/Sebastian_Ciborowski_CV.docx      docs/Sebastian_Ciborowski_CV_PL.docx
-          [ -f CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf ]  && cp -f CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf  docs/Sebastian_Ciborowski_CV_EN.pdf
-          [ -f CV/ENG/Sebastian_Ciborowski_CV_ENG.docx ] && cp -f CV/ENG/Sebastian_Ciborowski_CV_ENG.docx docs/Sebastian_Ciborowski_CV_EN.docx
-=======
           set -euo pipefail
           copied=0
->>>>>>> 9ee9cd1 (build-cv.yml update)
 
           # PL / PDF — wymagany
           if cp -f "CV/PL/Sebastian_Ciborowski_CV.pdf" "docs/Sebastian_Ciborowski_CV_PL.pdf"; then
