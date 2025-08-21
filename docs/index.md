@@ -22,8 +22,8 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 
 [<span class="badge">⬇️ CV (PL, PDF)</span>](Sebastian_Ciborowski_CV_PL.pdf)
 [<span class="badge">⬇️ CV (PL, DOCX)</span>](Sebastian_Ciborowski_CV_PL.docx)
-[<span class="badge">⬇️ CV (ENG, PDF)</span>](Sebastian_Ciborowski_CV_EN.pdf)
-[<span class="badge">⬇️ CV (Markdown)</span>](Sebastian_Ciborowski_CV_EN.docx)
+[<span class="badge">⬇️ CV (ENG, PDF)</span>](Sebastian_Ciborowski_CV_ENG.pdf)
+[<span class="badge">⬇️ CV (Markdown)</span>](cv-pl.md)
 
 
 ---
@@ -31,14 +31,14 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 <details>
 <summary>📚 Więcej (szkolenia, oceny, portfolio, pełne CV w Markdown)</summary>
 
-- [Lista szkoleń »](../achievements/szkolenia/ListaSzkolen.md)  
-- [Oceny i opis przedmiotów »](../achievements/uczelnia/README.md)  
-- [Portfolio — przegląd »](../portfolio/README.md)  
-- [Pełne CV (PL i ENG) – wersja Markdown »](cv-pl.md) 
+- [Lista szkoleń »](/achievements/szkolenia/ListaSzkolen.md)  
+- [Oceny i opis przedmiotów »](/achievements/uczelnia/README.md)  
+- [Portfolio — przegląd »](/portfolio/README.md)  
+- [Pełne CV (PL i ENG) – wersja Markdown »](cv-pl.md)
+
 </details>
 
-
-#
+##
 
 ## Kontakt
 
