@@ -1,6 +1,6 @@
 ﻿---
 title: Sebastian Ciborowski — CV & Portfolio
-description: Wizytówka: linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
+description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
 layout: default
 ---
 
@@ -29,7 +29,8 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 ---
 
 <details>
-<summary>📚 Więcej (szkolenia, oceny, portfolio, pełne CV w Markdown)</summary>
+<summary>📚 Więcej (szkolenia, oceny, portfolio, pełne CV w Markdown):</summary>
+<br>
 
 - [Lista szkoleń »](/achievements/szkolenia/ListaSzkolen.md)  
 - [Oceny i opis przedmiotów »](/achievements/uczelnia/README.md)  
@@ -38,7 +39,9 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 
 </details>
 
-##
+<br>
+
+---
 
 ## Kontakt
 

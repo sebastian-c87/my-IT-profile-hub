@@ -34,13 +34,41 @@ jobs:
         id: copy
         shell: bash
         run: |
+<<<<<<< HEAD
           set -e
           cp -f CV/PL/Sebastian_Ciborowski_CV.pdf       docs/Sebastian_Ciborowski_CV_PL.pdf
           [ -f CV/PL/Sebastian_Ciborowski_CV.docx ]      && cp -f CV/PL/Sebastian_Ciborowski_CV.docx      docs/Sebastian_Ciborowski_CV_PL.docx
           [ -f CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf ]  && cp -f CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf  docs/Sebastian_Ciborowski_CV_EN.pdf
           [ -f CV/ENG/Sebastian_Ciborowski_CV_ENG.docx ] && cp -f CV/ENG/Sebastian_Ciborowski_CV_ENG.docx docs/Sebastian_Ciborowski_CV_EN.docx
+=======
+          set -euo pipefail
+          copied=0
+>>>>>>> 9ee9cd1 (build-cv.yml update)
 
-          echo "copied=$copied" >> $GITHUB_OUTPUT
+          # PL / PDF — wymagany
+          if cp -f "CV/PL/Sebastian_Ciborowski_CV.pdf" "docs/Sebastian_Ciborowski_CV_PL.pdf"; then
+            copied=1
+          fi
+
+          # PL / DOCX — opcjonalny
+          if [ -f "CV/PL/Sebastian_Ciborowski_CV.docx" ]; then
+            cp -f "CV/PL/Sebastian_Ciborowski_CV.docx" "docs/Sebastian_Ciborowski_CV_PL.docx"
+            copied=1
+          fi
+
+          # ENG / PDF — opcjonalny
+          if [ -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf" ]; then
+            cp -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf" "docs/Sebastian_Ciborowski_CV_EN.pdf"
+            copied=1
+          fi
+
+          # ENG / DOCX — opcjonalny
+          if [ -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.docx" ]; then
+            cp -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.docx" "docs/Sebastian_Ciborowski_CV_EN.docx"
+            copied=1
+          fi
+
+          echo "copied=${copied}" >> "$GITHUB_OUTPUT"
 
       - name: Generate checksums & manifest
         if: steps.copy.outputs.copied == '1'
