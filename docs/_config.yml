@@ -3,7 +3,7 @@ theme: jekyll-theme-hacker
 
 # --- Meta / SEO  ---
 title: Sebastian Ciborowski — CV & Portfolio
-description: Krótka wizytówka: linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
+description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
 
 # --- Wykluczenia (nie renderuj tych ścieżek przez Jekyll) ---
 exclude:
