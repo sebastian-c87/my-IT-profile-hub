@@ -1,0 +1,88 @@
+﻿name: Build & Sync CV
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'cv/**'
+      - '.github/workflows/build-cv.yml'
+      - 'README.md'
+  workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Create a GitHub Release with current CV assets'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync CV files to docs/
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure docs exists
+        run: mkdir -p docs
+
+      - name: Copy CV files (PL/EN) to docs with stable names
+        id: copy
+        shell: bash
+        run: |
+          set -e
+          cp -f cv/PL/Sebastian_Ciborowski_CV.pdf       docs/Sebastian_Ciborowski_CV_PL.pdf
+          cp -f cv/PL/Sebastian_Ciborowski_CV.docx      docs/Sebastian_Ciborowski_CV_PL.docx
+          cp -f cv/ENG/Sebastian_Ciborowski_CV_ENG.pdf  docs/Sebastian_Ciborowski_CV_EN.pdf
+          cp -f cv/ENG/Sebastian_Ciborowski_CV_ENG.docx docs/Sebastian_Ciborowski_CV_EN.docx
+
+          echo "copied=$copied" >> $GITHUB_OUTPUT
+
+      - name: Generate checksums & manifest
+        if: steps.copy.outputs.copied == '1'
+        shell: bash
+        run: |
+          cd docs
+          ls -1 *.pdf *.docx 2>/dev/null | sort > MANIFEST.txt || true
+          sha256sum *.pdf *.docx > CHECKSUMS.sha256 || true
+
+      - name: Auto-commit docs/ changes
+        if: steps.copy.outputs.copied == '1'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync CV files to docs/ (auto)"
+          file_pattern: docs/*
+
+  release:
+    name: Optional Release with CV assets
+    needs: sync
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.create_release == 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Collect assets
+        shell: bash
+        run: |
+          mkdir -p dist
+          cp docs/*.pdf dist/ 2>/dev/null || true
+          cp docs/*.docx dist/ 2>/dev/null || true
+          cp docs/CHECKSUMS.sha256 dist/ 2>/dev/null || true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: cv-${{ github.run_number }}
+          name: "CV assets build #${{ github.run_number }}"
+          body: "Automated release with current CV files and checksums."
+          files: |
+            dist/*.pdf
+            dist/*.docx
+            dist/CHECKSUMS.sha256
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
