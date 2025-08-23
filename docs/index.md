@@ -4,7 +4,7 @@ description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”,
 layout: default
 ---
 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <link rel="stylesheet" href="assets/css/extra.css?v=3">
 
 
@@ -25,7 +25,7 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 [⬇️ CV (PL, PDF)](Sebastian_Ciborowski_CV_PL.pdf){:.btn}
 [⬇️ CV (PL, DOCX)](Sebastian_Ciborowski_CV_PL.docx){:.btn}
 [⬇️ CV (ENG, PDF)](Sebastian_Ciborowski_CV_ENG.pdf){:.btn}
-[<span class="btn">⬇️ CV (Markdown)</span>](cv-pl.md){:.btn}
+[<span class="btn">⬇️ CV (Markdown)</span>](cv-pl.md)
 
 
 ---
@@ -33,7 +33,7 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 <details>
   <summary>📚 Więcej…</summary>
   <ul class="links-list">
-    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener">Lista szkoleń »</a></li>
+    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener" download="Sebastian_Ciborowski_CV_PL.pdf">Lista szkoleń »</a></li>
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/uczelnia/README.md" target="_blank" rel="noopener">Oceny i opis przedmiotów »</a></li>
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/portfolio/README.md" target="_blank" rel="noopener">Portfolio — przegląd »</a></li>
     <li><a href="cv-pl.md">Pełne CV (PL) — Markdown »</a></li>
