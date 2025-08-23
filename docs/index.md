@@ -3,6 +3,8 @@ title: Sebastian Ciborowski — CV & Portfolio
 description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
 layout: default
 ---
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="assets/css/extra.css">
 
 
@@ -20,23 +22,24 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 
 ## Pobierz CV
 
-[<span class="badge">⬇️ CV (PL, PDF)</span>](Sebastian_Ciborowski_CV_PL.pdf)
-[<span class="badge">⬇️ CV (PL, DOCX)</span>](Sebastian_Ciborowski_CV_PL.docx)
-[<span class="badge">⬇️ CV (ENG, PDF)</span>](Sebastian_Ciborowski_CV_ENG.pdf)
-[<span class="badge">⬇️ CV (Markdown)</span>](cv-pl.md)
+[⬇️ CV (PL, PDF)](Sebastian_Ciborowski_CV_PL.pdf){:.btn}
+[⬇️ CV (PL, DOCX)](Sebastian_Ciborowski_CV_PL.docx){:.btn}
+[⬇️ CV (ENG, PDF)](Sebastian_Ciborowski_CV_ENG.pdf){:.btn}
+[<span class="btn">⬇️ CV (Markdown)</span>](cv-pl.md){:.btn}
 
 
 ---
 
 <details>
-  <summary>📚 Więcej (szkolenia, oceny, portfolio, pełne CV w Markdown)</summary>
-  <ul>
-    <li><a href="../achievements/szkolenia/ListaSzkolen.md">Lista szkoleń »</a></li>
-    <li><a href="../achievements/uczelnia/README.md">Oceny i opis przedmiotów »</a></li>
-    <li><a href="../portfolio/README.md">Portfolio — przegląd »</a></li>
-    <li><a href="cv-pl.md">Pełne CV (PL) — wersja Markdown »</a></li>
+  <summary>📚 Więcej…</summary>
+  <ul class="links-list">
+    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener">Lista szkoleń »</a></li>
+    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/uczelnia/README.md" target="_blank" rel="noopener">Oceny i opis przedmiotów »</a></li>
+    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/portfolio/README.md" target="_blank" rel="noopener">Portfolio — przegląd »</a></li>
+    <li><a href="cv-pl.md">Pełne CV (PL) — Markdown »</a></li>
   </ul>
 </details>
+
 
 ---
 

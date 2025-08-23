@@ -1,9 +1,35 @@
-﻿/* docs/assets/css/extra.css */
-:root { --accent: #36ff00; }
+﻿
+/* Podstawy */
 a { text-decoration: none; }
-.badge {
-  display:inline-block; padding:.45rem .7rem; border:1px solid var(--accent);
-  border-radius:.4rem; color:var(--accent); font-weight:700;
+.markdown-body details { margin: 1rem 0; }
+
+/* Akcent kolorystyczny */
+:root { --accent: #36ff00; }
+
+/* PRZYCISKI */
+.btn {
+  display:inline-block; padding:.55rem .9rem;
+  border:2px solid var(--accent); border-radius:.45rem;
+  color:var(--accent); font-weight:700; letter-spacing:.3px;
+  transition: transform .06s ease-in-out, box-shadow .06s ease-in-out, background .06s;
 }
-.badge + .badge { margin-left:.5rem; }
-.markdown-body details { margin: .8rem 0; }
+.btn + .btn { margin-left:.6rem; }
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(54,255,0,.35);
+  background: rgba(54,255,0,.08);
+}
+
+/* LISTA LINKÓW (w <details>) */
+.links-list { list-style: none; padding-left: 0; }
+.links-list li { margin:.35rem 0; }
+.links-list a {
+  display:inline-block; padding:.25rem .5rem .25rem .6rem;
+  border-left: 3px solid transparent;
+  transition: border-color .1s, color .1s, background .1s;
+}
+.links-list a:hover {
+  border-color: var(--accent);
+  background: rgba(54,255,0,.06);
+  color: var(--accent);
+}
