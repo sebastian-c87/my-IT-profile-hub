@@ -31,9 +31,10 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 ---
 
 <details>
-  <summary>📚 Więcej…</summary>
+  <summary>📚 Więcej (szkolenia, oceny, portfolio, pełne CV w Markdown):</summary>
   <ul class="links-list">
-    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener" download="Sebastian_Ciborowski_CV_PL.pdf">Lista szkoleń »</a></li>
+    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener">Lista szkoleń »</a></li>
+    <li><a href="Sebastian_Ciborowski_CV_PL.pdf" target="_blank" rel="noopener" download="Sebastian_Ciborowski_CV_PL.pdf">Test pobrania CV</a></li>
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/uczelnia/README.md" target="_blank" rel="noopener">Oceny i opis przedmiotów »</a></li>
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/portfolio/README.md" target="_blank" rel="noopener">Portfolio — przegląd »</a></li>
     <li><a href="cv-pl.md">Pełne CV (PL) — Markdown »</a></li>
