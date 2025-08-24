@@ -1,19 +1,24 @@
 ﻿a { text-decoration: none; }
 .markdown-body details { margin: 1rem 0; }
 
-:root { --accent: #00b3ff; }
+:root { --accent: #4ade80; }
 
-/* PRZYCISKI */
+/* PRZYCISKI PILLOWE */
 .btn {
-  display:inline-block; padding:.5rem .85rem; border:1px solid var(--accent);
-  border-radius:.4rem; color:var(--accent); font-weight:600;
-  transition: background .1s, color .1s;
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.55rem 1rem; border-radius:999px; border:1px solid var(--accent);
+  color:var(--accent); font-weight:700;
+  transition: background .12s, transform .06s;
 }
-.btn + .btn { margin-left:.6rem; }
-.btn:hover { background: rgba(0,179,255,.09); }
+.btn .ico { font-size:1.1em; line-height:1; }
+.btn:hover { background: rgba(74,222,128,.12); transform: translateY(-1px); }
 
-/* LISTA LINKÓW */
+/* LINKI z małą strzałką */
 .links-list { list-style: none; padding-left: 0; }
 .links-list li { margin:.35rem 0; }
-.links-list a { font-weight: 600; }
-.links-list a:hover { text-decoration: underline; color: var(--accent); }
+.links-list a { position: relative; padding-right: 1rem; }
+.links-list a:hover { color: var(--accent); }
+.links-list a:hover::after {
+  content:"↗"; position:absolute; right:.25rem; top:50%; transform: translateY(-50%);
+  font-size:.85em; opacity:.9;
+}
