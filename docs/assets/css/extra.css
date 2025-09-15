@@ -1,24 +1,219 @@
-﻿a { text-decoration: none; }
-.markdown-body details { margin: 1rem 0; }
-
-:root { --accent: #4ade80; }
-
-/* PRZYCISKI PILLOWE */
-.btn {
-  display:inline-flex; align-items:center; gap:.5rem;
-  padding:.55rem 1rem; border-radius:999px; border:1px solid var(--accent);
-  color:var(--accent); font-weight:700;
-  transition: background .12s, transform .06s;
+﻿/* ========== ZMIENNE ========== */
+:root{
+  --accent:#36ff00; --accent-2:#7cffe5; --text:#eaeaea;
+  --underline-speed:.92s;
+  --breath-dur:1.4s; --ipop-dur:1.4s;
+  --shine-dur:1.4s;
 }
-.btn .ico { font-size:1.1em; line-height:1; }
-.btn:hover { background: rgba(74,222,128,.12); transform: translateY(-1px); }
 
-/* LINKI z małą strzałką */
-.links-list { list-style: none; padding-left: 0; }
-.links-list li { margin:.35rem 0; }
-.links-list a { position: relative; padding-right: 1rem; }
-.links-list a:hover { color: var(--accent); }
-.links-list a:hover::after {
-  content:"↗"; position:absolute; right:.25rem; top:50%; transform: translateY(-50%);
-  font-size:.85em; opacity:.9;
+/* ========== BAZY ========== */
+a{ text-decoration:none; }
+.markdown-body details{ margin:1rem 0; }
+
+/* ========== ANIMACJE ========== */
+@keyframes neon-breath{
+  0%,100%{ box-shadow:0 0 18px rgba(54,255,0,.35),0 0 24px rgba(124,255,229,.15); }
+  50%    { box-shadow:0 0 26px rgba(54,255,0,.48),0 0 34px rgba(124,255,229,.25); }
+}
+@keyframes ico-pop{ 50%{ transform: translateY(-1px) scale(1.41);} }
+
+@keyframes shine{
+  0%    { transform: translateX(-150%); opacity: 0; }
+  50%   { opacity: .25; }
+  100%  { transform: translateX(150%); opacity: 0; } 
+}
+
+
+/* ========== PRZYCISKI: E-1 + border sweep na obrysie + breath/pop ========== */
+.btn-bar{
+  display: flex; flex-wrap: wrap; gap: .6rem;
+}
+
+.btn{
+  line-height: 1; white-space: nowrap;
+}
+
+.btn-bar .btn{
+  display:inline-flex; align-items:center; gap:.55rem;
+  padding:.6rem 1rem; border-radius:999px; color:var(--accent);
+  background:
+    linear-gradient(#101510,#101510) padding-box,                   /* wypełnienie */
+    linear-gradient(135deg, var(--accent), var(--accent-2)) border-box; /* kolorowy obrys */
+  border:2px solid transparent;                                     /* przezroczysty – gradient na border-box */
+  font-weight:800;
+  transition:
+    transform .08s ease,
+    color .12s ease,
+    background-position .8s linear; /* przemiatanie obrysu */
+  background-size: 100% 100%, 220% 220%;
+  background-position: 0 0, 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-bar .btn + .btn{ margin-left:0; }
+
+.btn-bar .btn:hover{
+  transform: scale(1.145);                       /* powiększenie */
+  color:#b7ffd1;                                 /* cieplejszy odcień */
+  background-position: 0 0, 100% 100%;           /* sweep obrysu */
+  animation: neon-breath var(--breath-dur) ease-in-out infinite; /* miękki „oddech” */
+}
+
+.btn-bar .btn::before{
+  content:"";
+  position:absolute; inset:0;             /* pełne pole przycisku */
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.35),                /* jasny rdzeń połysku */
+    transparent
+  );
+  transform: translateX(-150%);           /* start spoza lewej krawędzi */
+  opacity: 0;
+  pointer-events: none;                    /* nigdy nie blokuje kliknięć */
+}
+.btn-bar .btn:hover::before{
+  animation: shine var(--shine-dur) ease-in-out infinite; /* jeden przejazd */
+}
+
+/* Focus ring (klawiatura) */
+.btn-bar .btn:focus-visible{
+  outline: 3px solid rgba(54,255,0,.45);
+  outline-offset: 2px;
+}
+
+.btn .ico{
+  font-size:1.1em; transition: transform var(--ipop-dur) ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(54,255,0,.35));                 /* neon ikony */
+  display: inline-flex; align-items: center; color: var(--ico-color, white);
+}
+
+.btn:hover .ico{ animation: ico-pop var(--ipop-dur) ease-in-out infinite; }
+
+.btn .ico svg{
+  width: 1.1em;
+  height: 1.1em;
+  display: block;             /* usuwa „baseline gap” pod SVG */
+  margin-right: .4rem;
+  fill: currentColor;         /* ikona dziedziczy kolor tekstu */
+  transform: scale(var(--ico-scale, 1));  /* mikro-skalowanie poj. ikony – opcjonalne */
+  transform-origin: center;
+}
+/* Dla ikon konturowych (np. Feather/Heroicons outline), jeśli kiedyś użyjesz */
+.btn .ico svg.is-stroke{
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ========== LINKI: underline grubsze + zmiana koloru  ========== */
+.links-list{ list-style:none; padding-left:0; }
+.links-list li{ margin:.38rem 0; }
+.links-list a{
+  position:relative; color:var(--text); padding:.2rem .95rem .2rem .1rem; padding-right: 1.4rem;
+  transition: color var(--underline-speed) ease, font-weight .05s ease;
+}
+
+.links-list a::before{
+  content:"↗";
+  position:absolute; right:.2rem; top:50%;
+  transform: translateY(-50%) scale(.9);
+  opacity:0;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.links-list a:hover::before{
+  opacity:1; transform: translateY(-50%) scale(1);
+}
+
+.links-list a::after{
+  content:""; position:absolute; left:0; bottom:-2px;
+  height:2px; width:0;                                  /* start cienkie i krótkie */
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition:
+    width var(--underline-speed) ease,                  /* rozszerzanie w poziomie */
+    height var(--underline-speed) ease;                 /* pogrubienie */
+}
+.links-list a:hover{ color:var(--accent-2); font-weight:700; }
+.links-list a:hover::after{ width:100%; height:4px; }   /* pełnej szerokości i grubsze */
+
+/* ========== SUMMARY: biały/bold/20px -> akcent/kursywa po otwarciu; większa strzałka ========== */
+details>summary{
+  cursor:pointer; color:#fff; font-weight:700; font-size:20px;
+  list-style:none; position:relative; padding-right:1.7rem; padding-left:1.7rem;
+}
+details>summary::-webkit-details-marker{ display:none; }
+details>summary::before{
+  content:"▸"; position:absolute; left:0; top:50%;
+  transform:translateY(-50%) rotate(0deg); font-size:1.35em;
+  transition: transform 2s ease;
+}
+details[open]>summary{ color:var(--accent); font-style:italic; }
+details[open]>summary::before{ transform:translateY(-50%) rotate(325deg); }
+
+/* ========== ROZWIJANIE LISTY: otwieranie/zamykanie + stagger, powtarzalne ========== */
+
+/* 1) Fallback – działa wszędzie (otwieranie/zamykanie; w części przeglądarek zamknięcie może być mniej „miękkie”) */
+.links-list{
+  max-height:0;           /* zamknięte */
+  opacity:0;
+  overflow:clip;          /* lub hidden */
+  transform: translateY(-8px);
+  transition:
+    max-height .89s ease,
+    opacity   .89s ease,
+    transform .89s ease;
+}
+details[open] .links-list{
+  max-height:1000px;      /* otwarte */
+  opacity:1;
+  transform:none;
+}
+
+/* Elementy – stan bazowy (zamknięte) */
+.links-list li{
+  opacity:0;
+  transform: translateY(-2px);
+  transition: opacity .85s ease, transform .85s ease;
+}
+
+/* STAGGER „w tył” dla zamykania (wracając do tego stanu) */
+.links-list li:nth-child(1){ transition-delay: .84s; }
+.links-list li:nth-child(2){ transition-delay: .68s; }
+.links-list li:nth-child(3){ transition-delay: .42s; }
+.links-list li:nth-child(4){ transition-delay: .26s; }
+
+/* STAGGER „w przód” dla otwierania */
+details[open] .links-list li{
+  opacity:1; transform:none;
+}
+details[open] .links-list li:nth-child(1){ transition-delay: .26s; }
+details[open] .links-list li:nth-child(2){ transition-delay: .42s; }
+details[open] .links-list li:nth-child(3){ transition-delay: .68s; }
+details[open] .links-list li:nth-child(4){ transition-delay: .84s; }
+
+/* 2) Ulepszenie dla przeglądarek wspierających ::details-content i @starting-style
+      (Chromium / Safari – VS Code Preview również):
+      - miękkie ZAMYKANIE (zawartość nie chowa się natychmiast),
+      - animacja działa także przy PIERWSZYM otwarciu dzięki @starting-style. */
+@supports selector(::details-content) {
+  /* animujemy sam „kontener treści” details – działa w obie strony */
+  details::details-content{
+    opacity:0;
+    transform: translateY(-8px);
+    transition: opacity .89s ease, transform .89s ease;
+  }
+  details[open]::details-content{
+    opacity:1;
+    transform: none;
+  }
+  /* zapewnia startowe wartości dla pierwszego otwarcia (żeby nie „skakało” bez animacji) */
+  @starting-style {
+    details[open]::details-content{
+      opacity:0;
+      transform: translateY(-8px);
+    }
+  }
 }
