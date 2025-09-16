@@ -109,6 +109,33 @@ a{ text-decoration:none; }
   stroke-linejoin: round;
 }
 
+/* ===== Ikony w sekcji Kontakt (pliki .svg ładowane przez <img>) ===== */
+.contact-ico{
+  height: 1.05em;       /* ikona = wysokość tekstu */
+  width: auto;          /* zachowaj proporcje */
+  vertical-align: -0.18em; /* naturalne „posadzenie” na linii tekstu */
+  margin-right: .40rem; /* odstęp od tekstu po prawej */
+  display: inline-block;
+}
+.contact-ico--tail{     /* ikona „na końcu wiersza”, np. aparat po numerze */
+  margin-left: .35rem;
+  margin-right: 0;
+  vertical-align: -0.18em;
+  height: 1.05em;
+  display: inline-block;
+}
+.contact-ico--tail2{     /* ikona „na końcu wiersza”, np. aparat po numerze */
+  margin-left: .35rem;
+  margin-right: 0;
+  vertical-align: -0.18em;
+  height: 1.55em;
+  display: inline-block;
+}
+/* (opcjonalnie) drobne warianty rozmiaru, gdyby pojedynczy piktogram wymagał korekty */
+.contact-ico--sm{ height: .95em; }
+.contact-ico--md{ height: 1.15em; }
+
+
 /* ========== LINKI: underline grubsze + zmiana koloru  ========== */
 .links-list{ list-style:none; padding-left:0; }
 .links-list li{ margin:.38rem 0; }
