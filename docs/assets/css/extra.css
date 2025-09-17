@@ -230,7 +230,7 @@ details[open] .links-list li:nth-child(4){ transition-delay: .84s; }
   details::details-content{
     opacity:0;
     transform: translateY(-8px);
-    transition: opacity .89s ease, transform .89s ease;
+    transition: opacity 2.89s ease, transform 2.89s ease;
   }
   details[open]::details-content{
     opacity:1;
