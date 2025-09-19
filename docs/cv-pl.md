@@ -1,4 +1,13 @@
-﻿# Sebastian Ciborowski — CV (PL)
+﻿---
+title: Sebastian Ciborowski — CV & Portfolio
+description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
+layout: default
+---
+
+
+<link rel="stylesheet" href="assets/css/extra.css?v=4">
+
+# Sebastian Ciborowski — CV (PL)
 
 **Junior Backend Developer • Prompt Engineer • Specjalista Cyber Security**
 
