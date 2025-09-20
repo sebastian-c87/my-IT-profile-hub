@@ -1,12 +1,12 @@
-﻿<center> 
+﻿<div align="center"> 
 
 # Sebastian Ciborowski — CV & Portfolio
-</center>
+</div>
 
-<center>
+<div align="center">
 
 [![Pobierz CV (PDF)](https://img.shields.io/badge/Sebastian_Ciborowski_CV-PDF-DD0031?style=flat&logo=readme&logoColor=white)](CV/PL/Sebastian_Ciborowski_CV.pdf) &ensp; [![Pages](https://img.shields.io/badge/GitHub_Pages-About-2088FF?style=flat&logo=github)](https://sebastian-c87.github.io/my-IT-profile-hub/)
-</center>
+</div>
 
 ## O mnie
 
@@ -15,10 +15,11 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 ## SKILLS 
 
 ![Skills Row 1](https://skillicons.dev/icons?i=py,java,cs,js,ts,html,angular,css,react,aiscript,spring,flask,fastapi,dotnet,pytorch,ai,linkedin,twitter,discord&perline=40)
+
 ![Skills Row 2](https://skillicons.dev/icons?i=git,github,gitlab,githubactions,docker,postman,vscode,idea,visualstudio,mysql,postgres,sqlite,mongodb,linux,ubuntu,windows,bash,md,stackoverflow&perline=40)
 
 
-<img src="https://skillicons.dev/icons?i=py,java,cs,js,html,css,git,github,githubactions,idea,visualstudio,ai,vscode,postman,docker,mysql,postgres,sqlite,linux,bash,spring,flask,fastapi,dotnet,angular,react,ts,gitlab&perline=50" alt="Skills" height="30" /> 
+
 
 - **Języki:** Python, Java, C#, SQL, JS/HTML/CSS
 - **Dev Tools:** Git (Github Actions), IntelliJ, Visual Studio, VS Code, Postman, Docker, SQL Server, Colab
