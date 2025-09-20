@@ -11,7 +11,7 @@
 Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, tworzenia struktury projektu, przez kod i testy, po dokumentację i wdrożenia. Profesjonalnie korzystam z AI – projektuję precyzyjne prompty (rola, format, kryteria), buduję wyspecjalizowanych agentów i spinam je automatyzacjami oraz mechanizmami RAG, używając zaawansowanych narzędzi. Moją specjalizacją na studiach jest cyberbezpieczeństwo i w tym kierunku dodatkowo się rozwijam, szkoląc się w Sekurak.Academy. Wnoszę do zespołu energię, komunikację i nawyk planowania pracy z wyprzedzeniem. Korzystam z doświadczenia biznesowego – potrafię rozmawiać z interesariuszami, organizować sprinty, porządkować priorytety i zamykać tematy w terminie.  
 
 ## SKILLS 
-<img src="https://skillicons.dev/icons?i=py,java,cs,js,html,css,git,githubactions,idea,visualstudio,vscode,postman,docker,mysql,postgres,sqlite,linux,bash,spring,flask,fastapi,dotnet,angular,react,ts,openai&perline=50" alt="Skills" height="30" /> 
+<img src="https://skillicons.dev/icons?i=py,java,cs,js,html,css,git,github,githubactions,idea,visualstudio,vscode,postman,docker,mysql,postgres,sqlite,linux,bash,spring,flask,fastapi,dotnet,angular,react,ts,openai&perline=50" alt="Skills" height="30" /> 
 
 - **Języki:** Python, Java, C#, SQL, JS/HTML/CSS
 - **Dev Tools:** Git (Github Actions), IntelliJ, Visual Studio, VS Code, Postman, Docker, SQL Server, Colab
@@ -38,7 +38,7 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 | <img src="docs/assets/icons/2.svg"  width="32" alt=""> | Specialist in CyberSecurity, Python & AI | <img src="docs/assets/icons/2a.svg" width="32" alt=""> |
 | <img src="docs/assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="docs/assets/icons/3a.svg" width="32" alt=""> |
 | <img src="docs/assets/icons/4.svg"  width="22" alt=""> | +48 539 298 079 | <img src="docs/assets/icons/4a.svg" width="32" alt=""> |
-| <img src="docs/assets/icons/5d.svg" width="22" alt=""> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="docs/assets/icons/5b.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/5d.svg#gh-dark-mode-only" width="22" alt=""> <img src="docs/assets/icons/5l.svg#gh-light-mode-only" width="22"> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="docs/assets/icons/5b.svg#gh-dark-mode-only" width="32" alt=""><img src="docs/assets/icons/5f.svg#gh-light-mode-only" width="32"> |
 | <img src="docs/assets/icons/6.svg"  width="22" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="docs/assets/icons/6a.svg" width="32" alt=""> |
 | <img src="docs/assets/icons/g.svg" width="22" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="docs/assets/icons/g1.svg"  width="33" alt=""> |
 
