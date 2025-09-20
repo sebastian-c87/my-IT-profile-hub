@@ -13,11 +13,13 @@ Structure: · title · provider · scope ·
 
 **Tech/Tools:** ✍️ Markdown · 🧾 PDF (optional)
 
-## 
+---
+## STUDENT OF VISTULA UNIVERSITY
+
 
 **Sebastian Ciborowski**
 - 🎓 Computer Science Student & IT Enthusiast
-- 💼 Specialization in CyberSecurity, Python & AI
+- 💼 Specialist in CyberSecurity, Python & AI
 - 🏢 Warszawa, Polska
 - 📞 +48 539 298 079
 - 🔗 GitHub: [@sebastian-c87](https://github.com/sebastian-c87)

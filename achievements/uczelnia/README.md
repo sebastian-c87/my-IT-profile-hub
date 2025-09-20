@@ -27,7 +27,7 @@ The study progress card downloaded from the USOS university system: `Arkusz_ocen
 
 **Sebastian Ciborowski**
 - 🎓 Computer Science Student & IT Enthusiast
-- 💼 Specialization in CyberSecurity, Python & AI
+- 💼 Specialist in CyberSecurity, Python & AI
 - 🏢 Warszawa, Polska
 - 📞 +48 539 298 079
 - 🔗 GitHub: [@sebastian-c87](https://github.com/sebastian-c87)

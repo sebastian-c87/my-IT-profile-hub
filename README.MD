@@ -1,11 +1,18 @@
-﻿# Sebastian Ciborowski — CV & Portfolio [README DRAFT]
+﻿# Sebastian Ciborowski — CV & Portfolio
 
-[⬇️ Pobierz CV (PDF)](cv/PL/Sebastian_Ciborowski_CV.pdf) · [⬇️ DOCX](cv/PL/Sebastian_Ciborowski_CV.docx)
+
+<div align="center">
+
+[![Pobierz CV (PDF)](https://img.shields.io/badge/Sebastian_Ciborowski_CV-PDF-DD0031?style=flat&logo=readme&logoColor=white)](CV/PL/Sebastian_Ciborowski_CV.pdf) &ensp; [![Pages](https://img.shields.io/badge/GitHub_Pages-About-2088FF?style=flat&logo=github)](https://sebastian-c87.github.io/my-IT-profile-hub/)
+</div>
 
 ## O mnie
-Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, tworzenia struktury projektu, przez kod i testy, po dokumentację i wdrożenia. Profesjonalnie korzystam z AI – projektuję precyzyjne prompty (rola, format, kryteria), buduję wyspecjalizowanych agentów i spinam je automatyzacjami oraz mechanizmami RAG, używając zaawansowanych narzędzi. Moją specjalizacją na studiach jest cyberbezpieczeństwo i w tym kierunku dodatkowo się rozwijam, szkoląc się w Sekurak.Academy. Wnoszę do zespołu energię, komunikację i nawyk planowania pracy z wyprzedzeniem. Korzystam z doświadczenia biznesowego – potrafię rozmawiać z interesariuszami, organizować sprinty, porządkować priorytety i zamykać tematy w terminie.  <!-- cytat 1:1 z CV -->
 
-## Umiejętności techniczne 
+Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, tworzenia struktury projektu, przez kod i testy, po dokumentację i wdrożenia. Profesjonalnie korzystam z AI – projektuję precyzyjne prompty (rola, format, kryteria), buduję wyspecjalizowanych agentów i spinam je automatyzacjami oraz mechanizmami RAG, używając zaawansowanych narzędzi. Moją specjalizacją na studiach jest cyberbezpieczeństwo i w tym kierunku dodatkowo się rozwijam, szkoląc się w Sekurak.Academy. Wnoszę do zespołu energię, komunikację i nawyk planowania pracy z wyprzedzeniem. Korzystam z doświadczenia biznesowego – potrafię rozmawiać z interesariuszami, organizować sprinty, porządkować priorytety i zamykać tematy w terminie.  
+
+## SKILLS 
+<img src="https://skillicons.dev/icons?i=py,java,cs,js,html,css,git,githubactions,idea,visualstudio,vscode,postman,docker,mysql,postgres,sqlite,linux,bash,spring,flask,fastapi,dotnet,angular,react,ts,openai&perline=50" alt="Skills" height="30" /> 
+
 - **Języki:** Python, Java, C#, SQL, JS/HTML/CSS
 - **Dev Tools:** Git (Github Actions), IntelliJ, Visual Studio, VS Code, Postman, Docker, SQL Server, Colab
 - **CyberSec:** Wireshark, GNS3, OSINT, Wazuh(podst.), Metasploit(podst.), AES, SHA256, base64, hashcat, Sekurak Academy – społeczność.
@@ -15,25 +22,27 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 - **Systemy i sieci:** Linux(Ubuntu, OpenSUSE), Windows (Server)/ TCP/IP, DNS/HTTP, VLAN/ACL, Cisco, Oracle VirtualBox
 - **Inżynieria Oprogramowania:** Markdown, Mermaid, PlantUML, draw.io, UML, MS Office, analiza projektu, diagram SWOT, szczegółowe planowanie wdrożenia
 
-## Certyfikaty i szkolenia
-Zobacz: [`achievements/certyfikaty/`](achievements/certyfikaty/) oraz [`achievements/szkolenia/`](achievements/szkolenia/).
 
-- HexArcana – Wstęp do Python (Securitum)
-- Dyplom Sekurak.Academy (Sem. I i II 2024, I 2025 + II w trakcie)
-- Securitum – Automatyzacja AI / Narzędziownik AI / Poznaj AI
-- Navoica – Podstawy AI
-- Securitum – Zawód Pentester
-- 08.09.2025 – start programu „Umiejętności Jutra: AI 2.0” (Google+SGH)
+## Szybkie linki
+- <img src="docs/assets/icons/5d.svg" width="15"> &emsp; [Lista Publicznych Repozytoriów](docs/cv-pl.md) <img src="docs/assets/icons/5b.svg" width="15">
+- <img src="docs/assets/icons/p.svg" width="15">  &emsp;[Portfolio](portfolio/) — mini apps, prompts & agents, www, graph
+- <img src="docs/assets/icons/c2.svg" width="15" alt=""> &emsp; [Szkolenia](achievements/szkolenia/ListaSzkolen.md)  &emsp; • &emsp; [Certyfikaty](achievements/certyfikaty/)&emsp;<img src="docs/assets/icons/c.svg" width="15">
 
-## Kontakt
+# Kontakt
 
-- 🏢 Polska, Warszawa
+**Sebastian Ciborowski**
 
-- 📞 +48 539 298 079
-- ✉️ ciborowski.s@gmail.com
-- 🐙 GitHub: https://github.com/sebastian-c87
+|  |  |  |
+|:--:|:---:|:--:|
+| <img src="docs/assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="docs/assets/icons/1.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/2.svg"  width="32" alt=""> | Specialist in CyberSecurity, Python & AI | <img src="docs/assets/icons/2a.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="docs/assets/icons/3a.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/4.svg"  width="22" alt=""> | +48 539 298 079 | <img src="docs/assets/icons/4a.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/5d.svg" width="22" alt=""> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="docs/assets/icons/5b.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/6.svg"  width="22" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="docs/assets/icons/6a.svg" width="32" alt=""> |
+| <img src="docs/assets/icons/g.svg" width="22" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="docs/assets/icons/g1.svg"  width="33" alt=""> |
 
-<br>
+
 
 ---
 
