@@ -41,7 +41,7 @@ Jako pasjonat IT i AI lubię pracę end-to-end: od doprecyzowania wymagań, twor
 ### **Sebastian Ciborowski**
 
 |  |  |  |
-|:--|:---:|--:|
+|:--:|:---:|:--:|
 | <img src="docs/assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="docs/assets/icons/1.svg" width="32" alt=""> |
 | <img src="docs/assets/icons/2.svg"  width="32" alt=""> | Specialist in CyberSecurity, Python & AI | <img src="docs/assets/icons/2a.svg" width="32" alt=""> |
 | <img src="docs/assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="docs/assets/icons/3a.svg" width="32" alt=""> |
