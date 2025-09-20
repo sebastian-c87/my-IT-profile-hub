@@ -29,14 +29,14 @@ layout: default
 
 ## UMIEJĘTNOŚCI TECHNICZNE
 
-**Języki:** Python, Java, C#, SQL, JS/HTML/CSS 
+**Języki:** Python, Java, C#, SQL, JS/HTML/CSS  
 **Dev Tools:** Git (GitHub Actions), IntelliJ, Visual Studio, VS Code, Postman, Docker, SQL Server, Google Colab  
 **CyberSec:** Wireshark, GNS3, OSINT, Wazuh (podst.), Metasploit (podst.), AES, SHA-256, base64, hashcat, społeczność Sekurak Academy  
 **Backend:** Spring Boot (REST, API), Thymeleaf, Lombok, Flask/FastAPI, Swagger/OpenAPI, .NET, ASP.NET Core, .NET MAUI, Cryptography  
 **Desktop/GUI:** (Custom)Tkinter, Kivy, Angular/React (podst.) (JS/TS), NetworkX, Matplotlib  
 **AI/LLM:** OpenAI API, RAG + embeddings, Perplexity Spaces + specjalni agenci, multi-models, prompt engineering (role, restrykcje, styl), n8n/Make, Hugging Face, Gamma, Bolt.new, Sona, Canva + Narzędziownik AI  
 **SYSTEMY I SIECI:** Linux (Ubuntu, OpenSUSE), Windows (Server) / TCP/IP, DNS/HTTP, VLAN/ACL, Cisco, Oracle VirtualBox  
-**INŻYNIERIA OPROGRAMOWANIA:** Markdown, Mermaid, PlantUML, draw.io, UML, MS Office, analiza projektu, diagram SWOT, szczegółowe planowanie wdrożenia
+**INŻYNIERIA OPROGRAMOWANIA:** Markdown, Mermaid, PlantUML, draw.io, UML, MS Office, analiza projektu, diagram SWOT, szczegółowe planowanie wdrożenia  
 
 ## USES SKILLS
 
@@ -117,7 +117,7 @@ layout: default
 
 ---
 
-## CERTYFIKATY / SZKOLENIA - więcej w repo:[![Cret](https://img.shields.io/badge/My--IT--profile--hub-Achievements-2088FF?style=flat&logo=github&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements) 
+## CERTYFIKATY / SZKOLENIA - więcej w repo: &emsp; [![Cret](https://img.shields.io/badge/My--IT--profile--hub-Achievements-2088FF?style=flat&logo=github&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements) 
 - **HexArcana** — Wstęp do Python (Securitum)  
 - **Sekurak.Academy** — Semestr I i II 2024, I 2025 + II w trakcie *(lista szkoleń i certyfikatów dostępna w repo)*  
 - **Securitum** — Automatyzacja AI (T. Turba)  
@@ -196,10 +196,10 @@ Sport, forex/crypto, AI, IT, muzyka, stand-up, nowe technologie, podróże
 | <img src="assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="assets/icons/1.svg" width="32" alt=""> |
 | <img src="assets/icons/2.svg"  width="32" alt=""> | Specialization in CyberSecurity, Python & AI | <img src="assets/icons/2a.svg" width="32" alt=""> |
 | <img src="assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="assets/icons/3a.svg" width="32" alt=""> |
-| <img src="assets/icons/4.svg"  width="22" alt=""> | +48 539 298 079 | <img src="assets/icons/4a.svg" width="32" alt=""> |
-| <img src="assets/icons/5d.svg" width="22" alt=""> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="assets/icons/5b.svg" width="32" alt=""> |
-| <img src="assets/icons/6.svg"  width="22" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="assets/icons/6a.svg" width="32" alt=""> |
-| <img src="assets/icons/g.svg" width="22" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="assets/icons/g1.svg"  width="33" alt=""> |
+| <img src="assets/icons/4.svg"  width="32" alt=""> | +48 539 298 079 | <img src="assets/icons/4a.svg" width="32" alt=""> |
+| <img src="assets/icons/5d.svg" width="32" alt=""> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="assets/icons/5b.svg" width="32" alt=""> |
+| <img src="assets/icons/6.svg"  width="32" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="assets/icons/6a.svg" width="32" alt=""> |
+| <img src="assets/icons/g.svg" width="32" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="assets/icons/g1.svg"  width="33" alt=""> |
 
 ---
 ---
