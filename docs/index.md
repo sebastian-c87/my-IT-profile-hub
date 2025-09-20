@@ -42,7 +42,7 @@ Pasjonuję się **CyberSecurity**, dlatego w tle zawsze pracuje **warstwa bezpie
    <summary> <div style="text-align: center"> <img src="assets/icons/8.svg" alt="" class="contact-ico"> Więcej (szkolenia, oceny, portfolio, repositories): </div> </summary><br>
   <ul class="links-list">
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener">Lista szkoleń »</a></li>
-    <li><a href="ListaZajec.md" rel="noopener">Oceny i opis przedmiotów »</a></li>
+    <li><a href="./ListaZajec.html" rel="noopener">Oceny i opis przedmiotów »</a></li>
     <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/portfolio/README.md" target="_blank" rel="noopener">Portfolio — przegląd »</a></li>
     <li><a href="https://github.com/sebastian-c87?tab=repositories" target="_blank" rel="noopener">My Repositories »</a></li>  
     <li><a href="" target="_blank" rel="noopener"></a></li>

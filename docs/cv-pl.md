@@ -17,7 +17,7 @@ layout: default
 - Warszawa, Polska  
 - Telefon: +48 539 298 079  
 - Email: ciborowski.s@gmail.com  
-- GitHub: https://github.com/sebastian-c87
+- GitHub: [https://github.com/sebastian-c87](https://github.com/sebastian-c87)
 
 ---
 
