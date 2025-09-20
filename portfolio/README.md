@@ -1,37 +1,41 @@
 ﻿# Portfolio
-Folder zawierający pracę nad projektami w różnych kategoriach.<br>
+
+Folder zawierający pracę nad projektami w różnych kategoriach.
+<br>
 - **www** - projekty stron internetowych html/css/js + API
 - **code** - prace programistyczne różnych aplikacji
 - **AI** - przedstawia umiejętności korzystania z wielu narzędzi AI [agents, prompts, API]
 - **Graphics** - zabawa grafikami
+
 <br>
-<br>
-<br>
----
----
----
----
 <br>
 
-## 🇵🇱 Portfolio — www
+
+---
+---
+---
+
+<br>
+
+## 🇵🇱 Portfolio – www
 Przykładowe strony/aplikacje web (każda w osobnym podfolderze).  
-Szablon opisu: **Cel → Stack → Zakres → Rezultat**.
+
 
 **Tech/Tools:** 🌐 HTML/CSS/JS · 🍃 Spring/Thymeleaf (gdzie dotyczy) · 🐙 Git
 
-## 🇵🇱 Portfolio — code
-Małe, użyteczne skrypty/narzędzia (1 podfolder = 1 mini-projekt).  
-Dodawaj `README.md` z uruchomieniem i przykładem użycia.
+## 🇵🇱 Portfolio – code
+Małe, użyteczne skrypty/narzędzia wraz z wyjaśnionym kodem(1 podfolder = 1 mini-projekt).  
+Dodatkowe `README.md` z instrukcją uruchomienia oraz korzystania i przykładem użycia.
 
-**Tech/Tools:** 🐍 Python · ☕ Java · 🧱 C# · 🧪 Tests (opcjonalnie)
+**Tech/Tools:** 🐍 Python · ☕ Java · 🧱 C# · 🧪 Tests 
 
-## 🇵🇱 Portfolio — AI
+## 🇵🇱 Portfolio – AI
 Przykłady: **prompts**, **agents**, **API** (kod + opis), **demos** (np. RAG).  
-Zachowuj dane wejściowe/wyjściowe i wersje modeli, jeśli to możliwe.
+Opisy danych wejściowych/wyjściowych i używanych modeli.
 
-**Tech/Tools:** 🤖 OpenAI API · 📚 RAG/embeddings · 🔗 n8n/Make (opcjonalnie) · 🐍 Python
+**Tech/Tools:** 🤖 OpenAI API · 📚 RAG/embeddings · 🔗 n8n/Make  · 🐍 Python
 
-## 🇵🇱 Portfolio — graphics
+## 🇵🇱 Portfolio – graphics
 Wybrane grafiki (PNG/JPG) z krótkim opisem kontekstu i narzędzi.
 
 **Tech/Tools:** 🖼️ PNG/JPG · 🎨 Canva
@@ -39,25 +43,26 @@ Wybrane grafiki (PNG/JPG) z krótkim opisem kontekstu i narzędzi.
 ---
 
 ---
-## 🇬🇧 Portfolio — www
+
+## 🇬🇧 Portfolio – www
 Sample websites/web apps (each in its own subfolder).  
-Description template: **Goal → Stack → Scope → Outcome**.
+
 
 **Tech/Tools:** 🌐 HTML/CSS/JS · 🍃 Spring/Thymeleaf (where applicable) · 🐙 Git
 
 
 
 ---
-## 🇬🇧 Portfolio — code
+## 🇬🇧 Portfolio – code
 Small, useful scripts/tools (1 subfolder = 1 mini-project).  
-Add a `README.md` with run steps and example usage.
+With a `README.md` with run steps and example usage.
 
-**Tech/Tools:** 🐍 Python · ☕ Java · 🧱 C# · 🧪 Tests (optional)
+**Tech/Tools:** 🐍 Python · ☕ Java · 🧱 C# · 🧪 Tests
 
 
 
 ---
-## 🇬🇧 Portfolio — graphics
+## 🇬🇧 Portfolio – graphics
 Selected artworks (PNG/JPG) with short context and tools info.
 
 **Tech/Tools:** 🖼️ PNG/JPG · 🎨 Canva
@@ -65,23 +70,33 @@ Selected artworks (PNG/JPG) with short context and tools info.
 
 
 ---
-## 🇬🇧 Portfolio — AI
+## 🇬🇧 Portfolio – AI
 Examples: **prompts**, **agents**, **API** (code + notes), **demos** (e.g., RAG).  
-Keep inputs/outputs and model versions when possible.
 
-**Tech/Tools:** 🤖 OpenAI API · 📚 RAG/embeddings · 🔗 n8n/Make (optional) · 🐍 Python
+
+**Tech/Tools:** 🤖 OpenAI API · 📚 RAG/embeddings · 🔗 n8n/Make · 🐍 Python
 
 ---
 ---
-## Author
+
+# Author
 
 **Sebastian Ciborowski**
-- 🎓 Computer Science Student & IT Enthusiast
-- 💼 Specialization in CyberSecurity, Python & AI
-- 🏢 Warszawa, Polska
-- 📞 +48 539 298 079
-- 🔗 GitHub: [@sebastian-c87](https://github.com/sebastian-c87)
-- 💼 LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/)
+
+|  |  |  |
+|:--:|:---:|:--:|
+| <img src="../docs/assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="../docs/assets/icons/1.svg" width="32" alt=""> |
+| <img src="../docs/assets/icons/2.svg"  width="32" alt=""> | Specialist in CyberSecurity, Python & AI | <img src="../docs/assets/icons/2a.svg" width="32" alt=""> |
+| <img src="../docs/assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="../docs/assets/icons/3a.svg" width="32" alt=""> |
+| <img src="../docs/assets/icons/4.svg"  width="32" alt=""> | +48 539 298 079 | <img src="../docs/assets/icons/4a.svg" width="32" alt=""> |
+| <img src="../docs/assets/icons/5d.svg#gh-dark-mode-only" width="32" alt=""> <img src="../docs/assets/icons/5l.svg#gh-light-mode-only" width="32"> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="../docs/assets/icons/5b.svg#gh-dark-mode-only" width="32" alt=""><img src="../docs/assets/icons/5f.svg#gh-light-mode-only" width="32"> |
+| <img src="../docs/assets/icons/6.svg"  width="32" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="../docs/assets/icons/6a.svg" width="32" alt=""> |
+| <img src="../docs/assets/icons/g.svg" width="32" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="../docs/assets/icons/g1.svg"  width="33" alt=""> |
 
 
-- ✉️ ciborowski.s@gmail.com
+
+---
+
+---
+---
+
