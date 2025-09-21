@@ -41,9 +41,9 @@ Pasjonuję się **CyberSecurity**, dlatego w tle zawsze pracuje **warstwa bezpie
 <details>
    <summary> <div style="text-align: center"> <img src="assets/icons/8.svg" alt="" class="contact-ico"> Więcej (szkolenia, oceny, portfolio, repositories): </div> </summary><br>
   <ul class="links-list">
-    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/szkolenia/ListaSzkolen.md" target="_blank" rel="noopener">Lista szkoleń »</a></li>
-    <li><a href="./ListaZajec.html" rel="noopener">Oceny i opis przedmiotów »</a></li>
-    <li><a href="https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/portfolio/README.md" target="_blank" rel="noopener">Portfolio — przegląd »</a></li>
+    <li><a href="./Lista_Szkolen.html" rel="noopener">Lista szkoleń »</a></li>
+    <li><a href="./Opis_Zajec.html" rel="noopener">Oceny i opis przedmiotów »</a></li>
+    <li><a href="./Portfolio.html" rel="noopener">Portfolio — przegląd »</a></li>
     <li><a href="https://github.com/sebastian-c87?tab=repositories" target="_blank" rel="noopener">My Repositories »</a></li>  
     <li><a href="" target="_blank" rel="noopener"></a></li>
   </ul>
@@ -53,7 +53,7 @@ Pasjonuję się **CyberSecurity**, dlatego w tle zawsze pracuje **warstwa bezpie
 
 # Kontakt
 
-**Sebastian Ciborowski**
+### **Sebastian Ciborowski**
 - <img src="assets/icons/1a.svg" alt="" class="contact-ico"> Computer Science Student & IT Enthusiast <img src="assets/icons/1.svg" alt="" class="contact-ico--tail2">
 - <img src="assets/icons/2.svg" alt="" class="contact-ico"> Specialization in CyberSecurity, Python & AI <img src="assets/icons/2a.svg" alt="" class="contact-ico--tail2">
 - <img src="assets/icons/3.svg" alt="" class="contact-ico"> Warszawa, Polska <img src="assets/icons/3a.svg" alt="" class="contact-ico--tail2">
