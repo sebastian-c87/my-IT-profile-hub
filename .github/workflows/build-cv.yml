@@ -5,6 +5,12 @@ on:
     branches: [ main ]
     paths:
       - 'CV/**'
+      - 'achievements/szkolenia/ListaSzkolen.md'
+      - 'achievements/uczelnia/OpisZajęć.md'
+      - 'achievements/uczelnia/OpisZajec.md'
+      - 'portfolio/README.md'
+      - 'portfolio/portfolio.md'
+      - 'CV/cv-multilang.md'
       - '.github/workflows/build-cv.yml'
       - 'README.md'
   workflow_dispatch:
@@ -35,46 +41,72 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          export LANG=C.UTF-8
           copied=0
 
-          # PL / PDF — wymagany
-          if cp -f "CV/PL/Sebastian_Ciborowski_CV.pdf" "docs/Sebastian_Ciborowski_CV_PL.pdf"; then
-            copied=1
-          fi
+          copy_if_exists () {
+            local src="$1"; local dst="$2"
+            if [ -f "$src" ]; then
+              cp -f "$src" "$dst"
+              echo "✔ $src -> $dst"
+              copied=1
+            else
+              echo "… (skip) $src (not found)"
+            fi
+          }
 
-          # PL / DOCX — opcjonalny
-          if [ -f "CV/PL/Sebastian_Ciborowski_CV.docx" ]; then
-            cp -f "CV/PL/Sebastian_Ciborowski_CV.docx" "docs/Sebastian_Ciborowski_CV_PL.docx"
-            copied=1
-          fi
+          # --- CV (jak masz) ---
+          copy_if_exists "CV/PL/Sebastian_Ciborowski_CV.pdf"       "docs/Sebastian_Ciborowski_CV_PL.pdf"
+          copy_if_exists "CV/PL/Sebastian_Ciborowski_CV.docx"      "docs/Sebastian_Ciborowski_CV_PL.docx"
+          copy_if_exists "CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf"  "docs/Sebastian_Ciborowski_CV_EN.pdf"
+          copy_if_exists "CV/ENG/Sebastian_Ciborowski_CV_ENG.docx" "docs/Sebastian_Ciborowski_CV_EN.docx"
 
-          # ENG / PDF — opcjonalny
-          if [ -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf" ]; then
-            cp -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.pdf" "docs/Sebastian_Ciborowski_CV_EN.pdf"
-            copied=1
-          fi
-
-          # ENG / DOCX — opcjonalny
-          if [ -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.docx" ]; then
-            cp -f "CV/ENG/Sebastian_Ciborowski_CV_ENG.docx" "docs/Sebastian_Ciborowski_CV_EN.docx"
-            copied=1
-          fi
+          # --- Nowe treści (mirror do /docs) ---
+          copy_if_exists "achievements/szkolenia/ListaSzkolen.md"       "docs/Lista_Szkolen.md"
+          copy_if_exists "achievements/uczelnia/OpisZajęć.md"           "docs/Opis_Zajec.md"
+          copy_if_exists "achievements/uczelnia/OpisZajec.md"           "docs/Opis_Zajec.md"   # fallback bez diakrytyków
+          copy_if_exists "portfolio/README.md"                          "docs/Portfolio.md"
+          copy_if_exists "portfolio/portfolio.md"                       "docs/Portfolio.md"    # alternatywa
+          copy_if_exists "CV/cv-multilang.md"                           "docs/cv-cv.md"
 
           echo "copied=${copied}" >> "$GITHUB_OUTPUT"
 
+                # ⬇⬇⬇ NOWY KROK — NORMALIZACJA ŚCIEŻEK DO IKON (tylko gdy coś skopiowano) ⬇⬇⬇
+      - name: Normalize icon paths for Pages
+        if: steps.copy.outputs.copied == '1'
+        shell: bash
+        run: |
+          normalize_md () {
+            f="$1"
+            [ -f "$f" ] || return 0
+            # Najpierw najbardziej zagnieżdżone warianty, potem płytsze:
+            sed -i \
+              -e 's|\.\./\.\./docs/assets/|assets/|g' \
+              -e 's|\.\./docs/assets/|assets/|g' \
+              -e 's|docs/assets/|assets/|g' \
+              "$f"
+          }
+
+          # Podmień ścieżki w skopiowanych plikach docelowych (w docs/)
+          normalize_md docs/Lista_Szkolen.md   || true
+          normalize_md docs/Portfolio.md       || true
+          normalize_md docs/Opis_Zajec.md      || true
+          # (opcjonalnie) jeśli kopiujesz inne *.md do docs/, dodaj je tutaj:
+          # normalize_md docs/cv-cv.md || true
+          
       - name: Generate checksums & manifest
         if: steps.copy.outputs.copied == '1'
         shell: bash
         run: |
           cd docs
-          ls -1 *.pdf *.docx 2>/dev/null | sort > MANIFEST.txt || true
-          sha256sum *.pdf *.docx > CHECKSUMS.sha256 || true
+          { ls -1 *.pdf 2>/dev/null; ls -1 *.docx 2>/dev/null; ls -1 *.md 2>/dev/null; } | sort > MANIFEST.txt || true
+          { [ -n "$(ls -1 *.pdf 2>/dev/null)" ] || [ -n "$(ls -1 *.docx 2>/dev/null)" ]; } && sha256sum *.pdf *.docx > CHECKSUMS.sha256 || true
 
       - name: Auto-commit docs/ changes
         if: steps.copy.outputs.copied == '1'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: sync CV files to docs/ (auto)"
+          commit_message: "chore: sync CV + public content to /docs (auto)"
           file_pattern: docs/*
 
   release:
