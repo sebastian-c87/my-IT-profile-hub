@@ -1,1 +1,6 @@
+Lista_Szkolen.md
+Opis_Zajec.md
+Portfolio.md
 Sebastian_Ciborowski_CV_PL.pdf
+cv-pl.md
+index.md
