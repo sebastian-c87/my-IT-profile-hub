@@ -89,7 +89,7 @@ Examples: **prompts**, **agents**, **API** (code + notes), **demos** (e.g., RAG)
 | <img src="assets/icons/2.svg"  width="32" alt=""> | Specialist in CyberSecurity, Python & AI | <img src="assets/icons/2a.svg" width="32" alt=""> |
 | <img src="assets/icons/3.svg"  width="32" alt=""> | Warszawa, Polska | <img src="assets/icons/3a.svg" width="32" alt=""> |
 | <img src="assets/icons/4.svg"  width="32" alt=""> | +48 539 298 079 | <img src="assets/icons/4a.svg" width="32" alt=""> |
-| <img src="assets/icons/5d.svg#gh-dark-mode-only" width="32" alt=""> <img src="assets/icons/5l.svg#gh-light-mode-only" width="32"> | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="assets/icons/5b.svg#gh-dark-mode-only" width="32" alt=""><img src="assets/icons/5f.svg#gh-light-mode-only" width="32"> |
+| <img src="assets/icons/5d.svg" width="32" alt="">  | GitHub: [@sebastian-c87](https://github.com/sebastian-c87) | <img src="assets/icons/5b.svg" width="32" alt=""> |
 | <img src="assets/icons/6.svg"  width="32" alt=""> | LinkedIn: [Sebastian Ciborowski](https://www.linkedin.com/in/sebastian-ciborowski-8442a6302/) | <img src="assets/icons/6a.svg" width="32" alt=""> |
 | <img src="assets/icons/g.svg" width="32" alt=""> | Mail Me: [ciborowski.s@gmail.com](mailto:ciborowski.s@gmail.com) | <img src="assets/icons/g1.svg"  width="33" alt=""> |
 
