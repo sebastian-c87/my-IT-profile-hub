@@ -3,11 +3,9 @@
 
 Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> 
 
-<center> 
-
 [![PDF](https://img.shields.io/badge/Certyficates_list-PDFs-EA1F25?style=for-the-badge&logo=readthedocs&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements/certyfikaty) 
 
-</center>
+
 
 ---
 
