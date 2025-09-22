@@ -1,7 +1,13 @@
 ﻿# 📚 Lista szkoleń &emsp; [![Pages](https://img.shields.io/badge/GitHub_Pages-Go_To_Home_Page-aa?style=for-the-badge&labelColor=7cffe5&logo=github&logoColor=black&)](https://sebastian-c87.github.io/my-IT-profile-hub/)
-# <div align="center"> Sekurak.Academy – 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II </div>
+# Sekurak.Academy – 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II 
 
-Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> <div align="center"> [![PDF](https://img.shields.io/badge/Certyficates_list-PDFs-EA1F25?style=flat&logo=readthedocs&logoColor=white)]([/achievements/certyfikaty](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements/certyfikaty)) </div>
+Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> 
+
+<div align="center"> 
+
+[![PDF](https://img.shields.io/badge/Certyficates_list-PDFs-EA1F25?style=for-the-badge&logo=readthedocs&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements/certyfikaty) 
+
+</div>
 
 ---
 

@@ -7,11 +7,12 @@ Folder zawierający pracę nad projektami w różnych kategoriach.
 - **AI** - przedstawia umiejętności korzystania z wielu narzędzi AI [agents, prompts, API]
 - **Graphics** - zabawa grafikami
 
-### <div align="center">  Projekty dostępne również w oddzielnych repozytoriach:  </div>
-
 <div align="center">
 
-[![Repo](https://img.shields.io/badge/GitHub_Repositories-My_Projects-f05032?style=for-the-badge&logo=github)](https://github.com/sebastian-c87?tab=repositories) </div>
+###   Projekty dostępne również w oddzielnych repozytoriach: 
+
+[![Repo](https://img.shields.io/badge/GitHub_Repositories-My_Projects-f05032?style=for-the-badge&logo=github)](https://github.com/sebastian-c87?tab=repositories)
+</div>
 
 
 ---
