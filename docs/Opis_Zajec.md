@@ -1,6 +1,6 @@
 ﻿# 🧾 Karta przebiegu studiów – **lista i opis przedmiotów** &emsp; [![Pages](https://img.shields.io/badge/GitHub_Pages-Go_To_Home_Page-aa?style=for-the-badge&labelColor=7cffe5&logo=github&logoColor=black&)](https://sebastian-c87.github.io/my-IT-profile-hub/) &emsp; 
 
-> Zestawienie zajęć odbytych podczas studiów. [![Karta przebiegu studiów](https://img.shields.io/badge/Karta_Przebiegu_Studiów-PDF-orange?style=flat&logo=readme&logoColor=white)]([/achievements/uczelnia/Arkusz_Ocen.pdf](https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/uczelnia/Arkusz_Ocen.pdf)) wraz z ocenami i punktami ECTS.
+> Zestawienie zajęć odbytych podczas studiów. [![Karta przebiegu studiów](https://img.shields.io/badge/Karta_Przebiegu_Studiów-PDF-orange?style=flat&logo=readme&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/blob/main/achievements/uczelnia/Arkusz_Ocen.pdf) wraz z ocenami i punktami ECTS.
 > 
 >> # **Akademia Finansów i Biznesu VISTULA** <br> 
 >>> # Informatyka.   
