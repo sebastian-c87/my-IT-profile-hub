@@ -1,6 +1,7 @@
-﻿# 📚 Lista szkoleń Sekurak.Academy — 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II
+﻿# 📚 Lista szkoleń &emsp; [![Pages](https://img.shields.io/badge/GitHub_Pages-Go_To_Home_Page-aa?style=for-the-badge&labelColor=7cffe5&logo=github&logoColor=black&)](https://sebastian-c87.github.io/my-IT-profile-hub/)
+# <div align="center"> Sekurak.Academy – 2023 oraz 2024 (Semestr I & II) & 2025 Semestr I + trwający obecnie Semestr II </div>
 
-Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PDF](https://img.shields.io/badge/Certyficates_list-PDFs-EA1F25?style=flat&logo=readthedocs&logoColor=white)](/achievements/certyfikaty)
+Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> <div align="center"> [![PDF](https://img.shields.io/badge/Certyficates_list-PDFs-EA1F25?style=flat&logo=readthedocs&logoColor=white)]([/achievements/certyfikaty](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements/certyfikaty)) </div>
 
 ---
 
@@ -96,10 +97,11 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 
 **Trener:** Piotr Rzeszut · **Poziom:** ★★★ · **Kategorie:** 🔌 HARDWARE · 📶 WIRELESS
 **Opis:** Podstawy Software Defined Radio. Sprzęt, pasma i narzędzia. Przykłady praktycznych analiz sygnałów.
+# <div align="center"> 
 
 ---
 
-# 🗓️ 2024 — Semestr I
+# 🗓️ 2024 – Semestr I
 
 ### 🎓 Bezpieczeństwo Active Directory II
 
@@ -170,10 +172,11 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 
 **Trener:** Bohdan Widła · **Poziom:** ★ · **Kategorie:** ⚖️ PRAWO
 **Opis:** Różnice między popularnymi licencjami OSS. Obowiązki licencyjne i zgodność. Dobre praktyki w projektach.
+# <div align="center"> 
 
 ---
 
-# 🗓️ 2024 — Semestr II
+# 🗓️ 2024 – Semestr II
 
 ### 🎓 Model bezpieczeństwa przeglądarek
 
@@ -262,11 +265,13 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 
 ---
 
-# 📚 Sekurak.Academy — 2025 (Semestr I & II)
+# 📚 
+# <div align="center"> Sekurak.Academy – 2025 (Semestr I & II)
+# <div align="center"> 
 
 ---
 
-# 🗓️ 2025 — Semestr I
+# 🗓️ 2025 – Semestr I
 
 ### 🎓 Analiza złośliwego oprogramowania na żywo
 
@@ -347,10 +352,11 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 
 **Trener:** Robert „ProXy” Kruczek · **Poziom:** ★ · **Kategorie:** 🌐 **SIECI**, 🗣️ **SOCJOTECHNIKA**
 **Opis:** Pretexting, phishing i live-demo łańcuchów socjotechnicznych. Jak budować mechanizmy odporności na poziomie ludzi i procesów.&#x20;
+# <div align="center"> 
 
 ---
 
-# 🗓️ 2025 — Semestr II (Agenda)
+# 🗓️ 2025 – Semestr II (Agenda)
 
 ### 🎓 Bezpieczna architektura sieci w małej firmie i mikroprzedsiębiorstwie
 
@@ -379,7 +385,8 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 **Trenerzy:** jw. · **Poziom:** *(nie podano)* · **Kategorie:** 🌍 **WEB**, 🛡️ **BLUE TEAM**
 **Opis:** Aktualne kategorie ryzyk, ich konsekwencje i sposoby przeciwdziałania. Mapowanie na wymagania secure coding i testy.
 
-### 🎓 Dlaczego hackowanie aplikacji webowych jest proste? — przegląd najnowszych luk (6 mies.)
+### 🎓 Dlaczego hackowanie aplikacji webowy
+# <div align="center"> ch jest proste? – przegląd najnowszych luk (6 mies.)
 
 **Trenerzy:** jw. · **Poziom:** *(nie podano)* · **Kategorie:** 🌍 **WEB**, 🔓 **RED TEAM**
 **Opis:** Case-study świeżych podatności i łańcuchów ataków, wraz z „quick wins” dla zespołów dev/ops.
@@ -433,26 +440,30 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 ### 🎓 DNS w systemach Windows
 
 **Trener:** Grzegorz Tworek · **Poziom:** *(nie podano)* · **Kategorie:** 🪟 **WINDOWS**, 🛠️ **ADMIN**, 📈 **MONITORING**
-**Opis:** Architektura DNS w AD, bezpieczeństwo stref i rozwiązywanie problemów. Praktyczne polityki i logowanie.
+**Opis:** Architektura DNS w AD, bezpieczeństwo stref i rozwiązywanie problemów. Praktyczne polityki i logowanie
+# <div align="center"> .
 
-### 🎓 Sysmon — narzędzie monitoringu Windows
+### 🎓 Sysmon – narzędzie monitoringu Windows
 
 **Trener:** Grzegorz Tworek · **Poziom:** *(nie podano)* · **Kategorie:** 🪟 **WINDOWS**, 📈 **MONITORING**, 🛡️ **BLUE TEAM**
-**Opis:** Konfiguracja reguł, profile hałasu i korelacja zdarzeń Sysmon w SOC.
+**Opis:** Konfiguracja reguł, profile hałasu i korelacja zdarzeń Sysmon w SOC
+# <div align="center"> .
 
-### 🎓 WinDbg — narzędzie debugowania Windows
+### 🎓 WinDbg – narzędzie debugowania Windows
 
 **Trener:** Grzegorz Tworek · **Poziom:** *(nie podano)* · **Kategorie:** 🪟 **WINDOWS**, 🧰 **NARZĘDZIA**
 **Opis:** Debug jądra i aplikacji na Windows: podstawowe komendy, rozszerzenia i scenariusze IR.
 
 ---
 
-### 🎓 OSINTowanie na żywo III — łapiemy scammera na żywo
+### 🎓 OSINTowa
+# <div align="center"> nie na żywo III – łapiemy scammera na żywo
 
 **Trenerzy:** Tomasz Turba / Maciej Góra / Sebastian Jeż · **Poziom:** *(nie podano)* · **Kategorie:** 🧭 **OSINT**, 📣 **AWARENESS**<br>
 **Opis:** Live-case prowadzony krok po kroku: od źródeł, przez pivoting, po korelację wskaźników oszustwa.
 
-### 🎓 USA kontra Chiny w cyberprzestrzeni — „kto to zrobił?”
+### 🎓 USA kontra Chiny w c
+# <div align="center"> yberprzestrzeni – „kto to zrobił?”
 
 **Trenerzy:** Tomasz Turba / Maciej Góra / Sebastian Jeż · **Poziom:** *(nie podano)* · **Kategorie:** 📣 **AWARENESS**, 🛡️ **BLUE TEAM**
 **Opis:** Analiza atrybucji w cyberkonfliktach, operacje państwowe i ich ślady w infrastrukturze.
@@ -462,24 +473,28 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 **Trenerzy:** Tomasz Turba / Maciej Góra / Sebastian Jeż · **Poziom:** *(nie podano)* · **Kategorie:** 🔓 **RED TEAM**, 🛡️ **BLUE TEAM**
 **Opis:** Cykl życia 0-day, wektory pozyskiwania i obrony. Konsekwencje dla polityk bezpieczeństwa.
 
-### 🎓 Cyberszpiegostwo — wstęp, przykłady, ciekawostki
+### 🎓 C
+# <div align="center"> yberszpiegostwo – wstęp, przykłady, ciekawostki
 
 **Trenerzy:** Tomasz Turba / Maciej Góra / Sebastian Jeż · **Poziom:** *(nie podano)* · **Kategorie:** 🧭 **OSINT**, 📣 **AWARENESS**
 **Opis:** Narzędzia i TTP wykorzystywane w wywiadzie cybernetycznym; studia przypadków.
 
-### 🎓 Dezinformacja — wstęp, przykłady, ciekawostki
+### 
+# <div align="center"> 🎓 Dezinformacja – wstęp, przykłady, ciekawostki
 
 **Trenerzy:** Tomasz Turba / Maciej Góra / Sebastian Jeż · **Poziom:** *(nie podano)* · **Kategorie:** 📣 **AWARENESS**
 **Opis:** Mechanizmy tworzenia i rozprzestrzeniania dezinformacji. Jak budować odporność organizacji i użytkowników.
 
 ---
 
-### 🎓 Naruszenie ochrony danych — jak postępować przy wycieku?
+### 🎓 Naruszenie
+# <div align="center">  ochrony danych – jak postępować przy wycieku?
 
 **Trenerzy:** Michał Zajączkowski / Paweł Litwiński · **Poziom:** *(nie podano)* · **Kategorie:** ⚖️ **PRAWO / COMPLIANCE**
 **Opis:** Obowiązki prawne, notyfikacje i komunikacja kryzysowa. Jak udokumentować incydent zgodnie z regulacjami.
 
-### 🎓 Compliance — ale po co?
+#
+# <div align="center"> ## 🎓 Compliance – ale po co?
 
 **Trenerzy:** jw. · **Poziom:** *(nie podano)* · **Kategorie:** ⚖️ **PRAWO / COMPLIANCE**
 **Opis:** Rola compliance w ograniczaniu ryzyka operacyjnego i prawnego. Mierniki skuteczności i współpraca z IT/SOC.
@@ -489,7 +504,8 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 **Trenerzy:** Michał Zajączkowski / Paweł Litwiński · **Poziom:** *(nie podano)* · **Kategorie:** ⚖️ **PRAWO / COMPLIANCE**
 **Opis:** Przegląd kluczowych norm (np. ISO/IEC), regulacji sektorowych i ich implikacje dla bezpieczeństwa.
 
-### 🎓 Audyt bezpieczeństwa — z czym to się je?
+### 🎓 Audyt
+# <div align="center">  bezpieczeństwa – z czym to się je?
 
 **Trenerzy:** Michał Zajączkowski / Paweł Litwiński · **Poziom:** *(nie podano)* · **Kategorie:** ⚖️ **PRAWO / COMPLIANCE**, 🛡️ **BLUE TEAM**
 **Opis:** Zakres, metody i raportowanie wyników audytu. Jak przekuć wnioski na plan działań.
@@ -516,6 +532,7 @@ Certyfikaty szkoleń dostępne w formie **PDF** w oddzielnym folderze <br> [![PD
 # Kontakt
 
 ### **Sebastian Ciborowski**
+
 |  |  |  |
 |:--:|:---:|:--:|
 | <img src="assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="assets/icons/1.svg" width="32" alt=""> |

@@ -1,4 +1,4 @@
-﻿# Portfolio
+﻿# Portfolio &emsp; [![Pages](https://img.shields.io/badge/GitHub_Pages-Go_To_Home_Page-aa?style=for-the-badge&labelColor=7cffe5&logo=github&logoColor=black&)](https://sebastian-c87.github.io/my-IT-profile-hub/)
 
 Folder zawierający pracę nad projektami w różnych kategoriach.
 <br>
@@ -7,8 +7,11 @@ Folder zawierający pracę nad projektami w różnych kategoriach.
 - **AI** - przedstawia umiejętności korzystania z wielu narzędzi AI [agents, prompts, API]
 - **Graphics** - zabawa grafikami
 
-<br>
-<br>
+### <div align="center">  Projekty dostępne również w oddzielnych repozytoriach:  </div>
+
+<div align="center">
+
+[![Repo](https://img.shields.io/badge/GitHub_Repositories-My_Projects-f05032?style=for-the-badge&logo=github)](https://github.com/sebastian-c87?tab=repositories) </div>
 
 
 ---
