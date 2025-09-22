@@ -1,13 +1,13 @@
 ﻿---
-title: Sebastian Ciborowski — CV & Portfolio
-description: Wizytówka - linki do CV (PL/EN), „O mnie”, „Jak pracuję”, szkolenia i portfolio.
+title: Sebastian Ciborowski – CV & Portfolio
+description: Wizytówka - CV (SKILLS, EXP, PROJECTS).
 layout: default
 ---
 
 
 <link rel="stylesheet" href="assets/css/extra.css?v=4">
 
-# Sebastian Ciborowski — CV (PL)
+# Sebastian Ciborowski – CV (PL) [![Pages](https://img.shields.io/badge/GitHub_Pages-Go_To_Home_Page-aa?style=for-the-badge&labelColor=7cffe5&logo=github&logoColor=black&)](https://sebastian-c87.github.io/my-IT-profile-hub/)
 
 **Junior Backend Developer • Prompt Engineer • Specjalista Cyber Security**
 
@@ -22,8 +22,8 @@ layout: default
 ---
 
 ## WYKSZTAŁCENIE
-- **2023 – obecnie** — Informatyka *(specjalizacja: AI, CyberSecurity)*, **Akademia Finansów i Biznesu Vistula**, Warszawa  
-- **2008 – 2010** — Zarządzanie, **Wyższa Szkoła Menedżerska**, Warszawa *(niekompletne)*
+- **2023 – obecnie** – Informatyka *(specjalizacja: AI, CyberSecurity)*, **Akademia Finansów i Biznesu Vistula**, Warszawa  
+- **2008 – 2010** – Zarządzanie, **Wyższa Szkoła Menedżerska**, Warszawa *(niekompletne)*
 
 ---
 
@@ -76,35 +76,35 @@ layout: default
 ---
 ---
 
-## DOŚWIADCZENIE W IT — PROJEKTY I PRACE
+## DOŚWIADCZENIE W IT – PROJEKTY I PRACE
 
-- **AI Code Debugger** — Autor / Programista, Prompt Engineer *(Python, CustomTkinter, OpenAI API (GPT-4.x/5), Pylint, Flake8, MongoDB, AES)*  
+- **AI Code Debugger** – Autor / Programista, Prompt Engineer *(Python, CustomTkinter, OpenAI API (GPT-4.x/5), Pylint, Flake8, MongoDB, AES)*  
   Aplikacja desktopowa do analizy i debugowania kodu Python łącząca analizę statyczną (Pylint/Flake8) z sugestiami AI; szyfrowanie kluczy API (AES), hybrydowe przechowywanie historii, wersja `.exe` dla Windows.  
 
-  **Repo:**  [![AiCodeDebugger](https://img.shields.io/badge/AI_CodeDebugger-CODE-2088FF?style=flat&logo=python&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger) [![Release exe](https://img.shields.io/badge/Release_Download-EXE-2088FF?style=flat&logo=gitforwindows&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger/releases)
+  **Repo:**  [![AiCodeDebugger](https://img.shields.io/badge/AI_CodeDebugger-CODE-2088FF?style=plastic&logo=python&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger) [![Release exe](https://img.shields.io/badge/Release_Download-EXE-2088FF?style=plastic&logo=gitforwindows&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger/releases)
 
-- **Dijkstra Algorithm App** — Autor / Programista *(Python, Tkinter, NetworkX, Matplotlib, PyInstaller)*  
+- **Dijkstra Algorithm App** – Autor / Programista *(Python, Tkinter, NetworkX, Matplotlib, PyInstaller)*  
   Edukacyjna aplikacja wizualizująca algorytm Dijkstry: generowanie grafów, uruchamianie algorytmu krok po kroku, analiza złożoności; wersja `.exe`.  
 
-  **Repo:** [![DijkstraApp](https://img.shields.io/badge/dijkstryApp-CODE-2088FF?style=flat&logo=python&logoColor=white)](https://github.com/sebastian-c87/dijkstryApp)
+  **Repo:** [![DijkstraApp](https://img.shields.io/badge/dijkstryApp-CODE-2088FF?style=plastic&logo=python&logoColor=white)](https://github.com/sebastian-c87/dijkstryApp)
 
-- **SpringBoot REST API** — Programista / Inżynier oprogramowania *(Java, Spring Boot, REST)*  
+- **SpringBoot REST API** – Programista / Inżynier oprogramowania *(Java, Spring Boot, REST)*  
   Projekt pokazowy implementacji RESTful API w Spring Boot (struktura projektu, kontrolery, podstawy konfiguracji).  
 
-  **Repo:** [![SpringBoot](https://img.shields.io/badge/SpringBoot_RESTful_API-Java_CODE-E34F26?style=flat&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/SpringBoot-REST-API)
+  **Repo:** [![SpringBoot](https://img.shields.io/badge/SpringBoot_RESTful_API-Java_CODE-E34F26?style=plastic&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/SpringBoot-REST-API)
 
-- **Spring Framework Project** — Programista / Inżynier oprogramowania *(Java, Spring Framework/MVC)*  
+- **Spring Framework Project** – Programista / Inżynier oprogramowania *(Java, Spring Framework/MVC)*  
   Projekt pokazujący pracę z warstwami i konfiguracją w Spring; podstawy obsługi żądań.  
 
-  **Repo:** [![Spring Framework](https://img.shields.io/badge/Spring_Framework-Java_CODE-E34F26?style=flat&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/Spring-Framework-Project)
+  **Repo:** [![Spring Framework](https://img.shields.io/badge/Spring_Framework-Java_CODE-E34F26?style=plastic&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/Spring-Framework-Project)
 
-- **Gra Memo (Windows Forms)** — Programista *(C#, .NET, Windows Forms)*  
+- **Gra Memo (Windows Forms)** – Programista *(C#, .NET, Windows Forms)*  
   Prosta gra logiczna „Memo” – z 32 kart należy dobrać 16 par; repozytorium pokazujące kod **w przygotowaniu** (link po publikacji).
 
-- **Aplikacja mobilna fitness + AI (w toku)** — Programista / Inżynier oprogramowania *(C#, ASP.NET Core API, .NET MAUI, Angular, AI API)*  
+- **Aplikacja mobilna fitness + AI (w toku)** – Programista / Inżynier oprogramowania *(C#, ASP.NET Core API, .NET MAUI, Angular, AI API)*  
   Praca koncepcyjno-wdrożeniowa nad aplikacją mobilną z funkcjami AI; architektura, API i pierwszy MVP. *(Repozytorium do publikacji.)*
 
-- **Mini-aplikacje (Python)** — Autor *(Python + biblioteki + AI)*  
+- **Mini-aplikacje (Python)** – Autor *(Python + biblioteki + AI)*  
   RPG Story Generator, Symulator rzutu kostką, Social-Media Post Generator, Img-Recognition, Legal-invest Assistant AI. *(Kod w repozytoriach tematycznych lub w toku upublicznienia.)*
 
 ---
@@ -122,15 +122,15 @@ layout: default
 ---
 
 ## CERTYFIKATY / SZKOLENIA - więcej w repo: &emsp; [![Cret](https://img.shields.io/badge/My--IT--profile--hub-Achievements-2088FF?style=flat&logo=github&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements) 
-- **HexArcana** — Wstęp do Python (Securitum)  
-- **Sekurak.Academy** — Semestr I i II 2024, I 2025 + II w trakcie *(lista szkoleń i certyfikatów dostępna w repo)*  
-- **Securitum** — Automatyzacja AI (T. Turba)  
-- **Securitum** — Narzędziownik AI (T. Turba)  
-- **Securitum** — Poznaj AI (T. Turba)  
-- **Navoica** — Podstawy AI  
-- **Securitum** — Zawód Pentester  
-- **Academy OpenAI** — uczestnik wybranych webinarów (np. GPT, Agentic Systems with PydanticAI)  
-- Od **8.09.2025** — uczestnik programu „Umiejętności Jutra: AI 2.0” (Google + SGH)
+- **HexArcana** – Wstęp do Python (Securitum)  
+- **Sekurak.Academy** – Semestr I i II 2024, I 2025 + II w trakcie *(lista szkoleń i certyfikatów dostępna w repo)*  
+- **Securitum** – Automatyzacja AI (T. Turba)  
+- **Securitum** – Narzędziownik AI (T. Turba)  
+- **Securitum** – Poznaj AI (T. Turba)  
+- **Navoica** – Podstawy AI  
+- **Securitum** – Zawód Pentester  
+- **Academy OpenAI** – uczestnik wybranych webinarów (np. GPT, Agentic Systems with PydanticAI)  
+- Od **8.09.2025** – uczestnik programu „Umiejętności Jutra: AI 2.0” (Google + SGH)
 
 ---
 
@@ -213,7 +213,7 @@ Sport, forex/crypto, AI, IT, muzyka, stand-up, nowe technologie, podróże
 ---
 ---
 
-# Sebastian Ciborowski — CV (EN)
+# Sebastian Ciborowski – CV (EN)
 
 **Junior Backend Developer • Master of Prompt Engineering • Cyber Security Specialist**
 
@@ -230,8 +230,8 @@ Sport, forex/crypto, AI, IT, muzyka, stand-up, nowe technologie, podróże
 
 ## EDUCATION
 
-* **2023 – present** — Computer Science *(specialization: AI, CyberSecurity)*, **AFiB Vistula**, Warsaw
-* **2008 – 2010** — Management *(incomplete)*, **Wyższa Szkoła Menedżerska**, Warsaw 
+* **2023 – present** – Computer Science *(specialization: AI, CyberSecurity)*, **AFiB Vistula**, Warsaw
+* **2008 – 2010** – Management *(incomplete)*, **Wyższa Szkoła Menedżerska**, Warsaw 
 
 ---
 
@@ -248,71 +248,71 @@ Sport, forex/crypto, AI, IT, muzyka, stand-up, nowe technologie, podróże
 
 ## USES SKILLS
 
-**Languages:** [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat\&logo=python\&logoColor=white)](https://www.python.org/) [![Java](https://img.shields.io/badge/Java-Backend-007396?style=flat\&logo=openjdk\&logoColor=white)](https://www.java.com/) [![C%23](https://img.shields.io/badge/C%23-.NET-512BD4?style=flat\&logo=csharp\&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/) [![SQL](https://img.shields.io/badge/SQL-Queries-336791?style=flat\&logo=databricks\&logoColor=white)](https://en.wikipedia.org/wiki/SQL) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=flat\&logo=javascript\&logoColor=white)](https://developer.mozilla.org/docs/Web/JavaScript) [![HTML5](https://img.shields.io/badge/HTML5-Markup-E34F26?style=flat\&logo=html5\&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-Styles-1572B6?style=flat\&logo=css\&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+**Languages:** [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/) [![Java](https://img.shields.io/badge/Java-Backend-007396?style=flat&logo=openjdk&logoColor=white)](https://www.java.com/) [![C%23](https://img.shields.io/badge/C%23-.NET-512BD4?style=flat&logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/) [![SQL](https://img.shields.io/badge/SQL-Queries-336791?style=flat&logo=databricks&logoColor=white)](https://en.wikipedia.org/wiki/SQL) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=flat&logo=javascript&logoColor=white)](https://developer.mozilla.org/docs/Web/JavaScript) [![HTML5](https://img.shields.io/badge/HTML5-Markup-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-Styles-1572B6?style=flat&logo=css&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 
-**Dev Tools:** [![Git](https://img.shields.io/badge/Git-Versioning-F05032?style=flat\&logo=git\&logoColor=white)](https://git-scm.com/) [![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?style=flat\&logo=githubactions\&logoColor=white)](https://github.com/features/actions) [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ-IDEA-000000?style=flat\&logo=intellijidea\&logoColor=white)](https://www.jetbrains.com/idea/) [![Visual Studio](https://img.shields.io/badge/Visual_Studio-IDE-5C2D91?style=flat\&logo=visualstudio\&logoColor=white)](https://visualstudio.microsoft.com/) [![VS Code](https://img.shields.io/badge/VS_Code-Editor-007ACC?style=flat\&logo=visualstudiocode\&logoColor=white)](https://code.visualstudio.com/) [![Postman](https://img.shields.io/badge/Postman-API-FF6C37?style=flat\&logo=postman\&logoColor=white)](https://www.postman.com/) [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=flat\&logo=docker\&logoColor=white)](https://www.docker.com/) [![SQL Server](https://img.shields.io/badge/Microsoft-SQL_Server-CC2927?style=flat\&logo=microsoftsqlserver\&logoColor=white)](https://www.microsoft.com/sql-server) [![Google Colab](https://img.shields.io/badge/Google-Colab-F9AB00?style=flat\&logo=googlecolab\&logoColor=white)](https://colab.research.google.com/)
+**Dev Tools:** [![Git](https://img.shields.io/badge/Git-Versioning-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) [![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?style=flat&logo=githubactions&logoColor=white)](https://github.com/features/actions) [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ-IDEA-000000?style=flat&logo=intellijidea&logoColor=white)](https://www.jetbrains.com/idea/) [![Visual Studio](https://img.shields.io/badge/Visual_Studio-IDE-5C2D91?style=flat&logo=visualstudio&logoColor=white)](https://visualstudio.microsoft.com/) [![VS Code](https://img.shields.io/badge/VS_Code-Editor-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/) [![Postman](https://img.shields.io/badge/Postman-API-FF6C37?style=flat&logo=postman&logoColor=white)](https://www.postman.com/) [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/) [![SQL Server](https://img.shields.io/badge/Microsoft-SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server) [![Google Colab](https://img.shields.io/badge/Google-Colab-F9AB00?style=flat&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
 
-**CyberSec:** [![Wireshark](https://img.shields.io/badge/Wireshark-Network_Analysis-1679A7?style=flat\&logo=wireshark\&logoColor=white)](https://www.wireshark.org/) ![OSINT](https://img.shields.io/badge/OSINT-Research-DC382D?style=flat) [![GNS3](https://img.shields.io/badge/GNS3-Network_Lab-0082C9?style=flat\&logo=gns3\&logoColor=white)](https://www.gns3.com/) [![Wazuh](https://img.shields.io/badge/Wazuh-Basic-0AB4FF?style=flat\&logo=wazuh\&logoColor=white)](https://wazuh.com/) ![Metasploit](https://img.shields.io/badge/Metasploit-Basic-512BD?style=flat\&logo=metasploit\&logoColor=white) ![AES](https://img.shields.io/badge/AES-Crypto-6C63FF?style=flat) ![SHA-256](https://img.shields.io/badge/SHA--256-Hash-2D2D2D?style=flat) ![base64](https://img.shields.io/badge/base64-Encode-FF9900?style=flat) ![hashcat](https://img.shields.io/badge/hashcat-Password_Cracking-9B59B6?style=flat) ![Sekurak Academy](https://img.shields.io/badge/Sekurak-Academy-E53935?style=flat)
+**CyberSec:** [![Wireshark](https://img.shields.io/badge/Wireshark-Network_Analysis-1679A7?style=flat&logo=wireshark&logoColor=white)](https://www.wireshark.org/) ![OSINT](https://img.shields.io/badge/OSINT-Research-DC382D?style=flat) [![GNS3](https://img.shields.io/badge/GNS3-Network_Lab-0082C9?style=flat&logo=gns3&logoColor=white)](https://www.gns3.com/) [![Wazuh](https://img.shields.io/badge/Wazuh-Basic-0AB4FF?style=flat&logo=wazuh&logoColor=white)](https://wazuh.com/) ![Metasploit](https://img.shields.io/badge/Metasploit-Basic-512BD?style=flat&logo=metasploit&logoColor=white) ![AES](https://img.shields.io/badge/AES-Crypto-6C63FF?style=flat) ![SHA-256](https://img.shields.io/badge/SHA--256-Hash-2D2D2D?style=flat) ![base64](https://img.shields.io/badge/base64-Encode-FF9900?style=flat) ![hashcat](https://img.shields.io/badge/hashcat-Password_Cracking-9B59B6?style=flat) ![Sekurak Academy](https://img.shields.io/badge/Sekurak-Academy-E53935?style=flat)
 
-**Backend:** [![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=flat\&logo=spring\&logoColor=white)](https://spring.io/projects/spring-boot) [![.NET MAUI](https://img.shields.io/badge/.NET-MAUI-512BD4?style=flat\&logo=dotnet\&logoColor=white)](https://learn.microsoft.com/dotnet/maui/what-is-maui) ![Lombok](https://img.shields.io/badge/Lombok-Annotations-CA0F21?style=flat) [![Flask](https://img.shields.io/badge/Flask-API-000000?style=flat\&logo=flask\&logoColor=white)](https://flask.palletsprojects.com/) [![FastAPI](https://img.shields.io/badge/FastAPI-Services-009688?style=flat\&logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com/) [![Swagger/OpenAPI](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=flat\&logo=swagger\&logoColor=white)](https://swagger.io/specification/) [![.NET](https://img.shields.io/badge/.NET-Platform-512BD4?style=flat\&logo=dotnet\&logoColor=white)](https://dotnet.microsoft.com/) [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-Templates-005F0F?style=flat\&logo=thymeleaf\&logoColor=white)](https://www.thymeleaf.org/) [![ASP.NET Core](https://img.shields.io/badge/ASP.NET-Core-512BD4?style=flat\&logo=dotnet\&logoColor=white)](https://learn.microsoft.com/aspnet/core) ![Cryptography](https://img.shields.io/badge/Cryptography-Primitives-4B0082?style=flat\&logo=cryptpad\&logoColor=white)
+**Backend:** [![Spring Boot](https://img.shields.io/badge/Spring_Boot-REST_API-6DB33F?style=flat&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot) [![.NET MAUI](https://img.shields.io/badge/.NET-MAUI-512BD4?style=flat&logo=dotnet&logoColor=white)](https://learn.microsoft.com/dotnet/maui/what-is-maui) ![Lombok](https://img.shields.io/badge/Lombok-Annotations-CA0F21?style=flat) [![Flask](https://img.shields.io/badge/Flask-API-000000?style=flat&logo=flask&logoColor=white)](https://flask.palletsprojects.com/) [![FastAPI](https://img.shields.io/badge/FastAPI-Services-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Swagger/OpenAPI](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=flat&logo=swagger&logoColor=white)](https://swagger.io/specification/) [![.NET](https://img.shields.io/badge/.NET-Platform-512BD4?style=flat&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/) [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-Templates-005F0F?style=flat&logo=thymeleaf&logoColor=white)](https://www.thymeleaf.org/) [![ASP.NET Core](https://img.shields.io/badge/ASP.NET-Core-512BD4?style=flat&logo=dotnet&logoColor=white)](https://learn.microsoft.com/aspnet/core) ![Cryptography](https://img.shields.io/badge/Cryptography-Primitives-4B0082?style=flat&logo=cryptpad&logoColor=white)
 
-**Desktop/GUI:** ![(Custom) Tkinter](https://img.shields.io/badge/\(Custom\)-Tkinter-3776AB?style=flat\&logo=python\&logoColor=white) ![Kivy](https://img.shields.io/badge/Kivy-Python_UI-4A7F2C?style=flat) [![Angular](https://img.shields.io/badge/Angular-Framework-DD0031?style=flat\&logo=angular\&logoColor=white)](https://angular.dev/) [![React](https://img.shields.io/badge/React-Library-20232A?style=flat\&logo=react\&logoColor=white)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-Language-3178C6?style=flat\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/) ![NetworkX](https://img.shields.io/badge/NetworkX-Graphs-512BD4?style=flat\&logo=pypi\&logoColor=white) [![Matplotlib](https://img.shields.io/badge/Matplotlib-Plotting-11557C?style=flat\&logo=matplotlib\&logoColor=white)](https://matplotlib.org/)
+**Desktop/GUI:** ![(Custom) Tkinter](https://img.shields.io/badge/\(Custom\)-Tkinter-3776AB?style=flat&logo=python&logoColor=white) ![Kivy](https://img.shields.io/badge/Kivy-Python_UI-4A7F2C?style=flat) [![Angular](https://img.shields.io/badge/Angular-Framework-DD0031?style=flat&logo=angular&logoColor=white)](https://angular.dev/) [![React](https://img.shields.io/badge/React-Library-20232A?style=flat&logo=react&logoColor=white)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-Language-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) ![NetworkX](https://img.shields.io/badge/NetworkX-Graphs-512BD4?style=flat&logo=pypi&logoColor=white) [![Matplotlib](https://img.shields.io/badge/Matplotlib-Plotting-11557C?style=flat&logo=matplotlib&logoColor=white)](https://matplotlib.org/)
 
-**AI/LLM:** [![OpenAI API](https://img.shields.io/badge/OpenAI-API-412991?style=flat\&logo=openai\&logoColor=white)](https://platform.openai.com/) ![RAG + embeddings](https://img.shields.io/badge/RAG-%2B%20embeddings-4B8BBE?style=flat) [![Perplexity Spaces](https://img.shields.io/badge/Perplexity-Spaces-1F1F1F?style=flat\&logo=perplexity\&logoColor=white)](https://www.perplexity.ai/) ![Specialized agents](https://img.shields.io/badge/AI-Specialized_agents-DD0031?style=flat) ![Multi-models](https://img.shields.io/badge/Multi-models-6C63FF?style=flat) ![Prompt Engineering](https://img.shields.io/badge/Prompt-Engineering-FFB000?style=flat\&logo=chromatic\&logoColor=white) [![n8n](https://img.shields.io/badge/n8n-Automation-F05A62?style=flat\&logo=n8n\&logoColor=white)](https://n8n.io/) ![Make](https://img.shields.io/badge/Make-Automation-2F8CFF?style=flat) [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models-FFD21E?style=flat\&logo=huggingface\&logoColor=white)](https://huggingface.co/) ![Gamma](https://img.shields.io/badge/Gamma-Presentations-6F3FF5?style=flat) ![Bolt.new](https://img.shields.io/badge/Bolt.new-Apps-111111?style=flat\&logo=htmx) ![Sona](https://img.shields.io/badge/Sona-Tools-0AA1D?style=flat) [![Canva](https://img.shields.io/badge/Canva-Design-00C4CC?style=flat\&logo=canva\&logoColor=white)](https://www.canva.com/) ![Narzędziownik AI](https://img.shields.io/badge/Narz%C4%99dziownik-AI-CC2927?style=flat)
+**AI/LLM:** [![OpenAI API](https://img.shields.io/badge/OpenAI-API-412991?style=flat&logo=openai&logoColor=white)](https://platform.openai.com/) ![RAG + embeddings](https://img.shields.io/badge/RAG-%2B%20embeddings-4B8BBE?style=flat) [![Perplexity Spaces](https://img.shields.io/badge/Perplexity-Spaces-1F1F1F?style=flat&logo=perplexity&logoColor=white)](https://www.perplexity.ai/) ![Specialized agents](https://img.shields.io/badge/AI-Specialized_agents-DD0031?style=flat) ![Multi-models](https://img.shields.io/badge/Multi-models-6C63FF?style=flat) ![Prompt Engineering](https://img.shields.io/badge/Prompt-Engineering-FFB000?style=flat&logo=chromatic&logoColor=white) [![n8n](https://img.shields.io/badge/n8n-Automation-F05A62?style=flat&logo=n8n&logoColor=white)](https://n8n.io/) ![Make](https://img.shields.io/badge/Make-Automation-2F8CFF?style=flat) [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models-FFD21E?style=flat&logo=huggingface&logoColor=white)](https://huggingface.co/) ![Gamma](https://img.shields.io/badge/Gamma-Presentations-6F3FF5?style=flat) ![Bolt.new](https://img.shields.io/badge/Bolt.new-Apps-111111?style=flat&logo=htmx) ![Sona](https://img.shields.io/badge/Sona-Tools-0AA1D?style=flat) [![Canva](https://img.shields.io/badge/Canva-Design-00C4CC?style=flat&logo=canva&logoColor=white)](https://www.canva.com/) ![Narzędziownik AI](https://img.shields.io/badge/Narz%C4%99dziownik-AI-CC2927?style=flat)
 
 **Systems & Networks:**
-[![Linux](https://img.shields.io/badge/Linux-OS-333333?style=flat\&logo=linux\&logoColor=white)](https://www.linux.org/)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-Desktop/Eco-FF6C37?style=flat\&logo=ubuntu\&logoColor=white)](https://ubuntu.com/)
-[![openSUSE](https://img.shields.io/badge/openSUSE-LEAP-73BA25?style=flat\&logo=opensuse\&logoColor=white)](https://www.opensuse.org/)
-[![Windows Server](https://img.shields.io/badge/Windows-Server-0078D6?style=flat\&logo=windows\&logoColor=white)](https://www.microsoft.com/windows-server)
+[![Linux](https://img.shields.io/badge/Linux-OS-333333?style=flat&logo=linux&logoColor=white)](https://www.linux.org/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-Desktop/Eco-FF6C37?style=flat&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![openSUSE](https://img.shields.io/badge/openSUSE-LEAP-73BA25?style=flat&logo=opensuse&logoColor=white)](https://www.opensuse.org/)
+[![Windows Server](https://img.shields.io/badge/Windows-Server-0078D6?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows-server)
 ![TCP/IP](https://img.shields.io/badge/TCP%2FIP-Networking-512BD4?style=flat)
 ![DNS/HTTP](https://img.shields.io/badge/DNS%2FHTTP-Protocols-61DAFB?style=flat)
 ![VLAN/ACL](https://img.shields.io/badge/VLAN%2FACL-Network_Segmentation-339933?style=flat)
-[![Cisco](https://img.shields.io/badge/Cisco-Networking-1BA0D7?style=flat\&logo=cisco\&logoColor=white)](https://www.cisco.com/)
-[![Oracle VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-F80000?style=flat\&logo=virtualbox\&logoColor=white)](https://www.virtualbox.org/)
+[![Cisco](https://img.shields.io/badge/Cisco-Networking-1BA0D7?style=flat&logo=cisco&logoColor=white)](https://www.cisco.com/)
+[![Oracle VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-F80000?style=flat&logo=virtualbox&logoColor=white)](https://www.virtualbox.org/)
 
 **Software Engineering:**
-[![Markdown](https://img.shields.io/badge/Markdown-Docs-000000?style=flat\&logo=markdown\&logoColor=white)](https://www.markdownguide.org/)
-[![Mermaid](https://img.shields.io/badge/Mermaid-Diagrams-009688?style=flat\&logo=mermaid\&logoColor=white)](https://mermaid.js.org/)
-[![draw.io](https://img.shields.io/badge/diagrams.net-draw.io-F08705?style=flat\&logo=diagramsdotnet\&logoColor=white)](https://www.diagrams.net/)
-![UML](https://img.shields.io/badge/UML-Modeling-DD0031?style=flat\&logo=uml\&logoColor=white)
-[![Microsoft Office](https://img.shields.io/badge/Microsoft-Office-D83B01?style=flat\&logo=microsoftoffice\&logoColor=white)](https://www.microsoft.com/microsoft-365)![PlantUML](https://img.shields.io/badge/PlantUML-Diagrams-5C2D91?style=flat\&logo=diagramsdotnet\&logoColor=white)
-![Project analysis](https://img.shields.io/badge/Project_analysis-Requirements-6DB337?style=flat\&logo=googleanalytics\&logoColor=white)
-![SWOT](https://img.shields.io/badge/Diagram-SWOT-F7DF1E?style=flat\&logo=googleforms)
+[![Markdown](https://img.shields.io/badge/Markdown-Docs-000000?style=flat&logo=markdown&logoColor=white)](https://www.markdownguide.org/)
+[![Mermaid](https://img.shields.io/badge/Mermaid-Diagrams-009688?style=flat&logo=mermaid&logoColor=white)](https://mermaid.js.org/)
+[![draw.io](https://img.shields.io/badge/diagrams.net-draw.io-F08705?style=flat&logo=diagramsdotnet&logoColor=white)](https://www.diagrams.net/)
+![UML](https://img.shields.io/badge/UML-Modeling-DD0031?style=flat&logo=uml&logoColor=white)
+[![Microsoft Office](https://img.shields.io/badge/Microsoft-Office-D83B01?style=flat&logo=microsoftoffice&logoColor=white)](https://www.microsoft.com/microsoft-365)![PlantUML](https://img.shields.io/badge/PlantUML-Diagrams-5C2D91?style=flat&logo=diagramsdotnet&logoColor=white)
+![Project analysis](https://img.shields.io/badge/Project_analysis-Requirements-6DB337?style=flat&logo=googleanalytics&logoColor=white)
+![SWOT](https://img.shields.io/badge/Diagram-SWOT-F7DF1E?style=flat&logo=googleforms)
 
 ---
 
 ---
 
-## IT EXPERIENCE — PROJECTS & WORK
+## IT EXPERIENCE – PROJECTS & WORK
 
-* **AI Code Debugger** — Author / Developer, Prompt Engineer *(Python, CustomTkinter, OpenAI API (GPT-4.x/5), Pylint, Flake8, MongoDB, AES)*
+* **AI Code Debugger** – Author / Developer, Prompt Engineer *(Python, CustomTkinter, OpenAI API (GPT-4.x/5), Pylint, Flake8, MongoDB, AES)*
   Desktop app for analyzing and debugging Python code that combines static analysis (Pylint/Flake8) with AI suggestions; API key encryption (AES), hybrid history storage, `.exe` build for Windows.  
 
-  **Repo:** [![AiCodeDebugger](https://img.shields.io/badge/AI_CodeDebugger-CODE-2088FF?style=flat\&logo=python\&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger) [![Release exe](https://img.shields.io/badge/Release_Download-EXE-2088FF?style=flat\&logo=gitforwindows\&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger/releases)
+  **Repo:** [![AiCodeDebugger](https://img.shields.io/badge/AI_CodeDebugger-CODE-2088FF?style=flat&logo=python&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger) [![Release exe](https://img.shields.io/badge/Release_Download-EXE-2088FF?style=flat&logo=gitforwindows&logoColor=white)](https://github.com/sebastian-c87/AI-Code-Debugger/releases)
 
-* **Dijkstra Algorithm App** — Author / Developer *(Python, Tkinter, NetworkX, Matplotlib, PyInstaller)*
+* **Dijkstra Algorithm App** – Author / Developer *(Python, Tkinter, NetworkX, Matplotlib, PyInstaller)*
   Educational application visualizing Dijkstra’s algorithm: graph generation, step-by-step execution, complexity analysis; `.exe` build.  
 
-  **Repo:** [![DijkstraApp](https://img.shields.io/badge/dijkstryApp-CODE-2088FF?style=flat\&logo=python\&logoColor=white)](https://github.com/sebastian-c87/dijkstryApp)
+  **Repo:** [![DijkstraApp](https://img.shields.io/badge/dijkstryApp-CODE-2088FF?style=flat&logo=python&logoColor=white)](https://github.com/sebastian-c87/dijkstryApp)
 
-* **SpringBoot REST API** — Developer / Software Engineer *(Java, Spring Boot, REST)*
+* **SpringBoot REST API** – Developer / Software Engineer *(Java, Spring Boot, REST)*
   Showcase project implementing a RESTful API in Spring Boot (project structure, controllers, basic configuration).  
 
-  **Repo:** [![SpringBoot](https://img.shields.io/badge/SpringBoot_RESTful_API-Java_CODE-E34F26?style=flat\&logo=openjdk\&logoColor=white)](https://github.com/sebastian-c87/SpringBoot-REST-API)
+  **Repo:** [![SpringBoot](https://img.shields.io/badge/SpringBoot_RESTful_API-Java_CODE-E34F26?style=flat&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/SpringBoot-REST-API)
 
-* **Spring Framework Project** — Developer / Software Engineer *(Java, Spring Framework/MVC)*
+* **Spring Framework Project** – Developer / Software Engineer *(Java, Spring Framework/MVC)*
   Project demonstrating layered architecture and configuration in Spring; request handling basics.  
 
-  **Repo:** [![Spring Framework](https://img.shields.io/badge/Spring_Framework-Java_CODE-E34F26?style=flat\&logo=openjdk\&logoColor=white)](https://github.com/sebastian-c87/Spring-Framework-Project)
+  **Repo:** [![Spring Framework](https://img.shields.io/badge/Spring_Framework-Java_CODE-E34F26?style=plastic&logo=openjdk&logoColor=white)](https://github.com/sebastian-c87/Spring-Framework-Project)
 
-* **Memo Game (Windows Forms)** — Developer *(C#, .NET, Windows Forms)*
-  Simple “Memo” logic game — match 16 pairs from 32 cards; repository with code **in preparation** (link upon publication).
+* **Memo Game (Windows Forms)** – Developer *(C#, .NET, Windows Forms)*
+  Simple “Memo” logic game – match 16 pairs from 32 cards; repository with code **in preparation** (link upon publication).
 
-* **Mobile fitness app + AI (in progress)** — Developer / Software Engineer *(C#, ASP.NET Core API, .NET MAUI, Angular, AI API)*
+* **Mobile fitness app + AI (in progress)** – Developer / Software Engineer *(C#, ASP.NET Core API, .NET MAUI, Angular, AI API)*
   Concept-to-implementation work on a mobile app with AI features; architecture, API and first MVP. *(Repository to be published.)*
 
-* **Mini-apps (Python)** — Author *(Python + libraries + AI)*
+* **Mini-apps (Python)** – Author *(Python + libraries + AI)*
   RPG Story Generator, Dice Roll Simulator, Social-Media Post Generator, Img-Recognition, Legal-invest Assistant AI. *(Code in themed repositories or pending publication.)*
 
 ---
@@ -324,23 +324,23 @@ Sport, forex/crypto, AI, IT, muzyka, stand-up, nowe technologie, podróże
 * Calm decision-making, data/log-based choices
 * Strong communication and teamwork
 * Independence and ownership (end-to-end)
-* Quality focus — checklists, code review, continuous improvement
+* Quality focus – checklists, code review, continuous improvement
 * Security awareness / OSINT, operational hygiene
 * Category B driving licence
 
 ---
 
-## CERTIFICATES / TRAININGS — more in the repo: &emsp; [![Cret](https://img.shields.io/badge/My--IT--profile--hub-Achievements-2088FF?style=flat\&logo=github\&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements)
+## CERTIFICATES / TRAININGS – more in the repo: &emsp; [![Cret](https://img.shields.io/badge/My--IT--profile--hub-Achievements-2088FF?style=plastic&logo=github&logoColor=white)](https://github.com/sebastian-c87/my-IT-profile-hub/tree/main/achievements)
 
-* **HexArcana** — Intro to Python (Securitum)
-* **Sekurak.Academy** — Semester I & II 2024, I 2025 + II in progress *(full list of trainings and certificates available in the repo)*
-* **Securitum** — AI Automation (T. Turba)
-* **Securitum** — AI Toolbox (T. Turba)
-* **Securitum** — Get to Know AI (T. Turba)
-* **Navoica** — Basics of AI
-* **Securitum** — Pentester Profession
-* **Academy OpenAI** — participant of selected webinars (e.g., GPT, Agentic Systems with PydanticAI)
-* From **08.09.2025** — participant of the “Skills of Tomorrow: AI 2.0” program (Google + SGH)
+* **HexArcana** – Intro to Python (Securitum)
+* **Sekurak.Academy** – Semester I & II 2024, I 2025 + II in progress *(full list of trainings and certificates available in the repo)*
+* **Securitum** – AI Automation (T. Turba)
+* **Securitum** – AI Toolbox (T. Turba)
+* **Securitum** – Get to Know AI (T. Turba)
+* **Navoica** – Basics of AI
+* **Securitum** – Pentester Profession
+* **Academy OpenAI** – participant of selected webinars (e.g., GPT, Agentic Systems with PydanticAI)
+* From **08.09.2025** – participant of the “Skills of Tomorrow: AI 2.0” program (Google + SGH)
 
 ---
 
