@@ -93,7 +93,21 @@ jobs:
           normalize_md docs/Opis_Zajec.md      || true
           # (opcjonalnie) jeśli kopiujesz inne *.md do docs/, dodaj je tutaj:
           # normalize_md docs/cv-cv.md || true
-          
+
+      - name: "Pages: force dark-only GitHub icons"
+        if: steps.copy.outputs.copied == '1'
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for f in docs/*.md; do
+            [ -f "$f" ] || continue
+            # 1) wytnij ikony "light" (Twoje nazwy: 5l.svg i 5f.svg)
+            sed -i -E 's#<img[^>]+src="assets/icons/5l\.svg[^"]*"[^>]*>##g' "$f"
+            sed -i -E 's#<img[^>]+src="assets/icons/5f\.svg[^"]*"[^>]*>##g' "$f"
+            # 2) usuń sufiksy gh-*-mode-only z pozostałych <img>
+            sed -i -E 's/#gh-(dark|light)-mode-only//g' "$f"
+          done
+
       - name: Generate checksums & manifest
         if: steps.copy.outputs.copied == '1'
         shell: bash
