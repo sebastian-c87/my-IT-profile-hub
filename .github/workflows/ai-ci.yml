@@ -1,0 +1,38 @@
+﻿name: AI Agent CI
+
+on:
+  push:
+    paths:
+      - "portfolio/AI/assistants/**"
+  pull_request:
+    paths:
+      - "portfolio/AI/assistants/**"
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install tools
+        run: |
+          npm i -g ajv-cli@5 promptfoo@latest
+          npm i js-yaml
+
+      - name: Validate assistant.yaml against schema
+        run: |
+          node -e "const fs=require('fs'),yaml=require('js-yaml');const doc=yaml.load(fs.readFileSync('portfolio/AI/assistants/python-fullstack-dev/assistant.yaml','utf8'));fs.writeFileSync('agent.json',JSON.stringify(doc));"
+          npx ajv validate --spec=draft2020 -s portfolio/AI/_templates/agent.spec.schema.json -d agent.json
+
+      - name: Run promptfoo eval
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd portfolio/AI/assistants/python-fullstack-dev/evaluations
+          promptfoo eval -c promptfoo.yml --output ./results.json
