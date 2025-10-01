@@ -1,4 +1,11 @@
-﻿.vscode/
+.vscode/
 Thumbs.db
 *.tmp
 dist/
+
+.env
+.env.local
+.env.production
+*.key
+node_modules/
+secrets/
