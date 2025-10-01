@@ -3,7 +3,7 @@
 > **Zaawansowany asystent AI do generowania kompletnych aplikacji web Python**
 
 [![AI Agent CI](https://img.shields.io/badge/Github-Actions-red?logo=github)](https://github.com/sebastian-c87/my-IT-profile-hub/actions/workflows/ai-ci.yml)
-[![License: CC-BY-NC-ND-4.0](https://img.shields.io/badge/License-CC--BY--NC--ND--4.0-blue.svg?logo=readme&logoColor=white)](LICENSE)
+[![License: CC-BY-NC-ND-4.0](https://img.shields.io/badge/License-CC--BY--NC--ND--4.0-blue.svg?logo=readme&logoColor=white)]
 [![OpenAI GPT-5](https://img.shields.io/badge/OpenAI-GPT--5-green?logo=openai)](https://platform.openai.com/)
 [![Anthropic Claude](https://img.shields.io/badge/Anthropic-Claude--3.5-orange.svg?logo=claude&logoColor=white)](https://claude.ai/)
 
