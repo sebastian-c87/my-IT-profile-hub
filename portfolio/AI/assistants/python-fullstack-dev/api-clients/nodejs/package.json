@@ -1,0 +1,40 @@
+{
+  "name": "python-fullstack-assistant-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js client for Python Full-Stack Developer Assistant supporting Claude and OpenAI APIs",
+  "main": "client.js",
+  "scripts": {
+    "start": "node demo.js",
+    "demo": "node demo.js",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "claude",
+    "openai",
+    "python",
+    "fullstack",
+    "web-development"
+  ],
+  "author": "Sebastian C.",
+  "license": "CC-BY-NC-ND-4.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-c87/my-IT-profile-hub.git"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.9",
+    "dotenv": "^16.6.1",
+    "fs-extra": "^11.3.2",
+    "openai": "^4.104.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sebastian-c87/my-IT-profile-hub/issues"
+  },
+  "homepage": "https://github.com/sebastian-c87/my-IT-profile-hub#readme"
+}
