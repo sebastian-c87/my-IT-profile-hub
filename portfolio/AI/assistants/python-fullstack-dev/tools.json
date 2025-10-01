@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Python Full-Stack Developer Tools",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "description", "parameters"],
+    "additionalProperties": false,
+    "properties": {
+      "name": { "type": "string", "enum": [
+        "design_architecture",
+        "generate_project_structure",
+        "scaffold_backend_api",
+        "scaffold_frontend_ui",
+        "plan_api_integrations",
+        "prepare_deployment_files"
+      ]},
+      "description": { "type": "string" },
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "idea": { "type": "string" },
+          "requirements": { "type": "string" },
+          "framework": { "type": "string", "enum": ["Django","Flask","FastAPI"] },
+          "frontend": { "type": "string", "enum": ["React","Vue"] },
+          "database": { "type": "string", "enum": ["PostgreSQL","MongoDB"] }
+        }
+      }
+    }
+  }
+}

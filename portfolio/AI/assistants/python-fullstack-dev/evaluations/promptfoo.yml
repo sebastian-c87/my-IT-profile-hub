@@ -1,0 +1,24 @@
+﻿prompts:
+  - file://../system.md
+
+providers:
+  - openai:gpt-5-nano
+
+
+tests:
+  - vars:
+      idea: "Aplikacja do planowania treningów i posiłków z integracją z API kalorycznym."
+      requirements: "FastAPI + React, PostgreSQL, OAuth2 login, Docker i CI/CD."
+    assert:
+      - type: contains
+        value: "🏗️ Architektura Aplikacji"
+      - type: contains
+        value: "📁 Struktura Plików"
+      - type: contains
+        value: "⚙️ Backend Code"
+      - type: contains
+        value: "🎨 Frontend Code"
+      - type: contains
+        value: "🔗 API Integration"
+      - type: contains
+        value: "🚀 Setup & Deployment"

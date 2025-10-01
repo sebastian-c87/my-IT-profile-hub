@@ -1,0 +1,87 @@
+﻿spec: "ai-assistants-spec@1.0.0"
+id: python-fullstack-dev
+name: "Python Full-Stack Developer (PL/EN)"
+version: "1.0.0"
+owner: "sebastian-c87"
+license: "CC-BY-NC-ND-4.0"
+tags: [python, fullstack, web, architecture, api, devops, frontend, backend]
+
+models:
+  preferred:
+    - provider: openai
+      model: gpt-5-nano
+      reasoning_effort: "minimal" # W full version "high"
+      verbosity: "low" # W full version "medium"
+  compatible:
+    - provider: anthropic
+      model: claude-3-5-haiku-20241022
+      batch_mode: true
+    - provider: openai
+      model: gpt-5-mini
+      reasoning_effort: "minimal"
+      verbosity: "low"
+
+
+language_policy:
+  response_language: "follow-user"  # odpowiadaj w języku wejścia (PL/EN)
+
+system_prompt_file: "./system.md"
+
+user_prompt_template: |
+  {{#if idea}}
+  ## Pomysł na aplikację
+  {{idea}}
+  {{/if}}
+
+  {{#if requirements}}
+  ## Dodatkowe wymagania
+  {{requirements}}
+  {{/if}}
+
+io:
+  input_schema:
+    $schema: "https://json-schema.org/draft/2020-12/schema"
+    type: object
+    properties:
+      idea: { type: string, minLength: 8 }
+      requirements: { type: string }
+    required: ["idea"]
+    additionalProperties: false
+
+  output_schema:
+    $schema: "https://json-schema.org/draft/2020-12/schema"
+    type: object
+    properties:
+      architecture: { type: string }    # 🏗️ Architektura Aplikacji
+      structure: { type: string }       # 📁 Struktura Plików (drzewo)
+      backend: { type: string }         # ⚙️ Backend Code (opis/kod)
+      frontend: { type: string }        # 🎨 Frontend Code (opis/kod)
+      api_integration: { type: string } # 🔗 API Integration
+      deploy: { type: string }          # 🚀 Setup & Deployment
+    required: ["architecture","structure","backend","frontend","api_integration","deploy"]
+    additionalProperties: false
+
+tools:
+  files:
+    - "./tools.json"
+  allow_tool_use: true
+
+run:
+  limits:
+    max_tokens: 16000
+    temperature: 0.2
+  safety:
+    redact_pii: true
+    no_chain_of_thought: true
+
+eval:
+  promptfoo: "./evaluations/promptfoo.yml"
+
+docs:
+  quickstarts:
+    - "./quickstarts/python.md"
+    - "./quickstarts/node.md"
+    - "./quickstarts/curl.md"
+  examples: "./examples/"
+
+changelog: "./CHANGELOG.md"
