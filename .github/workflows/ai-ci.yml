@@ -70,7 +70,7 @@ jobs:
         
     - name: Run promptfoo evaluation
       env:
-        OPENAI_API_KEY: ${{ env.OPENAI_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
         cd portfolio/AI/assistants/${{ matrix.assistant }}/evaluations
         promptfoo eval -c promptfoo.yml --output ./results.json
