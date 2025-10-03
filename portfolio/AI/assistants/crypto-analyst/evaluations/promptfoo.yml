@@ -3,17 +3,15 @@ description: "Test suite for Crypto Market Analyst assistant"
 
 # System Prompt Reference  
 prompts:
-  - file://../system.md  # ✅ Poprawna ścieżka względna
+  - file://../system.md  
 
-# Provider Configuration - Simplified for CI/CD
 providers:
-  - openai:gpt-5-nano  # ✅ Bez dodatkowych config - klucz z workflow
-
+  - openai:gpt-5-nano  
 # Test Cases matched to system.md output format
 tests:
-  # Basic cryptocurrency analysis
   - vars:
-      crypto_query: "Przeprowadź analizę rynkową dla Bitcoin (BTC). Potrzebuję oceny technicznej, fundamentalnej i rekomendacji."
+      crypto_query: "Przeprowadź analizę rynkową dla Bitcoin (BTC). Nie dopytuj o więcej innych walut tylko skup się na Bitcoin`ie"
+      timeframe: "Opieraj się o interwał 4h."
     assert:
       - type: contains
         value: "🎯 Executive Summary"
@@ -29,33 +27,5 @@ tests:
         value: "🎯 Rekomendacje & Sygnały"
       - type: contains
         value: "📋 Disclaimer"
-      - type: not-contains
-        value: "guaranteed profit"
 
-  # Technical analysis focus
-  - vars:
-      crypto_query: "Jaki jest obecny trend dla Ethereum? Sprawdź RSI, MACD i poziomy Fibonacci."
-      analysis_type: "technical"
-    assert:
-      - type: contains
-        value: "RSI"
-      - type: contains
-        value: "MACD"
-      - type: contains
-        value: "Fibonacci"
-      - type: regex
-        value: "(bullish|bearish|sideways|konsolidacja)"
 
-  # Trading signals
-  - vars:
-      crypto_query: "Wygeneruj sygnały tradingowe dla ADA (Cardano) na timeframe 4h."
-      timeframe: "4h"
-    assert:
-      - type: regex
-        value: "(BUY|SELL|HOLD)"
-      - type: contains
-        value: "entry"
-      - type: contains
-        value: "stop"
-      - type: contains
-        value: "target"

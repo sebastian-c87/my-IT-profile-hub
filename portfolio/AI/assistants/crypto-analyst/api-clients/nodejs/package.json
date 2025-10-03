@@ -1,0 +1,13 @@
+﻿{
+  "name": "crypto-analyst-nodejs-client",
+  "version": "1.0.0",
+  "description": "Cryptocurrency Market Analyst - Node.js Client",
+  "main": "client.js",
+  "type": "module",
+  "author": "Sebastian C.",
+  "license": "CC-BY-NC-ND-4.0",
+  "scripts": {
+    "start": "node demo.js",
+    "test": "node client.js"
+  }
+}

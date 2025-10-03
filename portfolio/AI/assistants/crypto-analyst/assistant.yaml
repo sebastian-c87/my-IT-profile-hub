@@ -66,7 +66,6 @@ io:
     properties:
       crypto_query: { type: string, minLength: 3 }
       timeframe: { type: string }
-      analysis_type: { type: string }
     required: ["crypto_query"]
     additionalProperties: false
 
@@ -74,20 +73,20 @@ io:
     $schema: "https://json-schema.org/draft/2020-12/schema"
     type: object
     properties:
-      executive_summary: { type: string }
-      technical_analysis: { type: string }
-      fundamental_analysis: { type: string }
-      sentiment_analysis: { type: string }
-      risk_assessment: { type: string }
-      recommendations: { type: string }
-      disclaimer: { type: string }
+      executive_summary: { type: string }     # 🎯 Executive Summary"
+      technical_analysis: { type: string }    # 📊 Analiza Techniczna
+      fundamental_analysis: { type: string }  # 🔍 Analiza Fundamentalna
+      sentiment_analysis: { type: string }    # 🌊 Sentiment & On-chain
+      risk_assessment: { type: string }       # ⚠️ Risk Assessment
+      recommendations: { type: string }       # 🎯 Rekomendacje & Sygnały
+      disclaimer: { type: string }            # 📋 Disclaimer
     required: ["executive_summary","technical_analysis","fundamental_analysis","sentiment_analysis","risk_assessment","recommendations","disclaimer"]
     additionalProperties: false
 
 # Runtime Limits
 run:
   limits:
-    max_tokens: 24000  # ✅ Znacznie zwiększone z 4000
+    max_tokens: 24000  
   safety:
     redact_pii: true
     no_chain_of_thought: true
