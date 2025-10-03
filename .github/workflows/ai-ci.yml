@@ -1,39 +1,76 @@
-﻿name: AI Agent CI
+﻿
+name: AI Assistants CI
 
 on:
   push:
     paths:
-      - "portfolio/AI/assistants/**"
+    - "portfolio/AI/assistants/**"
   pull_request:
     paths:
-      - "portfolio/AI/assistants/**"
+    - "portfolio/AI/assistants/**"
   workflow_dispatch:
-    
+
 jobs:
-  validate-and-test:
+  detect-changes:
     runs-on: ubuntu-latest
+    outputs:
+      changed-assistants: ${{ steps.changes.outputs.assistants }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Detect changed assistants
+      id: changes
+      run: |
+        # Get changed files
+        if [ "${{ github.event_name }}" == "pull_request" ]; then
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+        else
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+        fi
+        
+        # Extract unique assistant directories
+        ASSISTANTS=$(echo "$CHANGED_FILES" | grep "^portfolio/AI/assistants/" | cut -d'/' -f4 | sort -u | jq -R -s -c 'split("\n")[:-1]')
+        echo "assistants=$ASSISTANTS" >> $GITHUB_OUTPUT
+        echo "Changed assistants: $ASSISTANTS"
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install tools
-        run: |
-          npm i -g ajv-cli@5 promptfoo@latest
-          npm i js-yaml
-
-      - name: Validate assistant.yaml against schema
-        run: |
-          node -e "const fs=require('fs'),yaml=require('js-yaml');const doc=yaml.load(fs.readFileSync('portfolio/AI/assistants/python-fullstack-dev/assistant.yaml','utf8'));fs.writeFileSync('agent.json',JSON.stringify(doc));"
-          npx ajv validate --spec=draft2020 -s portfolio/AI/_templates/agent.spec.schema.json -d agent.json
-
-      - name: Run promptfoo eval
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          cd portfolio/AI/assistants/python-fullstack-dev/evaluations
-          promptfoo eval -c promptfoo.yml --output ./results.json
+  test-assistants:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed-assistants != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        assistant: ${{ fromJSON(needs.detect-changes.outputs.changed-assistants) }}
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install tools
+      run: |
+        npm i -g ajv-cli@5 promptfoo@latest
+        npm i js-yaml
+        
+    - name: Validate assistant.yaml against schema
+      run: |
+        cd portfolio/AI/assistants/${{ matrix.assistant }}
+        node -e "
+          const fs = require('fs');
+          const yaml = require('js-yaml');
+          const doc = yaml.load(fs.readFileSync('assistant.yaml', 'utf8'));
+          fs.writeFileSync('agent.json', JSON.stringify(doc, null, 2));
+        "
+        npx ajv-cli validate --spec=draft2020 \
+          -s ../../../_templates/agent.spec.schema.json \
+          -d agent.json
+        
+    - name: Run promptfoo evaluation
+      env:
+        OPENAI_API_KEY: ${{ env.OPENAI_API_KEY }}
+      run: |
+        cd portfolio/AI/assistants/${{ matrix.assistant }}/evaluations
+        promptfoo eval -c promptfoo.yml --output ./results.json

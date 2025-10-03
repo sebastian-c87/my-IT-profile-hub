@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Assistant Spec Schema v1.0.0",
+  "type": "object",
+  "required": ["spec","id","name","version","system_prompt_file","io"],
+  "properties": {
+    "spec": { "type": "string", "pattern": "^ai-assistants-spec@1\\.0\\.0$" },
+    "id": { "type": "string", "minLength": 3 },
+    "name": { "type": "string" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "owner": { "type": "string" },
+    "license": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "models": { "type": "object" },
+    "language_policy": { "type": "object" },
+    "system_prompt_file": { "type": "string" },
+    "user_prompt_template": { "type": "string" },
+    "io": {
+      "type": "object",
+      "required": ["input_schema","output_schema"],
+      "properties": {
+        "input_schema": { "type": "object" },
+        "output_schema": { "type": "object" }
+      }
+    },
+    "tools": { "type": "object" },
+    "run": { "type": "object" },
+    "eval": { "type": "object" },
+    "docs": { "type": "object" },
+    "changelog": { "type": "string" }
+  },
+  "additionalProperties": true
+}
