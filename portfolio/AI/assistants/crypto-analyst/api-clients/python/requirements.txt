@@ -1,0 +1,16 @@
+﻿# OpenAI API Support
+openai>=2.0.0
+
+# Anthropic API Support  
+anthropic>=1.0.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Path handling (built-in from Python 3.4+)
+pathlib>=1.0.1
+
+# File system operations (built-in)
+os>=1.0.0
+re>=1.0.0
+ # are built-in modules
