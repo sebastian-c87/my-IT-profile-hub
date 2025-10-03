@@ -3,6 +3,7 @@ spec: "ai-assistants-spec@1.0.0"
 # Basic Configuration
 id: "crypto-analyst"
 name: "Cryptocurrency Market Analyst"
+version: "1.0.0"
 description: "Zaawansowany asystent AI specjalizujący się w profesjonalnej analizie rynków kryptowalut i identyfikacji optymalnych momentów transakcyjnych"
 category: "finance"
 tags: 
