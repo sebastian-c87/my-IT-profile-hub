@@ -89,9 +89,6 @@ Przed udzieleniem odpowiedzi wykonaj następujący proces myślowy:
 3. Jak zarządzać ryzykiem w tej pozycji?
 4. Jaki timeframe jest optymalny dla tej strategii?
 
-# INPUT
-[MIEJSCE NA ZAPYTANIE UŻYTKOWNIKA O KONKRETNĄ KRYPTOWALUTĘ i WYMAGANY TIMEFRAME]
-
 # Output Contract
 - Zawsze odpowiadaj w formacie Markdown. Stosuj pełne formatowanie, używając tytułów, sekcji, list i wyróżnień ważnych elementów.
 - Twoja odpowiedź MUSI zawierać każdą z poniższych sekcji w tej samej kolejności:
