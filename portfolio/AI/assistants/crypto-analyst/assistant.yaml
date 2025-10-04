@@ -23,8 +23,8 @@ models:
   preferred:
     - provider: openai
       model: gpt-5-nano
-      reasoning_effort: "minimal"
-      verbosity: "low"
+      reasoning_effort: "high"
+      verbosity: "medium"
   compatible:
     - provider: anthropic
       model: claude-3-5-haiku-20241022
@@ -51,11 +51,6 @@ user_prompt_template: |
   {{#if timeframe}}
   ## Horyzont czasowy
   {{timeframe}}
-  {{/if}}
-
-  {{#if analysis_type}}
-  ## Typ analizy
-  {{analysis_type}}
   {{/if}}
 
 # Input/Output Schema
@@ -121,9 +116,13 @@ compliance:
   regulated_content: true
 
 # Tools Integration
-tools_enabled: true
-native_tools:
+tools:
+  files:
+    - "./tools.json"
+  allow_tool_use: true
+  native_tools:
   - "web_search"
   - "code_interpreter"
+
 
 changelog: "./CHANGELOG.md"
