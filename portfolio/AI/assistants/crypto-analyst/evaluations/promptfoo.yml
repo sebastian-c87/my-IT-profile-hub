@@ -3,21 +3,13 @@ description: "Test suite for Crypto Market Analyst assistant"
 
 # System Prompt Reference  
 prompts:
-  - |
-    file://../system.md
+  - "file://../system.md\n\n## Zapytanie o kryptowalutę\n{{crypto_query}}\n\n## Horyzont czasowy\n{{timeframe}}"
 
-    ## Zapytanie o kryptowalutę
-    {{crypto_query}}
-
-    {{#if timeframe}}## Horyzont czasowy
-    {{timeframe}}{{/if}}
 
 
 providers:
-  - id: openai:gpt-5-nano
-    config:
-      verbosity: high # low | medium | high
-      reasoning_effort: minimal
+  - openai:gpt-5-nano
+
 
 # Test Cases matched to system.md output format
 tests:
