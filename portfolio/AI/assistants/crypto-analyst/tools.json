@@ -4,85 +4,25 @@
     "type": "array",
     "items": {
         "type": "object",
-        "required": [
-            "name",
-            "description",
-            "parameters"
-        ],
+        "required": [ "name", "description", "parameters" ],
         "additionalProperties": false,
         "properties": {
-            "name": {
-                "type": "string",
-                "enum": [
-                    "analyze_cryptocurrency_market",
+            "name": { "type": "string", "enum": [
+                    "executive_summary",
                     "generate_technical_analysis",
                     "assess_fundamental_value",
                     "evaluate_market_sentiment",
                     "calculate_risk_assessment",
                     "provide_trading_recommendations",
                     "show_disclaimer"
-                ]
-            },
-            "description": {
-                "type": "string"
-            },
+                ]},
+            "description": { "type": "string" },
             "parameters": {
                 "type": "object",
-                "required": [
-                    "crypto_query"
-                ],
                 "additionalProperties": false,
                 "properties": {
-                    "crypto_query": {
-                        "type": "string",
-                        "description": "Konkretne zapytanie o analizę kryptowaluty"
-                    },
-                    "timeframe": {
-                        "type": "string",
-                        "enum": [
-                            "1h",
-                            "4h",
-                            "1d",
-                            "1w",
-                            "1m"
-                        ],
-                        "description": "Horyzont czasowy analizy"
-                    }
-                }
-            },
-            "response_format": {
-                "type": "object",
-                "required": [
-                    "executive_summary",
-                    "technical_analysis",
-                    "fundamental_analysis",
-                    "sentiment_analysis",
-                    "risk_assessment",
-                    "recommendations",
-                    "disclaimer"
-                ],
-                "properties": {
-                    "executive_summary": {
-                        "type": "string"
-                    },
-                    "technical_analysis": {
-                        "type": "string"
-                    },
-                    "fundamental_analysis": {
-                        "type": "string"
-                    },
-                    "sentiment_analysis": {
-                        "type": "string"
-                    },
-                    "risk_assessment": {
-                        "type": "string"
-                    },
-                    "recommendations": {
-                        "type": "string"
-                    },
-                    "disclaimer": {
-                        "type": "string"
-                    }
+                    "crypto_query": { "type": "string", "description": "Konkretne zapytanie o analizę kryptowaluty" },
+                    "timeframe": { "type": "string", "description": "Horyzont czasowy analizy" }
                 }
             }
         }
