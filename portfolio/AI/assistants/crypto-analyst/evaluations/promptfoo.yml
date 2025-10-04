@@ -10,8 +10,8 @@ providers:
 # Test Cases matched to system.md output format
 tests:
   - vars:
-      crypto_query: "Przeprowadź analizę rynkową dla kryptowaluty: Bitcoin (BTC). Nie dopytuj o więcej innych walut tylko skup się na BTC"
-      timeframe: "Preferowany Timeframe: interwał 4h."
+      crypto_query: "Bitcoin BTC"
+      timeframe: "Timeframe: 4h."
     assert:
       - type: contains
         value: "🎯 Executive Summary"
