@@ -9,7 +9,7 @@ prompts:
 
 
 providers:
-  - id: openai:responses:gpt-5
+  - id: openai:responses:gpt-5-nano
 
 # Test Cases matched to system.md output format
 tests:

@@ -136,7 +136,7 @@ Przed udzieleniem odpowiedzi wykonaj następujący proces myślowy:
 
 # INPUT
 
-
+Korzystając z narzędzi przeszukiwania internetu [web_search] wyszukaj aktualne informacje i:
 
 Zrób analize kryptowaluty: {{crypto_query}}. Opieraj się na horyzoncie czasowym: {{timeframe}}
 
