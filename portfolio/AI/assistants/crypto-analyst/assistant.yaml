@@ -1,6 +1,4 @@
 spec: "ai-assistants-spec@1.0.0"
-
-# Basic Configuration
 id: "crypto-analyst"
 name: "Cryptocurrency Market Analyst"
 version: "1.0.0"
@@ -83,6 +81,9 @@ tools:
   files:
     - "./tools.json"
   allow_tool_use: true
+  native_tools:
+    - "web_search"
+    - "code_interpreter"
 
 # Runtime Limits
 run:

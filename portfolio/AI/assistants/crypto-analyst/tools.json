@@ -22,7 +22,8 @@
                 "additionalProperties": false,
                 "properties": {
                     "crypto_query": { "type": "string", "description": "Konkretne zapytanie o analizę kryptowaluty" },
-                    "timeframe": { "type": "string", "description": "Horyzont czasowy analizy" }
+                    "timeframe": { "type": "string", "description": "Horyzont czasowy analizy" },
+                    "search_query": { "type": "string", "description": "Zapytanie do wyszukiwania aktualnych informacji" }
                 }
             }
         }
