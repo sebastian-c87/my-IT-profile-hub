@@ -5,9 +5,13 @@ on:
   push:
     paths:
     - "portfolio/AI/assistants/**"
+    paths-ignore:
+    - "portfolio/AI/assistants/README.md"
   pull_request:
     paths:
     - "portfolio/AI/assistants/**"
+    paths-ignore:
+    - "portfolio/AI/assistants/README.md"
   workflow_dispatch:
 
 jobs:

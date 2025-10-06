@@ -1,9 +1,12 @@
-﻿
-# Analityk Rynku Kryptowalut 📈💰
+﻿<div align="center">
+
+# 📈 Analityk Rynku Kryptowalut 💰
+
+> **Zaawansowany asystent AI specjalizujący się w profesjonalnej analizie rynków kryptowalut i identyfikacji optymalnych momentów transakcyjnych.**
 
 ![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg) ![AI Assistant](https://img.shields.io/badge/AI-Assistant-blue) ![OpenAI GPT-5](https://img.shields.io/badge/OpenAI-GPT--5-green) ![Claude](https://img.shields.io/badge/Anthropic-Claude-orange) ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
-**Zaawansowany asystent AI specjalizujący się w profesjonalnej analizie rynków kryptowalut i identyfikacji optymalnych momentów transakcyjnych.**
+</div>
 
 ## Przegląd
 
