@@ -5,13 +5,9 @@ on:
   push:
     paths:
     - "portfolio/AI/assistants/**"
-    paths-ignore:
-    - "portfolio/AI/assistants/README.md"
   pull_request:
     paths:
     - "portfolio/AI/assistants/**"
-    paths-ignore:
-    - "portfolio/AI/assistants/README.md"
   workflow_dispatch:
 
 jobs:
@@ -35,7 +31,7 @@ jobs:
         fi
         
         # Extract unique assistant directories
-        ASSISTANTS=$(echo "$CHANGED_FILES" | grep "^portfolio/AI/assistants/" | cut -d'/' -f4 | sort -u | jq -R -s -c 'split("\n")[:-1]')
+        ASSISTANTS=$(echo "$CHANGED_FILES" | grep "^portfolio/AI/assistants/" | grep -v "README.md" | cut -d'/' -f4 | sort -u | jq -R -s -c 'split("\n")[:-1]')
         echo "assistants=$ASSISTANTS" >> $GITHUB_OUTPUT
         echo "Changed assistants: $ASSISTANTS"
 
