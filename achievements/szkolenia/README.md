@@ -19,6 +19,7 @@ Structure: · title · provider · scope ·
 # Kontakt
 
 ### **Sebastian Ciborowski**
+
 |  |  |  |
 |:--:|:---:|:--:|
 | <img src="../../docs/assets/icons/1a.svg" width="32" alt=""> | Computer Science Student & IT Enthusiast | <img src="../../docs/assets/icons/1.svg" width="32" alt=""> |
