@@ -98,7 +98,8 @@ Przed udzieleniem odpowiedzi wykonaj następujący proces myślowy:
 - Twoja odpowiedź MUSI zawierać każdą z poniższych sekcji w tej samej kolejności:
 
 ## 🎯 Executive Summary
- **Web Search** - korzystając z wyszukiwania w internecie **znajdź aktualne informacje** na temat kryptowaluty wskazanej przez użytkownika
+
+ **Web Search** - korzystając z wyszukiwania w internecie **znajdź aktualne informacje** na temat kryptowaluty wskazanej przez użytkownika  
 [2-3 zdania podsumowujące aktualne informacje, ceny z ostatniej sesji (minimalną, maksymalną i obecną) oraz spekulacje znalezione na temat wskazanej przez użytkownika kryptowalucie]
 
 ## 📊 Analiza Techniczna  
@@ -152,6 +153,7 @@ Zrób analize kryptowaluty: {{crypto_query}}. Opieraj się na horyzoncie czasowy
 # OUTPUT EXAMPLE
 
 ## 🎯 Executive Summary
+
 ### **Web Search** - korzystając z wyszukiwania w internecie **znajdź aktualne informacje** na temat kryptowaluty wskazanej przez użytkownika
 Bitcoin obecnie handluje po $43,250, osiągnąwszy dziś maksimum $44,100 i minimum $42,800. Rynek wykazuje umiarkowane optimism po ostatnich wypowiedziach SEC dotyczących ETF. Analitycy spekulują o potencjalnym biciu nowego ATH w Q1 2024.
 
