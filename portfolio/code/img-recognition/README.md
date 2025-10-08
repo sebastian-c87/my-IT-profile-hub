@@ -11,7 +11,7 @@
 
 **Profesjonalne narzędzie do analizy obrazów wykorzystujące najnowsze możliwości GPT-5-mini**
 
-[Funkcje](#-funkcje) -  [Instalacja](#-instalacja) -  [Użycie](#-użycie) -  [Dokumentacja](#-dokumentacja) -  [Demo](#-demo)
+[Funkcje](#-funkcje) -  [Instalacja](#-instalacja) -  [Użycie](#-użycie) -  [API Reference](#-api-reference) -  [Kontakt](#-kontakt-z-autorem)
 
 </div>
 
@@ -33,7 +33,7 @@
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Kontakt](#-kontakt)
+- [Kontakt](#-kontakt-z-autorem)
 
 ---
 
