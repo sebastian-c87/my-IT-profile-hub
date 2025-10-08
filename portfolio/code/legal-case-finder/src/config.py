@@ -39,7 +39,7 @@ class Config:
     # Lawyer Information
     lawyer_name: str = "Kamila Sadłowicz"
     lawyer_location: str = "Warszawa"
-    lawyer_description: str = "Mecenas Kamila to doświadczona adwokatem z indywidualnym podejściem do każdej sprawy oraz \n gwarantuje maksymalne zaangażowanie w trakcie swoich działań podczas pomocy prawnej"
+    lawyer_description: str = "Mecenas Kamila to doświadczona adwokat z indywidualnym podejściem do każdej sprawy oraz \n gwarantuje maksymalne zaangażowanie w trakcie swoich działań podczas pomocy prawnej"
     
     # Legal Domains (Dziedziny prawa)
     legal_domains: tuple = (
