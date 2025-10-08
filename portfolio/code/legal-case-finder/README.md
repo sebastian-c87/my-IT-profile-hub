@@ -11,7 +11,7 @@
 
 **Profesjonalne narzędzie do analizy problemów prawnych w oparciu o polskie prawo**
 
-[Funkcje](#-funkcje) -  [Instalacja](#-instalacja) -  [Użycie](#-użycie) -  [API Reference](#-api-reference) -  [Kontakt](#-kontakt-z-autorem)
+[Funkcje](#-funkcje) -  [Instalacja](#-instalacja) -  [Użycie](#-użycie) -  [API Reference](#-api-reference) -  [Kontakt](#-autorzy)
 
 </div>
 
@@ -35,7 +35,7 @@
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Kontakt](#-kontakt-z-autorem)
+- [Kontakt](#-autorzy)
 
 ***
 
