@@ -1,0 +1,9 @@
+﻿# OpenAI SDK (Responses API)
+openai>=1.60.0
+
+# Anthropic SDK (Batch API)
+anthropic>=0.42.0
+
+# Opcjonalne dependencies
+python-dotenv>=1.0.0  # Dla .env file
+pydantic>=2.0.0       # Walidacja typów
