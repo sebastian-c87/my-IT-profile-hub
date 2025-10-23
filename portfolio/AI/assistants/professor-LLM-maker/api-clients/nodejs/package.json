@@ -1,0 +1,27 @@
+﻿{
+  "name": "llm-professor-client-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js client for LLM Engineering Professor Assistant (OpenAI Responses API + Anthropic Batch API)",
+  "type": "module",
+  "main": "client.js",
+  "scripts": {
+    "test": "node client.js",
+    "demo": "node demo.js",
+    "setup-global": "npm install -g openai @anthropic-ai/sdk dotenv prompts chalk",
+    "check-deps": "node -e \"console.log('✅ Checking global packages...'); ['openai', '@anthropic-ai/sdk', 'dotenv', 'prompts', 'chalk'].forEach(pkg => { try { require.resolve(pkg); console.log('  ✅', pkg); } catch { console.log('  ❌', pkg, '- Run: npm run setup-global'); } });\""
+  },
+  "keywords": [
+    "openai",
+    "anthropic",
+    "llm",
+    "gpt-5",
+    "claude",
+    "responses-api",
+    "batch-api"
+  ],
+  "author": "Sebastian C.",
+  "license": "CC-BY-NC-ND-4.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
