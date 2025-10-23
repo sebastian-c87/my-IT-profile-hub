@@ -1,0 +1,51 @@
+﻿yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+# PromptFoo Configuration for LLM Engineering Professor Assistant
+description: "Test suite for LLM Engineering Professor assistant"
+
+# System Prompt Reference
+prompts:
+  - file://../system.md
+
+# Provider Configuration
+providers:
+  - id: openai:responses:gpt-5-nano
+    config:
+      tools:
+        - type: web_search
+      tool_choice: auto
+      reasoning:
+        effort: 'medium'
+      text:
+        verbosity: 'medium'
+
+# Test kompletności odpowiedzi
+tests:
+  - vars:
+      llm_question: "Jak stworzyć tokenizer BPE w Pythonie?"
+      detail_level: "intermediate"
+    assert:
+      - type: contains
+        value: "Executive Summary"
+      # Sprawdzenie obecności sekcji "Teza"
+      - type: contains
+        value: "1. Teza"
+      
+      # Sprawdzenie obecności bloku kodu Python
+      - type: contains
+        value: "2. Kod Python"
+      
+      # Sprawdzenie obecności sekcji "Szczegółowe Wyjaśnienie"
+      - type: contains
+        value: "3. Szczegółowe Wyjaśnienie"
+      
+      # Sprawdzenie obecności sekcji "Decyzje Projektowe"
+      - type: contains
+        value: "4. Decyzje Projektowe i Trade-offy"
+      
+      # Sprawdzenie obecności sekcji "Checklista Ryzyk"
+      - type: contains
+        value: "5. Checklista Ryzyk i Kontrolki"
+      
+      # Sprawdzenie obecności sekcji "Dalsze Kroki"
+      - type: contains
+        value: "6. Dalsze Kroki"

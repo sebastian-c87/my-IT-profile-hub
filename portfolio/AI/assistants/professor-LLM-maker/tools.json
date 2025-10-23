@@ -1,0 +1,50 @@
+﻿{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "1.0.0",
+    "description": "Function calling definitions for LLM Engineering Professor assistant",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "name",
+            "description",
+            "parameters"
+        ],
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string",
+                "enum": [
+                    "executive_summary",
+                    "teza",
+                    "kod_python",
+                    "wyjaśnienie",
+                    "decyzje_projektowe",
+                    "ryzyka",
+                    "dalsze_kroki"
+                ]
+            },
+            "description": {
+                "type": "string"
+            },
+            "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "llm_question": {
+                        "type": "string",
+                        "description": "Konkretne zapytanie o model językowy"
+                    },
+                    "detail_level": {
+                        "type": "string",
+                        "description": "Poziom skomplikowania"
+                    },
+                    "search_query": {
+                        "type": "string",
+                        "description": "Zapytanie do wyszukiwania aktualnych informacji"
+                    }
+                }
+            }
+        }
+    }
+}
