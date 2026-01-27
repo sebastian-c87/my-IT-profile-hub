@@ -15,7 +15,7 @@ Zaawansowana symulacja sieci korporacyjnej wielooddziałowej z pełną segmentac
 
 ## 🏗️ Architektura sieci
 
-![Topologia sieci](topology-overview.png)
+![Topologia sieci](topology-overview.PNG)
 
 ### Podział logiczny sieci:
 
@@ -85,7 +85,7 @@ interface Vlan30
 
 **Konfiguracja DHCP (Serwer):**
 
-![DHCP Config](dhcp-config.png)
+![DHCP Config](dhcp-config.PNG)
 
 - **Pool `serverPool` (VLAN 10):** Gateway `10.10.10.1`, DNS `10.40.10.254`, Start IP `.11`
 - **Pool `serverPool20` (VLAN 20):** Gateway `10.10.20.1`, DNS `10.40.10.254`, Start IP `.11`
