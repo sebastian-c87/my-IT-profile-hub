@@ -139,6 +139,7 @@ interface Vlan30
 ├── dhcp-config.png (Screenshot DHCP)
 ├── project.pkt (Plik Packet Tracer)
 ├── configs/ (Eksport konfiguracji)
+│ ├── README.md
 │ ├── Router0-OSPF.txt
 │ ├── Router1-OSPF.txt
 │ ├── Router2-OSPF.txt
@@ -146,6 +147,9 @@ interface Vlan30
 │ ├── Switch0-Access.txt
 │ ├── Switch1-Access.txt
 │ └── ASA-Firewall.txt
+├── Config-Guides/
+│ ├── README.md
+│ ├── *.md - step-by-step configuration for all devices
 └── tests/
 └── ping-tests.txt (Wyniki testów łączności)
 ```
