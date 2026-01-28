@@ -1,0 +1,75 @@
+﻿version: '3.8'
+
+services:
+  # ===================================================
+  # Serwer Nginx z Wieloma Certyfikatami Testowymi
+  # ===================================================
+  nginx:
+    container_name: cert-test-nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    
+    ports:
+      # Port 8443 → Certyfikat ważny (90 dni)
+      - "0.0.0.0:8443:8443"
+      # Port 8444 → Certyfikat wygasający za 7 dni
+      - "8444:8444"
+      # Port 8445 → Certyfikat już wygasły
+      - "8445:8445"
+    
+    volumes:
+      # Montowanie konfiguracji Nginx
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      
+      # Montowanie certyfikatów testowych
+      - ./nginx/certs/valid:/etc/nginx/certs/valid:ro
+      - ./nginx/certs/expiring:/etc/nginx/certs/expiring:ro
+      - ./nginx/certs/expired:/etc/nginx/certs/expired:ro
+    
+    restart: unless-stopped
+    
+    networks:
+      - cert-test-network
+    
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-f", "https://localhost:8443"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  cert-test-network:
+    driver: bridge
+
+# ===================================================
+# WYJAŚNIENIE KONFIGURACJI
+# ===================================================
+# 
+# 1. BUILD CONTEXT
+#    - Docker buduje obraz z folderu ./nginx
+#    - Używa Dockerfile znajdującego się w tym folderze
+#
+# 2. PORTS (Mapowanie portów)
+#    - "8443:8443" → Port hosta:Port kontenera
+#    - Host (Twój komputer) → localhost:8443
+#    - Kontener (Nginx wewnątrz) → nasłuchuje na 8443
+#
+# 3. VOLUMES (Montowanie plików)
+#    - :ro = read-only (kontener nie może modyfikować plików)
+#    - nginx.conf → Konfiguracja serwerów wirtualnych
+#    - certs/* → Foldery z certyfikatami dla każdego portu
+#
+# 4. RESTART POLICY
+#    - unless-stopped = Automatycznie uruchamiaj po restarcie systemu
+#      (chyba że użytkownik ręcznie zatrzyma: docker-compose stop)
+#
+# 5. NETWORKS
+#    - Tworzy wirtualną sieć "cert-test-network"
+#    - Umożliwia komunikację między kontenerami (gdybyśmy dodali Apache/Postfix)
+#
+# 6. HEALTHCHECK
+#    - Docker sprawdza co 30 sekund, czy Nginx działa
+#    - Jeśli 3 razy pod rząd nie odpowie → oznacza kontener jako "unhealthy"
+#    - Komenda: curl -k (ignoruj błędy SSL) do https://localhost:8443
