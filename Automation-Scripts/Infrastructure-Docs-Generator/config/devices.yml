@@ -1,0 +1,137 @@
+﻿# ============================================
+# Infrastructure Documentation Generator
+# Lista urządzeń sieciowych do monitorowania
+# ============================================
+#
+# INSTRUKCJA:
+# - Dodaj wszystkie swoje routery, switche, firewalle
+# - Każde urządzenie wymaga: hostname, device_type, ip, username, password
+# - Możesz użyć zmiennych z .env: ${VARIABLE_NAME}
+# - Supported device types: https://github.com/ktbyers/netmiko/blob/develop/PLATFORMS.md
+
+
+# ============================================
+# CISCO DEVICES
+# ============================================
+
+# Przykładowy Switch Layer 3 (Core)
+- hostname: Switch-L3-Core
+  device_type: cisco_ios
+  ip: 10.10.10.1
+  port: 22
+  username: ${SWITCH_USERNAME}
+  password: ${SWITCH_PASSWORD}
+  secret: ""  # Enable password (jeśli wymagany)
+  description: "Switch Core Layer 3 - VLAN Routing"
+  enabled: true
+
+# Przykładowy Switch Layer 2 (Access)
+- hostname: Switch-L2-Access-Floor1
+  device_type: cisco_ios
+  ip: 10.10.10.10
+  port: 22
+  username: ${SWITCH_USERNAME}
+  password: ${SWITCH_PASSWORD}
+  secret: ""
+  description: "Switch Access Layer 2 - Piętro 1"
+  enabled: true
+
+# Przykładowy Router (WAN Edge)
+- hostname: Router-WAN-Edge
+  device_type: cisco_ios
+  ip: 10.50.10.2
+  port: 22
+  username: ${ROUTER_USERNAME}
+  password: ${ROUTER_PASSWORD}
+  secret: ""
+  description: "Router brzegowy - połączenie WAN"
+  enabled: true
+
+# Przykładowy Firewall ASA
+- hostname: ASA-Firewall-Primary
+  device_type: cisco_asa
+  ip: 10.30.40.2
+  port: 22
+  username: ${ASA_USERNAME}
+  password: ${ASA_PASSWORD}
+  secret: ${ASA_ENABLE_PASSWORD}
+  description: "Cisco ASA Firewall - Primary"
+  enabled: true
+
+
+# ============================================
+# JUNIPER DEVICES (Opcjonalnie)
+# ============================================
+# Odkomentuj jeśli używasz urządzeń Juniper
+
+# - hostname: Juniper-Router-01
+#   device_type: juniper_junos
+#   ip: 10.60.10.1
+#   port: 22
+#   username: ${JUNIPER_USERNAME}
+#   password: ${JUNIPER_PASSWORD}
+#   secret: ""
+#   description: "Juniper MX Series Router"
+#   enabled: true
+
+
+# ============================================
+# ARISTA DEVICES (Opcjonalnie)
+# ============================================
+# Odkomentuj jeśli używasz urządzeń Arista
+
+# - hostname: Arista-Switch-DC1
+#   device_type: arista_eos
+#   ip: 10.70.10.1
+#   port: 22
+#   username: admin
+#   password: arista123
+#   secret: ""
+#   description: "Arista 7050 Switch - Data Center"
+#   enabled: true
+
+
+# ============================================
+# HP / ARUBA DEVICES (Opcjonalnie)
+# ============================================
+# Odkomentuj jeśli używasz urządzeń HP/Aruba
+
+# - hostname: HP-Switch-Campus
+#   device_type: hp_comware
+#   ip: 10.80.10.1
+#   port: 22
+#   username: admin
+#   password: hp123
+#   secret: ""
+#   description: "HP Comware Switch"
+#   enabled: true
+
+
+# ============================================
+# UWAGI:
+# ============================================
+# 
+# 1. DEVICE_TYPE - Musi pasować do Netmiko:
+#    - cisco_ios: Cisco IOS, IOS-XE (Catalyst, ISR)
+#    - cisco_asa: Cisco ASA Firewall
+#    - cisco_nxos: Cisco Nexus (Data Center)
+#    - cisco_xr: Cisco IOS-XR (High-end routers)
+#    - juniper_junos: Juniper JunOS
+#    - arista_eos: Arista EOS
+#    - hp_comware: HP Comware
+#
+# 2. ENABLED - Ustaw false aby tymczasowo wyłączyć urządzenie z monitoringu
+#
+# 3. SECRET - Enable password (dla Cisco gdy 'enable' wymaga hasła)
+#
+# 4. PORT - Domyślnie SSH to port 22, zmień jeśli używasz innego
+#
+# 5. BEZPIECZEŃSTWO:
+#    - Używaj zmiennych z .env dla haseł (${VARIABLE_NAME})
+#    - Nigdy nie wpisuj haseł bezpośrednio w tym pliku
+#    - Ten plik może być commitowany do Git (jeśli używasz zmiennych .env)
+#
+# 6. TESTOWANIE:
+#    - Sprawdź połączenie SSH ręcznie przed dodaniem:
+#      ssh admin@10.10.10.1
+#    - Uruchom test: python scripts/main.py --test --device 10.10.10.1

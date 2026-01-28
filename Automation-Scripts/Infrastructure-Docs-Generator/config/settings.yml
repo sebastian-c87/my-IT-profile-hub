@@ -1,0 +1,231 @@
+﻿# ============================================
+# Infrastructure Documentation Generator
+# Globalne ustawienia projektu
+# ============================================
+
+
+# ============================================
+# OUTPUT PATHS
+# ============================================
+# Ścieżki do folderów gdzie zapisywane są pliki
+# Ścieżki relatywne do głównego folderu projektu
+
+output:
+  # Folder z wygenerowaną dokumentacją Markdown
+  documentation_dir: ./output/network-docs
+  
+  # Folder z raw konfiguracjami (backup)
+  backup_dir: ./output/raw-configs
+  
+  # Folder z logami
+  logs_dir: ./output/logs
+  
+  # Folder tymczasowy (czyszczony po każdym uruchomieniu)
+  temp_dir: ./output/temp
+
+
+# ============================================
+# OPENAI API CONFIGURATION
+# ============================================
+# Ustawienia dla modelu GPT-5-nano (dokumentacja AI)
+
+openai:
+  # Model - ZAWSZE gpt-5-nano (zgodnie z dokumentacją)
+  model: gpt-5-nano
+  
+  # Reasoning effort: minimal, low, medium, high
+  # minimal = najszybszy, najtańszy (dla prostych zadań)
+  # high = najdokładniejszy, najdroższy (dla skomplikowanych analiz)
+  reasoning:
+    effort: minimal
+  
+  # Text verbosity: low, medium, high
+  # low = zwięzła dokumentacja
+  # high = szczegółowa dokumentacja
+  text:
+    verbosity: medium
+  
+  # Timeout dla API request (sekundy)
+  timeout: 60
+  
+  # Retry policy przy błędzie API
+  max_retries: 3
+  retry_delay: 5
+
+
+# ============================================
+# SSH CONNECTION SETTINGS
+# ============================================
+# Ustawienia połączeń SSH do urządzeń
+
+ssh:
+  # Timeout dla pojedynczego połączenia (sekundy)
+  timeout: 30
+  
+  # Maksymalna liczba równoczesnych połączeń
+  # Zwiększ jeśli masz szybką sieć i wiele urządzeń
+  max_concurrent: 5
+  
+  # Retry policy przy błędzie połączenia
+  max_retries: 3
+  retry_delay: 10
+  
+  # Auto-detect device type (jeśli unknown w devices.yml)
+  auto_detect: false
+
+
+# ============================================
+# DOCUMENTATION GENERATION
+# ============================================
+# Ustawienia generowania dokumentacji
+
+documentation:
+  # Format nazw plików: {hostname}.md lub {hostname}_{date}.md
+  filename_format: "{hostname}.md"
+  
+  # Czy generować jeden plik README.md z przeglądem całej sieci?
+  generate_overview: true
+  overview_filename: "README.md"
+  
+  # Czy dołączać diagramy topologii? (wymaga graphviz)
+  include_topology_diagram: false
+  
+  # Czy dołączać raw config jako załącznik w dokumentacji?
+  include_raw_config: false
+  
+  # Sekcje do wygenerowania przez AI (można wyłączyć niektóre)
+  sections:
+    device_info: true        # Informacje ogólne (hostname, model, IOS version)
+    interfaces: true         # Lista interfejsów z IP
+    vlans: true             # Skonfigurowane VLANy
+    routing: true           # OSPF, EIGRP, static routes
+    acls: true              # Access Lists
+    security: true          # SSH, AAA, passwords policy
+    features: true          # Dodatkowe funkcje (HSRP, VTP, STP)
+
+
+# ============================================
+# BACKUP CONFIGURATION
+# ============================================
+# Ustawienia backupu raw konfiguracji
+
+backup:
+  # Czy zapisywać backup przed każdym uruchomieniem?
+  enabled: true
+  
+  # Format nazw plików backup
+  # {hostname} = nazwa urządzenia
+  # {date} = YYYY-MM-DD
+  # {time} = HH-MM-SS
+  filename_format: "{hostname}_{date}_{time}.txt"
+  
+  # Retencja backupów (ile dni przechowywać stare)
+  retention_days: 90
+  
+  # Czy kompresować stare backupy? (gzip)
+  compress_old: true
+  compress_after_days: 30
+
+
+# ============================================
+# LOGGING CONFIGURATION
+# ============================================
+# Ustawienia logowania
+
+logging:
+  # Poziom logów: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: INFO
+  
+  # Czy zapisywać logi do pliku?
+  to_file: true
+  
+  # Format logów
+  format: "[%(asctime)s] [%(levelname)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  
+  # Rotacja logów
+  max_size_mb: 10
+  backup_count: 5
+  
+  # Czy pokazywać logi w konsoli?
+  to_console: true
+
+
+# ============================================
+# ALERTING CONFIGURATION
+# ============================================
+# Powiadomienia o błędach i ukończeniu
+
+alerting:
+  # Czy wysyłać alerty?
+  enabled: true
+  
+  # Kiedy wysyłać alerty?
+  on_error: true           # Gdy urządzenie niedostępne lub błąd
+  on_success: false        # Gdy wszystko OK (może być spamem)
+  on_completion: true      # Gdy skrypt zakończy pracę
+  
+  # EMAIL notifications
+  email:
+    enabled: true
+    from: ${SMTP_USERNAME}
+    to: ${ALERT_EMAIL_TO}
+    cc: ${ALERT_EMAIL_CC}
+    subject_prefix: "[Network Docs]"
+  
+  # SLACK notifications
+  slack:
+    enabled: false
+    webhook_url: ${SLACK_WEBHOOK_URL}
+    channel: ${SLACK_CHANNEL}
+    username: "Network Docs Bot"
+    icon_emoji: ":robot_face:"
+
+
+# ============================================
+# ADVANCED SETTINGS
+# ============================================
+# Zaawansowane opcje (zmiana tylko jeśli wiesz co robisz)
+
+advanced:
+  # Czy wykonywać dry-run przed właściwym uruchomieniem?
+  dry_run: false
+  
+  # Czy czyszczć folder temp po każdym uruchomieniu?
+  cleanup_temp: true
+  
+  # Encoding dla plików (domyślnie utf-8)
+  file_encoding: utf-8
+  
+  # Czy używać cache dla powtarzających się zapytań?
+  use_cache: false
+  
+  # Debug mode (bardzo szczegółowe logi)
+  debug_mode: false
+
+
+# ============================================
+# UWAGI:
+# ============================================
+#
+# 1. Zmienne z .env:
+#    - Używaj ${VARIABLE_NAME} aby odwołać się do zmiennej z .env
+#    - Przykład: from: ${SMTP_USERNAME}
+#
+# 2. Ścieżki:
+#    - Relatywne do głównego folderu projektu
+#    - Windows: używaj / zamiast \ (działa uniwersalnie)
+#
+# 3. Reasoning effort:
+#    - minimal: najszybszy, dla prostych sieci (do 10 urządzeń)
+#    - low: dobry balans, zalecany dla większości
+#    - medium: dokładniejsza analiza
+#    - high: tylko dla bardzo skomplikowanych konfiguracji
+#
+# 4. Max concurrent connections:
+#    - Nie ustawiaj za wysoko (może przeciążyć urządzenia)
+#    - Zalecane: 3-5 dla małych sieci, 10-20 dla dużych
+#
+# 5. Retention days:
+#    - Stare backupy są automatycznie usuwane
+#    - Zalecane: 90 dni (3 miesiące)
