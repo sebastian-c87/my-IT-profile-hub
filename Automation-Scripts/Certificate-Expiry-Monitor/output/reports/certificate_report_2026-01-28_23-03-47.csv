@@ -1,0 +1,8 @@
+Hostname,Port,Protocol,Common Name,Issuer,Valid From,Valid Until,Days Remaining,Alert Level,Is Valid,Is Expired,Is Self-Signed,Key Size,Signature Algorithm
+localhost,8444,https,N/A,"countryName=PL, stateOrProvinceName=Mazovia, localityName=Warsaw, organizationName=Test Organization, commonName=expiring.test.local",2026-01-28 20:17:16,2026-02-04 20:17:16,6,CRITICAL,True,False,True,2048,sha256WithRSAEncryption
+localhost,8445,https,N/A,commonName=expired.test.local,2026-01-28 21:04:43,2026-01-29 21:04:43,0,CRITICAL,True,False,True,2048,sha256WithRSAEncryption
+stackoverflow.com,443,https,N/A,"countryName=US, organizationName=Let's Encrypt, commonName=E8",2025-12-22 14:45:33,2026-03-22 14:45:32,52,OK,True,False,False,256,ecdsa-with-SHA384
+google.com,443,https,N/A,"countryName=US, organizationName=Google Trust Services, commonName=WE2",2025-12-29 19:51:10,2026-03-23 19:51:09,53,OK,True,False,False,256,ecdsa-with-SHA256
+sebastian-c87.github.io,443,https,N/A,"countryName=GB, stateOrProvinceName=Greater Manchester, localityName=Salford, organizationName=Sectigo Limited, commonName=Sectigo RSA Domain Validation Secure Server CA",2025-03-07 00:00:00,2026-03-07 23:59:59,38,OK,True,False,False,2048,sha256WithRSAEncryption
+github.com,443,https,N/A,"countryName=GB, organizationName=Sectigo Limited, commonName=Sectigo Public Server Authentication CA DV E36",2026-01-06 00:00:00,2026-04-05 23:59:59,67,OK,True,False,False,256,ecdsa-with-SHA256
+localhost,8443,https,N/A,"countryName=PL, stateOrProvinceName=Mazovia, localityName=Warsaw, organizationName=Test Organization, commonName=valid.test.local",2026-01-28 20:17:16,2026-04-28 20:17:16,89,OK,True,False,True,2048,sha256WithRSAEncryption
