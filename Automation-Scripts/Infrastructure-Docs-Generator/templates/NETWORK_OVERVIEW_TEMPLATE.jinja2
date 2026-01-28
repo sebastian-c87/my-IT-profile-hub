@@ -1,0 +1,190 @@
+﻿
+# 🌐 Dokumentacja Infrastruktury Sieciowej
+
+**Organizacja:** {{ organization_name }}  
+**Data wygenerowania:** {{ generation_date }}  
+**Liczba urządzeń:** {{ total_devices }}  
+**Status:** {{ overall_status }}
+
+---
+
+## 📊 Podsumowanie Infrastruktury
+
+### Statystyki
+
+| Kategoria | Liczba |
+|-----------|--------|
+| Routery | {{ stats.routers }} |
+| Switche Layer 3 | {{ stats.l3_switches }} |
+| Switche Layer 2 | {{ stats.l2_switches }} |
+| Firewalle | {{ stats.firewalls }} |
+| Access Points | {{ stats.access_points }} |
+| **RAZEM** | **{{ stats.total }}** |
+
+### Status Ogólny
+
+| Status | Liczba | Procent |
+|--------|--------|---------|
+| ✓ Online | {{ status.online }} | {{ status.online_percent }}% |
+| ✗ Offline | {{ status.offline }} | {{ status.offline_percent }}% |
+| ⚠ Błędy | {{ status.errors }} | {{ status.errors_percent }}% |
+
+---
+
+## 📁 Lista Urządzeń
+
+### Routery
+
+| Hostname | IP Address | Model | Status | Dokumentacja |
+|----------|------------|-------|--------|--------------|
+{% for device in routers %}
+| {{ device.hostname }} | {{ device.ip }} | {{ device.model }} | {{ device.status }} | [Dokumentacja](./{{ device.doc_file }}) |
+{% endfor %}
+
+### Switche Layer 3 (Core)
+
+| Hostname | IP Address | Model | VLANy | Status | Dokumentacja |
+|----------|------------|-------|-------|--------|--------------|
+{% for device in l3_switches %}
+| {{ device.hostname }} | {{ device.ip }} | {{ device.model }} | {{ device.vlans }} | {{ device.status }} | [Dokumentacja](./{{ device.doc_file }}) |
+{% endfor %}
+
+### Switche Layer 2 (Access)
+
+| Hostname | IP Address | Model | Lokalizacja | Status | Dokumentacja |
+|----------|------------|-------|-------------|--------|--------------|
+{% for device in l2_switches %}
+| {{ device.hostname }} | {{ device.ip }} | {{ device.model }} | {{ device.location }} | {{ device.status }} | [Dokumentacja](./{{ device.doc_file }}) |
+{% endfor %}
+
+### Firewalle
+
+| Hostname | IP Address | Model | Zones | Status | Dokumentacja |
+|----------|------------|-------|-------|--------|--------------|
+{% for device in firewalls %}
+| {{ device.hostname }} | {{ device.ip }} | {{ device.model }} | {{ device.zones }} | {{ device.status }} | [Dokumentacja](./{{ device.doc_file }}) |
+{% endfor %}
+
+---
+
+## 🗺️ Topologia Sieci
+
+### Schemat Logiczny
+
+Poglądowy schemat połączeń między urządzeniami:
+
+    [Internet]
+        |
+    [Router WAN]
+        |
+    [Firewall ASA]
+        |
+    [Core Switch L3] -------- [Core Switch L3 Backup]
+        |       |       |
+        |       |       |
+    [SW L2] [SW L2] [SW L2]
+     Floor1  Floor2  Floor3
+
+### VLANy w Sieci
+
+| VLAN ID | Nazwa | Subnet | Gateway | Użycie |
+|---------|-------|--------|---------|--------|
+{% for vlan in vlans %}
+| {{ vlan.id }} | {{ vlan.name }} | {{ vlan.subnet }} | {{ vlan.gateway }} | {{ vlan.usage }} |
+{% endfor %}
+
+---
+
+## ⚠️ Urządzenia z Błędami
+
+{% if failed_devices %}
+Następujące urządzenia nie zostały poprawnie udokumentowane:
+
+| Hostname | IP Address | Błąd | Data |
+|----------|------------|------|------|
+{% for device in failed_devices %}
+| {{ device.hostname }} | {{ device.ip }} | {{ device.error }} | {{ device.date }} |
+{% endfor %}
+
+**Zalecane działania:**
+- Sprawdź połączenie SSH z urządzeniem
+- Zweryfikuj credentials w config/devices.yml
+- Sprawdź logi w output/logs/generator.log
+{% else %}
+✓ Wszystkie urządzenia zostały poprawnie udokumentowane.
+{% endif %}
+
+---
+
+## 📅 Historia Dokumentacji
+
+| Data | Liczba Urządzeń | Status | Notatki |
+|------|-----------------|--------|---------|
+| {{ generation_date }} | {{ total_devices }} | {{ overall_status }} | Automatyczna aktualizacja |
+{% for history in history_entries %}
+| {{ history.date }} | {{ history.devices }} | {{ history.status }} | {{ history.notes }} |
+{% endfor %}
+
+---
+
+## 📖 Jak Korzystać z Dokumentacji
+
+### Nawigacja
+
+1. **Znajdź urządzenie** w tabelach powyżej
+2. **Kliknij link** w kolumnie "Dokumentacja"
+3. **Przeglądaj** szczegółowe informacje o konfiguracji
+
+### Aktualizacja Dokumentacji
+
+Dokumentacja jest automatycznie aktualizowana codziennie o 2:00 AM.
+
+Ręczna aktualizacja:
+
+    python scripts/main.py
+
+### Backup Konfiguracji
+
+Raw konfiguracje (backup) znajdują się w folderze:
+
+    output/raw-configs/
+
+Format plików: `{hostname}_{date}_{time}.txt`
+
+---
+
+## 🔧 Narzędzia i Technologie
+
+| Narzędzie | Wersja | Zastosowanie |
+|-----------|--------|--------------|
+| Python | 3.9+ | Automatyzacja |
+| Netmiko | 4.3.0 | SSH do urządzeń |
+| OpenAI GPT-5-nano | Latest | Generowanie dokumentacji AI |
+| Jinja2 | 3.1.3 | Szablony dokumentów |
+
+---
+
+## 📞 Kontakt
+
+**Zespół IT:**
+- Email: {{ contact_email }}
+- Tel: {{ contact_phone }}
+- Slack: {{ contact_slack }}
+
+**W razie problemów:**
+- Sprawdź logi: `output/logs/generator.log`
+- GitHub Issues: {{ github_issues_url }}
+
+---
+
+## 📜 Licencja
+
+Dokumentacja wygenerowana automatycznie przez Infrastructure Documentation Generator.  
+Wszelkie prawa zastrzeżone © {{ current_year }} {{ organization_name }}
+
+---
+
+**Ostatnia aktualizacja:** {{ generation_date }}  
+**Generator:** Infrastructure Documentation Generator v1.0  
+**Autor:** Sebastian  
+**GitHub:** https://github.com/sebastian-c87/my-it-profile-hub

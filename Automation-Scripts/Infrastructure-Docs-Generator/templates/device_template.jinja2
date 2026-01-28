@@ -1,0 +1,254 @@
+﻿# Dokumentacja Urządzenia: {{ hostname }}
+
+**Typ urządzenia:** {{ device_type }}  
+**Adres IP:** {{ ip_address }}  
+**Data wygenerowania:** {{ generation_date }}  
+**Wygenerowano automatycznie przez:** Infrastructure Documentation Generator
+
+---
+
+## Spis Treści
+
+- [Informacje Ogólne](#informacje-ogólne)
+- [Interfejsy Sieciowe](#interfejsy-sieciowe)
+- [VLANy](#vlany)
+- [Routing](#routing)
+- [Access Listy (ACL)](#access-listy-acl)
+- [Bezpieczeństwo](#bezpieczeństwo)
+- [Dodatkowe Funkcje](#dodatkowe-funkcje)
+- [Notatki](#notatki)
+
+---
+
+## Informacje Ogólne
+
+| Parametr | Wartość |
+|----------|---------|
+| Hostname | {{ hostname }} |
+| Model | {{ model }} |
+| Wersja OS | {{ os_version }} |
+| Serial Number | {{ serial_number }} |
+| Uptime | {{ uptime }} |
+| Lokalizacja | {{ location }} |
+
+### Opis
+
+{{ device_description }}
+
+---
+
+## Interfejsy Sieciowe
+
+### Interfejsy Fizyczne
+
+| Interfejs | Status | IP Address | Opis | VLAN |
+|-----------|--------|------------|------|------|
+{% for interface in physical_interfaces %}
+| {{ interface.name }} | {{ interface.status }} | {{ interface.ip }} | {{ interface.description }} | {{ interface.vlan }} |
+{% endfor %}
+
+### Interfejsy VLAN (SVI)
+
+| Interfejs | Status | IP Address | Opis |
+|-----------|--------|------------|------|
+{% for interface in vlan_interfaces %}
+| {{ interface.name }} | {{ interface.status }} | {{ interface.ip }} | {{ interface.description }} |
+{% endfor %}
+
+### Interfejsy Loopback
+
+| Interfejs | IP Address | Opis |
+|-----------|------------|------|
+{% for interface in loopback_interfaces %}
+| {{ interface.name }} | {{ interface.ip }} | {{ interface.description }} |
+{% endfor %}
+
+---
+
+## VLANy
+
+### Skonfigurowane VLANy
+
+| VLAN ID | Nazwa | Status | Porty |
+|---------|-------|--------|-------|
+{% for vlan in vlans %}
+| {{ vlan.id }} | {{ vlan.name }} | {{ vlan.status }} | {{ vlan.ports }} |
+{% endfor %}
+
+### Trunk Ports
+
+| Port | Dozwolone VLANy | Native VLAN |
+|------|-----------------|-------------|
+{% for trunk in trunks %}
+| {{ trunk.port }} | {{ trunk.allowed_vlans }} | {{ trunk.native_vlan }} |
+{% endfor %}
+
+---
+
+## Routing
+
+### Protokoły Routingu
+
+{% if ospf_enabled %}
+#### OSPF
+
+- **Process ID:** {{ ospf.process_id }}
+- **Router ID:** {{ ospf.router_id }}
+- **Areas:** {{ ospf.areas }}
+- **Networks:**
+
+| Network | Area | Wildcard |
+|---------|------|----------|
+{% for network in ospf.networks %}
+| {{ network.address }} | {{ network.area }} | {{ network.wildcard }} |
+{% endfor %}
+{% endif %}
+
+{% if eigrp_enabled %}
+#### EIGRP
+
+- **AS Number:** {{ eigrp.as_number }}
+- **Router ID:** {{ eigrp.router_id }}
+- **Networks:** {{ eigrp.networks }}
+{% endif %}
+
+{% if bgp_enabled %}
+#### BGP
+
+- **AS Number:** {{ bgp.as_number }}
+- **Router ID:** {{ bgp.router_id }}
+- **Neighbors:**
+
+| Neighbor IP | Remote AS | Status |
+|-------------|-----------|--------|
+{% for neighbor in bgp.neighbors %}
+| {{ neighbor.ip }} | {{ neighbor.remote_as }} | {{ neighbor.status }} |
+{% endfor %}
+{% endif %}
+
+### Static Routes
+
+| Destination | Next Hop | Interface | Metric |
+|-------------|----------|-----------|--------|
+{% for route in static_routes %}
+| {{ route.destination }} | {{ route.next_hop }} | {{ route.interface }} | {{ route.metric }} |
+{% endfor %}
+
+---
+
+## Access Listy (ACL)
+
+### Standard ACLs
+
+{% for acl in standard_acls %}
+#### ACL {{ acl.number }} - {{ acl.name }}
+
+| Seq | Action | Source | Wildcard |
+|-----|--------|--------|----------|
+{% for rule in acl.rules %}
+| {{ rule.seq }} | {{ rule.action }} | {{ rule.source }} | {{ rule.wildcard }} |
+{% endfor %}
+{% endfor %}
+
+### Extended ACLs
+
+{% for acl in extended_acls %}
+#### ACL {{ acl.number }} - {{ acl.name }}
+
+| Seq | Action | Protocol | Source | Destination | Ports |
+|-----|--------|----------|--------|-------------|-------|
+{% for rule in acl.rules %}
+| {{ rule.seq }} | {{ rule.action }} | {{ rule.protocol }} | {{ rule.source }} | {{ rule.destination }} | {{ rule.ports }} |
+{% endfor %}
+{% endfor %}
+
+---
+
+## Bezpieczeństwo
+
+### Konfiguracja SSH
+
+- **Wersja SSH:** {{ ssh.version }}
+- **Timeout:** {{ ssh.timeout }}
+- **Retry:** {{ ssh.retry }}
+- **Dozwolone źródła:** {{ ssh.allowed_sources }}
+
+### AAA (Authentication, Authorization, Accounting)
+
+- **Model AAA:** {{ aaa.model }}
+- **Serwery RADIUS:** {{ aaa.radius_servers }}
+- **Serwery TACACS+:** {{ aaa.tacacs_servers }}
+
+### Password Policy
+
+- **Minimalna długość:** {{ password.min_length }}
+- **Typ szyfrowania:** {{ password.encryption_type }}
+- **Password recovery:** {{ password.recovery_enabled }}
+
+### Port Security
+
+| Port | Max MAC | Violation Action | Status |
+|------|---------|------------------|--------|
+{% for port in port_security %}
+| {{ port.interface }} | {{ port.max_mac }} | {{ port.violation }} | {{ port.status }} |
+{% endfor %}
+
+---
+
+## Dodatkowe Funkcje
+
+{% if hsrp_enabled %}
+### HSRP (Hot Standby Router Protocol)
+
+| VLAN | Group | Priority | Virtual IP | Preempt |
+|------|-------|----------|------------|---------|
+{% for hsrp in hsrp_groups %}
+| {{ hsrp.vlan }} | {{ hsrp.group }} | {{ hsrp.priority }} | {{ hsrp.virtual_ip }} | {{ hsrp.preempt }} |
+{% endfor %}
+{% endif %}
+
+{% if vtp_enabled %}
+### VTP (VLAN Trunking Protocol)
+
+- **Mode:** {{ vtp.mode }}
+- **Domain:** {{ vtp.domain }}
+- **Version:** {{ vtp.version }}
+- **Pruning:** {{ vtp.pruning }}
+{% endif %}
+
+{% if stp_enabled %}
+### STP (Spanning Tree Protocol)
+
+- **Mode:** {{ stp.mode }}
+- **Root Bridge:** {{ stp.root_bridge }}
+- **Priority:** {{ stp.priority }}
+- **PortFast:** {{ stp.portfast }}
+{% endif %}
+
+{% if ntp_enabled %}
+### NTP (Network Time Protocol)
+
+- **Serwery NTP:** {{ ntp.servers }}
+- **Timezone:** {{ ntp.timezone }}
+- **Synchronized:** {{ ntp.synchronized }}
+{% endif %}
+
+---
+
+## Notatki
+
+### Historia Zmian
+
+| Data | Zmiana | Autor |
+|------|--------|-------|
+| {{ generation_date }} | Dokumentacja wygenerowana automatycznie | Infrastructure Docs Generator |
+
+### Uwagi
+
+{{ custom_notes }}
+
+---
+
+**Wygenerowano automatycznie:** {{ generation_date }}  
+**Generator:** Infrastructure Documentation Generator v1.0  
+**GitHub:** https://github.com/sebastian-c87/my-it-profile-hub
