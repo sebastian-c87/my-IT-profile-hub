@@ -1,0 +1,421 @@
+# ============================================
+# Certificate Expiry Monitor - Domains Configuration
+# ============================================
+#
+# Lista hostów/domen do monitorowania certyfikatów SSL/TLS
+#
+# Struktura:
+#   name: Przyjazna nazwa (do raportów)
+#   host: Hostname lub IP
+#   port: Port SSL/TLS
+#   protocol: Protokół (https, smtps, imaps, ldaps, ftps)
+#   alert_days: Ile dni przed wygaśnięciem wysłać alert
+#   enabled: Czy aktywne monitorowanie (true/false)
+#   tags: Tagi do grupowania (opcjonalne)
+#
+
+# ============================================
+# Public Domains (do testowania)
+# ============================================
+# Te domeny służą do testowania skryptu bez dostępu do infrastruktury
+
+public_domains:
+  - name: Google
+    host: google.com
+    port: 443
+    protocol: https
+    alert_days: 30
+    enabled: true
+    tags:
+      - public
+      - test
+
+  - name: GitHub
+    host: github.com
+    port: 443
+    protocol: https
+    alert_days: 30
+    enabled: true
+    tags:
+      - public
+      - test
+
+  - name: Stack Overflow
+    host: stackoverflow.com
+    port: 443
+    protocol: https
+    alert_days: 30
+    enabled: true
+    tags:
+      - public
+      - test
+
+  - name: My GitHub Pages
+    host: sebastian-c87.github.io
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: true
+    tags:
+      - personal
+      - portfolio
+
+
+# ============================================
+# Internal Web Servers
+# ============================================
+# Serwery web w sieci wewnętrznej (produkcja)
+
+internal_web_servers:
+  - name: Main Web Server
+    host: 192.168.1.100
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false  # Wyłączone - zmień na true gdy masz dostęp
+    tags:
+      - internal
+      - web
+      - production
+
+  - name: Intranet Portal
+    host: intranet.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - internal
+      - web
+      - intranet
+
+  - name: API Gateway
+    host: api.company.local
+    port: 443
+    protocol: https
+    alert_days: 7
+    enabled: false
+    tags:
+      - internal
+      - api
+      - critical
+
+
+# ============================================
+# Mail Servers
+# ============================================
+# Serwery pocztowe (SMTP/IMAP z SSL/TLS)
+
+mail_servers:
+  - name: Mail Server SMTPS
+    host: mail.company.local
+    port: 465
+    protocol: smtps
+    alert_days: 7
+    enabled: false
+    tags:
+      - mail
+      - smtp
+      - critical
+
+  - name: Mail Server SMTP STARTTLS
+    host: mail.company.local
+    port: 587
+    protocol: smtps
+    alert_days: 7
+    enabled: false
+    tags:
+      - mail
+      - smtp
+      - critical
+
+  - name: Mail Server IMAPS
+    host: mail.company.local
+    port: 993
+    protocol: imaps
+    alert_days: 7
+    enabled: false
+    tags:
+      - mail
+      - imap
+      - critical
+
+
+# ============================================
+# Active Directory / LDAP
+# ============================================
+# Domain Controllers z LDAPS
+
+active_directory:
+  - name: Domain Controller 1
+    host: dc01.company.local
+    port: 636
+    protocol: ldaps
+    alert_days: 14
+    enabled: false
+    tags:
+      - ad
+      - ldap
+      - critical
+
+  - name: Domain Controller 2
+    host: dc02.company.local
+    port: 636
+    protocol: ldaps
+    alert_days: 14
+    enabled: false
+    tags:
+      - ad
+      - ldap
+      - critical
+
+
+# ============================================
+# Load Balancers
+# ============================================
+# Load balancery i reverse proxy
+
+load_balancers:
+  - name: Production Load Balancer
+    host: lb.company.com
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - load-balancer
+      - production
+      - critical
+
+  - name: HAProxy
+    host: proxy.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - proxy
+      - haproxy
+      - production
+
+
+# ============================================
+# VPN & Remote Access
+# ============================================
+# VPN gateways i remote access serwery
+
+vpn_servers:
+  - name: VPN Gateway
+    host: vpn.company.com
+    port: 443
+    protocol: https
+    alert_days: 7
+    enabled: false
+    tags:
+      - vpn
+      - remote-access
+      - critical
+
+  - name: Remote Desktop Gateway
+    host: rdp.company.local
+    port: 443
+    protocol: https
+    alert_days: 7
+    enabled: false
+    tags:
+      - rdp
+      - remote-access
+      - critical
+
+
+# ============================================
+# Database Servers
+# ============================================
+# Bazy danych z SSL/TLS
+
+database_servers:
+  - name: PostgreSQL
+    host: db.company.local
+    port: 5432
+    protocol: postgresql
+    alert_days: 14
+    enabled: false
+    tags:
+      - database
+      - postgresql
+      - production
+
+  - name: MySQL
+    host: mysql.company.local
+    port: 3306
+    protocol: mysql
+    alert_days: 14
+    enabled: false
+    tags:
+      - database
+      - mysql
+      - production
+
+
+# ============================================
+# Docker Test Environment
+# ============================================
+# Lokalne kontenery Docker (do testowania)
+
+docker_test:
+  - name: Docker Nginx Valid
+    host: localhost
+    port: 8443
+    protocol: https
+    alert_days: 30
+    enabled: true  # Włącz gdy uruchomisz docker-compose
+    verify_ssl: false
+    tags:
+      - docker
+      - test
+      - nginx
+      - self-signed
+
+  - name: Docker Nginx Expiring
+    host: localhost
+    port: 8444
+    protocol: https
+    alert_days: 30
+    enabled: true
+    tags:
+      - docker
+      - test
+      - nginx
+      - expiring
+
+  - name: Docker Nginx Expired
+    host: localhost
+    port: 8445
+    protocol: https
+    alert_days: 30
+    enabled: true
+    tags:
+      - docker
+      - test
+      - nginx
+      - expired
+
+  - name: Docker Apache Self-Signed
+    host: localhost
+    port: 8446
+    protocol: https
+    alert_days: 30
+    enabled: false
+    tags:
+      - docker
+      - test
+      - apache
+      - self-signed
+
+  - name: Docker Mail Server
+    host: localhost
+    port: 8465
+    protocol: smtps
+    alert_days: 30
+    enabled: false
+    tags:
+      - docker
+      - test
+      - mail
+
+
+# ============================================
+# Monitoring & Management
+# ============================================
+# Narzędzia monitoringu i zarządzania
+
+monitoring:
+  - name: Grafana
+    host: grafana.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - monitoring
+      - grafana
+
+  - name: Prometheus
+    host: prometheus.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - monitoring
+      - prometheus
+
+  - name: Zabbix
+    host: zabbix.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - monitoring
+      - zabbix
+
+
+# ============================================
+# Cloud Services (jeśli self-hosted)
+# ============================================
+
+cloud_services:
+  - name: Nextcloud
+    host: cloud.company.com
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - cloud
+      - nextcloud
+      - file-sharing
+
+  - name: GitLab
+    host: gitlab.company.local
+    port: 443
+    protocol: https
+    alert_days: 14
+    enabled: false
+    tags:
+      - cloud
+      - gitlab
+      - git
+
+
+# ============================================
+# Notes
+# ============================================
+#
+# 1. Testowanie:
+#    - Zacznij od public_domains (zawsze dostępne)
+#    - Włącz docker_test gdy uruchomisz docker-compose
+#
+# 2. Produkcja:
+#    - Zmień enabled: false na enabled: true dla swoich serwerów
+#    - Dostosuj alert_days do swoich potrzeb
+#
+# 3. Protokoły:
+#    - https: Web servers (port 443)
+#    - smtps: Mail SMTP SSL (port 465/587)
+#    - imaps: Mail IMAP SSL (port 993)
+#    - ldaps: LDAP SSL (port 636)
+#    - ftps: FTP SSL (port 990)
+#    - postgresql: PostgreSQL SSL (port 5432)
+#    - mysql: MySQL SSL (port 3306)
+#
+# 4. Alert Days:
+#    - 30 dni: Standard dla większości
+#    - 14 dni: Ważne serwery
+#    - 7 dni: Krytyczne serwery (mail, AD, VPN)
+#
+# 5. Tags:
+#    - Używaj do filtrowania i grupowania w raportach
+#    - Możesz mieć wiele tagów dla jednego hosta
+#

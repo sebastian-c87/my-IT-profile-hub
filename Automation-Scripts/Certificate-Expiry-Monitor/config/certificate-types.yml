@@ -1,0 +1,392 @@
+﻿# ============================================
+# Certificate Expiry Monitor - Certificate Types
+# ============================================
+#
+# Definicje typów certyfikatów i ich reguł walidacji
+#
+
+# ============================================
+# Public CA Certificates
+# ============================================
+
+public_ca:
+  name: "Public CA Certificate"
+  description: "Certyfikat wystawiony przez publiczne CA (Let's Encrypt, DigiCert, GlobalSign)"
+  
+  validation_rules:
+    # Sprawdź łańcuch certyfikatów
+    check_chain: true
+    
+    # Wymagaj zaufanego CA w systemowym trust store
+    require_trusted_ca: true
+    
+    # Sprawdź revocation (CRL/OCSP)
+    check_revocation: true
+    
+    # Weryfikuj hostname
+    verify_hostname: true
+    
+    # Minimalna siła klucza
+    min_key_size: 2048
+    
+    # Dozwolone algorytmy
+    allowed_algorithms:
+      - RSA
+      - ECDSA
+    
+    # Zakazane algorytmy signature
+    forbidden_signature_algorithms:
+      - MD5
+      - SHA1
+  
+  # Typowe CA dla tego typu
+  common_issuers:
+    - "Let's Encrypt"
+    - "DigiCert"
+    - "GlobalSign"
+    - "Sectigo"
+    - "GeoTrust"
+    - "Thawte"
+    - "Entrust"
+  
+  # Typowy okres ważności
+  typical_validity_days: 90  # Let's Encrypt
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 7
+
+
+# ============================================
+# Self-Signed Certificates
+# ============================================
+
+self_signed:
+  name: "Self-Signed Certificate"
+  description: "Certyfikat podpisany samodzielnie, nie przez CA"
+  
+  validation_rules:
+    # NIE sprawdzaj łańcucha (nie ma)
+    check_chain: false
+    
+    # NIE wymagaj zaufanego CA
+    require_trusted_ca: false
+    
+    # NIE sprawdzaj revocation (nie ma gdzie)
+    check_revocation: false
+    
+    # Weryfikuj hostname (nadal ważne)
+    verify_hostname: false
+    
+    # Minimalna siła klucza
+    min_key_size: 1024
+    
+    # Dozwolone algorytmy
+    allowed_algorithms:
+      - RSA
+      - ECDSA
+    
+    # Zakazane algorytmy
+    forbidden_signature_algorithms:
+      - SHA1
+  
+  # Wykrywanie
+  detection:
+    # Issuer == Subject
+    issuer_equals_subject: true
+    
+    # Brak Basic Constraints: CA:TRUE
+    is_ca: false
+  
+  # Typowy okres ważności
+  typical_validity_days: 365
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 14
+  
+  # Ostrzeżenia
+  warnings:
+    - "Self-signed certificate is not trusted by browsers"
+    - "Only suitable for internal testing or development"
+    - "Consider using internal CA for production"
+
+
+# ============================================
+# Internal CA Certificates
+# ============================================
+
+internal_ca:
+  name: "Internal CA Certificate"
+  description: "Certyfikat wystawiony przez wewnętrzne CA firmy (np. Windows Server CA)"
+  
+  validation_rules:
+    # Sprawdź łańcuch do root CA
+    check_chain: true
+    
+    # NIE wymagaj publicznego CA (internal)
+    require_trusted_ca: false
+    
+    # Sprawdź revocation jeśli dostępne
+    check_revocation: true
+    
+    # Weryfikuj hostname
+    verify_hostname: true
+    
+    # Minimalna siła klucza
+    min_key_size: 1024
+    
+    # Dozwolone algorytmy
+    allowed_algorithms:
+      - RSA
+      - ECDSA
+    
+    # Zakazane algorytmy
+    forbidden_signature_algorithms:
+      - MD5
+      - SHA1
+  
+  # Typowe nazwy internal CA
+  common_issuer_patterns:
+    - ".*-CA$"
+    - ".*Issuing CA.*"
+    - ".*Enterprise CA.*"
+    - ".*Internal CA.*"
+    - ".*Root CA.*"
+  
+  # Typowy okres ważności
+  typical_validity_days: 730  # 2 lata
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 60
+    default_critical_days: 14
+  
+  # Rekomendacje
+  recommendations:
+    - "Ensure internal root CA is trusted on all clients"
+    - "Configure auto-enrollment for seamless renewal"
+    - "Monitor CA health and CRL distribution"
+
+
+# ============================================
+# Wildcard Certificates
+# ============================================
+
+wildcard:
+  name: "Wildcard Certificate"
+  description: "Certyfikat dla *.example.com (wszystkie subdomeny)"
+  
+  validation_rules:
+    # Standardowa walidacja jak public CA
+    check_chain: true
+    require_trusted_ca: true
+    check_revocation: true
+    verify_hostname: true
+    min_key_size: 2048
+    
+    # Sprawdź czy CN lub SAN zawiera wildcard
+    check_wildcard_format: true
+  
+  # Wykrywanie
+  detection:
+    # CN lub SAN zaczyna się od "*."
+    subject_pattern: "^\\*\\."
+  
+  # Typowy okres ważności
+  typical_validity_days: 90
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 7
+  
+  # Ostrzeżenia
+  warnings:
+    - "Wildcard certificates protect all subdomains"
+    - "Compromise affects all subdomains"
+    - "Consider separate certs for critical subdomains"
+  
+  # Best practices
+  best_practices:
+    - "Store private key very securely"
+    - "Rotate regularly (every 90 days max)"
+    - "Monitor usage across subdomains"
+
+
+# ============================================
+# Multi-Domain (SAN) Certificates
+# ============================================
+
+multi_domain:
+  name: "Multi-Domain Certificate (SAN)"
+  description: "Certyfikat dla wielu domen (Subject Alternative Names)"
+  
+  validation_rules:
+    # Standardowa walidacja
+    check_chain: true
+    require_trusted_ca: true
+    check_revocation: true
+    verify_hostname: true
+    min_key_size: 2048
+    
+    # Sprawdź SAN extension
+    check_san_extension: true
+  
+  # Wykrywanie
+  detection:
+    # Ma extension SAN z wieloma DNS names
+    has_multiple_san_entries: true
+    min_san_entries: 2
+  
+  # Typowy okres ważności
+  typical_validity_days: 365
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 14
+  
+  # Rekomendacje
+  recommendations:
+    - "Document all domains covered by this certificate"
+    - "Update DNS/load balancer when renewing"
+    - "Consider separate certificates for critical domains"
+
+
+# ============================================
+# Extended Validation (EV) Certificates
+# ============================================
+
+extended_validation:
+  name: "Extended Validation Certificate"
+  description: "Certyfikat z rozszerzoną walidacją (EV) - najwyższy poziom zaufania"
+  
+  validation_rules:
+    # Bardzo restrykcyjna walidacja
+    check_chain: true
+    require_trusted_ca: true
+    check_revocation: true
+    verify_hostname: true
+    min_key_size: 2048
+    
+    # Sprawdź EV OID w policy
+    check_ev_oid: true
+  
+  # Wykrywanie
+  detection:
+    # Ma EV OID w Certificate Policies
+    has_ev_policy_oid: true
+    ev_policy_oids:
+      - "2.16.840.1.114412.2.1"  # DigiCert EV
+      - "2.16.840.1.113733.1.7.23.6"  # Symantec EV
+      - "1.3.6.1.4.1.4146.1.1"  # GlobalSign EV
+  
+  # Typowy okres ważności
+  typical_validity_days: 365
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 60
+    default_critical_days: 30
+  
+  # Best practices
+  best_practices:
+    - "Plan renewal 90 days in advance"
+    - "Budget for re-validation costs"
+    - "Maintain updated organization documents"
+
+
+# ============================================
+# Code Signing Certificates
+# ============================================
+
+code_signing:
+  name: "Code Signing Certificate"
+  description: "Certyfikat do podpisywania kodu (EXE, DLL, drivers)"
+  
+  validation_rules:
+    check_chain: true
+    require_trusted_ca: true
+    check_revocation: true
+    min_key_size: 2048
+    
+    # Specjalne Extended Key Usage dla code signing
+    check_eku: true
+    required_eku: "1.3.6.1.5.5.7.3.3"  # Code Signing
+  
+  # Typowy okres ważności
+  typical_validity_days: 365
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 90
+    default_critical_days: 30
+  
+  # Critical warnings
+  critical_warnings:
+    - "CRITICAL: Expired code signing cert invalidates signatures"
+    - "Plan renewal 90+ days in advance"
+    - "Budget time for re-signing all code"
+
+
+# ============================================
+# Client Authentication Certificates
+# ============================================
+
+client_auth:
+  name: "Client Authentication Certificate"
+  description: "Certyfikat do autentykacji klienta (VPN, mutual TLS)"
+  
+  validation_rules:
+    check_chain: true
+    require_trusted_ca: false  # Może być internal
+    check_revocation: true
+    min_key_size: 1024
+    
+    # Extended Key Usage dla client auth
+    check_eku: true
+    required_eku: "1.3.6.1.5.5.7.3.2"  # Client Authentication
+  
+  # Typowy okres ważności
+  typical_validity_days: 365
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 14
+
+
+# ============================================
+# Default/Unknown Type
+# ============================================
+
+unknown:
+  name: "Unknown Certificate Type"
+  description: "Certyfikat nieznanego typu - użyj podstawowej walidacji"
+  
+  validation_rules:
+    # Podstawowa walidacja
+    check_chain: true
+    require_trusted_ca: false
+    check_revocation: false
+    verify_hostname: true
+    min_key_size: 1024
+  
+  # Alert settings
+  alert_settings:
+    default_warning_days: 30
+    default_critical_days: 7
+  
+  # Warning
+  warnings:
+    - "Certificate type could not be determined"
+    - "Using basic validation rules"
+    - "Consider manual inspection"
+
+
+# ============================================
+# End of Certificate Types
+# ============================================

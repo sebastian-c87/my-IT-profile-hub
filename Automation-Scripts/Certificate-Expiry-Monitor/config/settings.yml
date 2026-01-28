@@ -1,0 +1,388 @@
+# ============================================
+# Certificate Expiry Monitor - Settings
+# ============================================
+#
+# Główne ustawienia aplikacji
+# Wartości z .env mają priorytet nad tymi ustawieniami
+#
+
+# ============================================
+# General Settings
+# ============================================
+
+general:
+  # Nazwa aplikacji (do logów i raportów)
+  app_name: "Certificate Expiry Monitor"
+  
+  # Wersja
+  version: "1.0.0"
+  
+  # Jak często sprawdzać certyfikaty (godziny)
+  check_interval_hours: 24
+  
+  # Czas rozpoczęcia codziennego sprawdzenia (24h format)
+  check_time: "03:00"
+  
+  # Ile sprawdzeń jednocześnie (concurrent)
+  concurrent_checks: 10
+  
+  # Timeout dla pojedynczego połączenia (sekundy)
+  connection_timeout: 10
+  
+  # Ile prób przy błędzie połączenia
+  retry_attempts: 3
+  
+  # Opóźnienie między próbami (sekundy)
+  retry_delay: 5
+
+
+# ============================================
+# SMTP Configuration
+# ============================================
+# Ustawienia z .env mają priorytet
+
+smtp:
+  enabled: true
+  
+  # Host i port (z .env lub domyślne)
+  host: ${SMTP_HOST}
+  port: ${SMTP_PORT}
+  
+  # TLS/SSL
+  use_tls: true
+  use_ssl: false
+  
+  # Autentykacja (z .env)
+  username: ${SMTP_USERNAME}
+  password: ${SMTP_PASSWORD}
+  
+  # Adresy email
+  from_address: ${ALERT_EMAIL_FROM}
+  to_addresses: ${ALERT_EMAIL_TO}
+  
+  # Subject prefix
+  subject_prefix: "[Certificate Alert]"
+  
+  # Include logo w emailu
+  include_logo: true
+  logo_url: "https://company.com/logo.png"
+
+
+# ============================================
+# Slack Configuration
+# ============================================
+
+slack:
+  enabled: ${SLACK_ENABLED}
+  webhook_url: ${SLACK_WEBHOOK_URL}
+  channel: ${SLACK_CHANNEL}
+  username: "Certificate Monitor"
+  icon_emoji: ":lock:"
+  
+  # Mention na critical alerts
+  mention_on_critical: "@here"
+  mention_on_expired: "@channel"
+  
+  # Formatowanie
+  use_blocks: true
+  include_buttons: true
+
+
+# ============================================
+# Microsoft Teams Configuration
+# ============================================
+
+teams:
+  enabled: ${TEAMS_ENABLED}
+  webhook_url: ${TEAMS_WEBHOOK_URL}
+  
+  # Theme colors
+  color_ok: "00FF00"
+  color_warning: "FFA500"
+  color_critical: "FF0000"
+  color_expired: "8B0000"
+
+
+# ============================================
+# Alert Thresholds
+# ============================================
+
+alerts:
+  # Progi alertów (dni przed wygaśnięciem)
+  thresholds:
+    warning: ${ALERT_WARNING_DAYS}
+    critical: ${ALERT_CRITICAL_DAYS}
+    urgent: ${ALERT_URGENT_DAYS}
+  
+  # Maksymalna liczba alertów dla jednego certyfikatu
+  max_alerts_per_cert: 3
+  
+  # Cooldown między alertami (godziny)
+  alert_cooldown_hours: 24
+  
+  # Alerty dla różnych stanów
+  alert_on_warning: true
+  alert_on_critical: true
+  alert_on_expired: true
+  alert_on_renewed: true
+  
+  # Grouping alertów (wyślij jeden email z wieloma alertami)
+  group_alerts: true
+  group_interval_minutes: 30
+
+
+# ============================================
+# Certificate Validation
+# ============================================
+
+validation:
+  # Weryfikuj łańcuch certyfikatów
+  verify_chain: ${VERIFY_CHAIN}
+  
+  # Sprawdzaj revocation (CRL/OCSP)
+  check_revocation: ${CHECK_REVOCATION}
+  
+  # Akceptuj self-signed certificates
+  allow_self_signed: true
+  
+  # Minimalna wersja TLS
+  min_tls_version: ${MIN_TLS_VERSION}
+  
+  # Sprawdzaj hostname match
+  verify_hostname: true
+  
+  # Wymagaj zaufanego CA (dla non-self-signed)
+  require_trusted_ca: false
+  
+  # Sprawdzaj key strength
+  check_key_strength: true
+  min_key_size: 1028
+  
+  # Zakazane algorytmy
+  forbidden_algorithms:
+    - SHA1
+  
+  # Sprawdzaj Subject Alternative Names (SAN)
+  check_san: true
+
+
+# ============================================
+# Reporting
+# ============================================
+
+reporting:
+  # Enable daily report
+  daily_report_enabled: ${DAILY_REPORT_ENABLED}
+  daily_report_time: ${DAILY_REPORT_TIME}
+  
+  # Formaty raportów
+  formats:
+    html: true
+    csv: true
+    json: true
+    pdf: false  # Wymaga reportlab
+  
+  # Ścieżka do raportów (relative do project root)
+  output_path: "output/reports"
+  
+  # Retention (ile dni przechowywać)
+  retention_days: ${REPORT_RETENTION_DAYS}
+  
+  # Include w raporcie
+  include_ok_certificates: true
+  include_warnings: true
+  include_criticals: true
+  include_expired: true
+  
+  # Sortowanie w raporcie
+  sort_by: "days_remaining"  # Options: name, days_remaining, alert_level
+  sort_order: "asc"  # asc or desc
+  
+  # Grupowanie w raporcie
+  group_by_tag: true
+  group_by_protocol: false
+
+
+# ============================================
+# Logging
+# ============================================
+
+logging:
+  # Log level
+  level: ${LOG_LEVEL}
+  
+  # Log file
+  file: ${LOG_FILE}
+  
+  # Rotation
+  max_size_mb: ${LOG_MAX_SIZE_MB}
+  backup_count: ${LOG_BACKUP_COUNT}
+  
+  # Console output
+  console: ${LOG_TO_CONSOLE}
+  
+  # Format
+  format: "[{time:YYYY-MM-DD HH:mm:ss}] [{level}] {message}"
+  
+  # Kolorowanie w konsoli
+  colorize: true
+  
+  # Separate log files
+  separate_error_log: true
+  error_log_file: "output/logs/errors.log"
+  
+  alert_log_file: "output/logs/alerts.log"
+
+
+# ============================================
+# Database (optional)
+# ============================================
+
+database:
+  enabled: ${DATABASE_ENABLED}
+  type: ${DATABASE_TYPE}
+  
+  # SQLite
+  sqlite:
+    path: ${DATABASE_PATH}
+  
+  # PostgreSQL
+  postgresql:
+    host: ${DATABASE_HOST}
+    port: ${DATABASE_PORT}
+    database: ${DATABASE_NAME}
+    user: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+  
+  # MySQL
+  mysql:
+    host: ${DATABASE_HOST}
+    port: ${DATABASE_PORT}
+    database: ${DATABASE_NAME}
+    user: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+  
+  # Tables
+  tables:
+    certificates: "certificates"
+    alerts: "alerts"
+    history: "check_history"
+
+
+# ============================================
+# Auto-Renewal (optional)
+# ============================================
+
+auto_renewal:
+  enabled: ${AUTO_RENEWAL_ENABLED}
+  method: ${RENEWAL_METHOD}
+  threshold_days: ${RENEWAL_THRESHOLD_DAYS}
+  
+  # Certbot
+  certbot:
+    path: ${CERTBOT_PATH}
+    config_dir: "/etc/letsencrypt"
+    work_dir: "/var/lib/letsencrypt"
+    logs_dir: "/var/log/letsencrypt"
+  
+  # ACME.sh
+  acme_sh:
+    path: "/root/.acme.sh/acme.sh"
+    config_dir: "/root/.acme.sh"
+  
+  # Custom script
+  custom:
+    script_path: "scripts/custom_renewal.sh"
+
+
+# ============================================
+# Webhooks (optional)
+# ============================================
+
+webhooks:
+  enabled: ${WEBHOOK_ENABLED}
+  url: ${WEBHOOK_URL}
+  
+  # Authentication
+  auth_type: "token"  # Options: token, basic, none
+  auth_token: ${WEBHOOK_AUTH_TOKEN}
+  
+  # Method
+  method: "POST"
+  
+  # Headers
+  headers:
+    Content-Type: "application/json"
+    User-Agent: "CertificateExpiryMonitor/1.0"
+  
+  # Retry
+  retry_attempts: 3
+  retry_delay: 5
+  timeout: 10
+
+
+# ============================================
+# Prometheus Metrics (optional)
+# ============================================
+
+prometheus:
+  enabled: ${PROMETHEUS_ENABLED}
+  port: ${PROMETHEUS_PORT}
+  path: ${PROMETHEUS_PATH}
+  
+  # Metrics to export
+  metrics:
+    - cert_expiry_days
+    - cert_valid
+    - cert_chain_valid
+    - alert_sent
+    - check_duration_seconds
+
+
+# ============================================
+# Advanced Settings
+# ============================================
+
+advanced:
+  # User-Agent dla HTTP requests
+  user_agent: ${USER_AGENT}
+  
+  # Debug mode
+  debug: ${DEBUG_MODE}
+  
+  # Dry run (nie wysyłaj alertów)
+  dry_run: ${DRY_RUN}
+  
+  # Quiet mode
+  quiet: ${QUIET_MODE}
+  
+  # Cache
+  cache_enabled: true
+  cache_ttl_hours: 1
+  
+  # Rate limiting
+  rate_limit_enabled: false
+  rate_limit_per_second: 10
+
+
+# ============================================
+# Documentation Sections (for reports)
+# ============================================
+
+documentation:
+  sections:
+    - name: "Overview"
+      enabled: true
+    - name: "Certificate Details"
+      enabled: true
+    - name: "Chain Validation"
+      enabled: true
+    - name: "Security Analysis"
+      enabled: true
+    - name: "Recommendations"
+      enabled: true
+
+
+# ============================================
+# End of Settings
+# ============================================
