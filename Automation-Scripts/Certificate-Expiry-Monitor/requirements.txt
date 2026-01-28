@@ -1,0 +1,60 @@
+﻿# ============================================
+# Certificate Expiry Monitor - Dependencies
+# ============================================
+
+# Certificate Management
+cryptography>=41.0.0          # X.509 certificate parsing and validation
+pyOpenSSL>=23.0.0             # OpenSSL wrapper for SSL/TLS operations
+
+# Network & HTTP
+requests>=2.31.0              # HTTP requests for API calls
+urllib3>=2.0.0                # HTTP client with SSL/TLS support
+
+# Configuration & Environment
+python-dotenv>=1.0.0          # .env file support
+pyyaml>=6.0.1                 # YAML configuration files
+
+# Templating
+jinja2>=3.1.2                 # Template engine for reports and emails
+
+# Scheduling & Automation
+schedule>=1.2.0               # Job scheduling
+APScheduler>=3.10.4           # Advanced scheduling (alternative)
+
+# CLI & Output
+colorama>=0.4.6               # Colored terminal output
+prettytable>=3.9.0            # Pretty CLI tables
+click>=8.1.7                  # CLI argument parsing
+tqdm>=4.66.1                  # Progress bars
+
+# Logging
+loguru>=0.7.2                 # Better logging
+
+# Email
+secure-smtplib>=0.1.1         # Secure SMTP for email alerts
+
+# Date & Time
+python-dateutil>=2.8.2        # Date parsing and manipulation
+pytz>=2023.3                  # Timezone support
+
+# Data Processing
+pandas>=2.1.0                 # Data analysis (for reports)
+openpyxl>=3.1.2               # Excel export
+
+# PDF Generation (optional)
+# reportlab>=4.0.0            # Uncomment if you want PDF reports
+
+# Testing
+pytest>=7.4.0                 # Unit testing
+pytest-cov>=4.1.0             # Test coverage
+pytest-mock>=3.11.1           # Mocking for tests
+
+# Code Quality (development)
+pylint>=2.17.0                # Linting
+black>=23.7.0                 # Code formatting
+flake8>=6.1.0                 # Style guide enforcement
+
+# Type Checking (development)
+mypy>=1.5.0                   # Static type checking
+types-PyYAML>=6.0.12          # Type stubs for PyYAML
+types-requests>=2.31.0        # Type stubs for requests
